@@ -1,0 +1,139 @@
+/* pages/allClass/index.wxss */
+
+/* 搜索 */
+.search {
+  box-sizing: border-box;
+  position: relative;
+  width: 750rpx;
+  padding: 28rpx;
+  background-color: #00c482;
+}
+.search i-icon{
+  position: absolute;
+  top: 49%;
+  left: 50rpx;
+  transform: translateY(-50%);
+}
+.search input{
+  font-size: 30rpx;
+  padding: 10rpx 0 12rpx 80rpx;
+  background-color: #fff;
+  border-radius: 35rpx;
+}
+
+/* 热门搜索 */
+/* .hot_search {
+  padding: 30rpx 30rpx 45rpx;
+  margin-bottom: 23rpx;
+  font-size: 23rpx;
+  background-color: #fff;
+}
+.hot_search .head,
+.recommend .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 27rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.hot_search .head image,
+.recommend .head image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 15rpx;
+}
+.hot_search navigator{
+  display: inline-block;
+  height: 54rpx;
+  padding: 0 20rpx;
+  margin-right: 15rpx;
+  margin-bottom: 15rpx;
+  line-height: 54rpx;
+  font-size: 23rpx;
+  color: #858585;
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 54rpx;
+}
+
+.recommend {
+  padding: 30rpx 0 10rpx;
+  font-size: 23rpx;
+  background-color: #fff;
+}
+
+.recommend .head {
+  padding: 0 30rpx;
+}
+
+.recommend .tab {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+  color: #00c482;
+  line-height: 60rpx;
+  background-color: #f8f8f8;
+  border-top: 1rpx solid #e8e8e8;
+  border-bottom: 1rpx solid #e8e8e8;
+  border-radius: 0;
+}
+
+.recommend .tab_container {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  transition: height 1s;
+}
+.recommend .tab_container button{
+  display: inline-block;
+  height: 54rpx;
+  padding: 0 20rpx;
+  margin-right: 15rpx;
+  margin-bottom: 15rpx;
+  line-height: 54rpx;
+  font-size: 23rpx;
+  color: #858585;
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 54rpx;
+} */
+
+.server_title {
+  height: 90rpx;
+  padding-left: 45rpx;
+  font-size: 26rpx;
+  line-height: 90rpx;
+  background-color: #F9F9F9;
+}
+
+.tab_container {
+  display: flex;
+  padding: 10rpx 0;
+  background-color: #fff;
+}
+
+.tab_container button {
+  display: inline-block;
+  width: 187.5rpx;
+  padding: 0;
+  margin-bottom: 20rpx;
+  vertical-align: top;
+  line-height: normal;
+  background-color: #fff;
+}
+
+.tab_container button > image {
+  display: block;
+  width: 88rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+
+.tab_container button > text {
+  display: block;
+  font-size: 22rpx;
+}

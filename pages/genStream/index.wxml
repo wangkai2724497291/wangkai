@@ -1,0 +1,16 @@
+<!--pages/genStream/index.wxml-->
+<view class='table_head'>
+  <text>注册时间</text>
+  <text>用户</text>
+  <text>推荐奖励</text>
+</view>
+
+<view class='table_tr' wx:for="{{list}}" wx:key="{{index}}">
+  <text class='table_td'>{{item.register_time}}</text>
+  <text class='table_td'>{{item.username}}</text>
+  <text class='table_td'>{{item.money}}</text>
+</view>
+
+<view class='loading' wx:if="{{isLoading}}"><i-spin i-class='loading_icon' fix></i-spin></view>
+
+<view class='nomore' wx:if="{{showNoMore}}">没有更多数据了</view>

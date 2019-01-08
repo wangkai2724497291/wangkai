@@ -1,0 +1,50 @@
+<!--pages/search/index.wxml-->
+<view class='search'>
+  <i-icon type="search" size="23" color="#9b9b9b" />
+  <input placeholder='输入您需要的服务，如：衣柜安装' value='{{keyword}}' confirm-type='search' bindconfirm='search'></input>
+</view>
+
+<navigator class='best_recomment' url='../repairDetail/index?id={{bestRecomment.p_id}}&standard={{bestRecomment.is_standard}}' wx:if='{{bestRecomment.p_id}}'>
+  <view class='head'>
+    <image src='../../img/hot.png' mode='aspectFit' />
+    <text>最优推荐</text>
+  </view>
+
+  <image class='product_img' src='{{bestRecomment.icon}}' />
+
+  <view class='info_action'>
+    <view class='info'>
+      <text class='title'>{{bestRecomment.p_name}}</text>
+      <text class='price'>￥{{bestRecomment.is_standard ? bestRecomment.product_price : '师傅报价'}}<text wx:if="{{bestRecomment.product_price}}">{{bestRecomment.unit === '' ? '' : '/' + bestRecomment.unit}} 起</text></text>
+      <view>{{bestRecomment.p_desc}}</view>
+    </view>
+    <button class='place_order' catchtap='takeOrder' data-id='{{bestRecomment.p_id}}' data-standard='{{bestRecomment.is_standard}}'>立即下单</button>
+  </view>
+</navigator>
+
+<view class='other_recommend' wx:if="{{otherRecomment.length}}">
+  <view class='head'>
+    <image src='../../img/other.png' mode='aspectFit' />
+    <text>其他推荐</text>
+  </view>
+
+  <navigator class='recom_item' url='../repairDetail/index?id={{item.p_id}}&standard={{item.is_standard}}' wx:for="{{otherRecomment}}" wx:key="{{index}}">
+    <image class='product_img' src='{{item.icon}}' />
+
+    <view class='info'>
+      <view class='title_saled'>
+        <text class='title'>{{item.p_name}}</text>
+        <!-- <text class='saled'>已售：{{item.buy_times ? item.buy_times : 0}}</text> -->
+      </view>
+      <view class='description'>{{item.p_desc}}</view>
+      <view class='price_button'>
+        <text class='price'>￥{{item.is_standard ? item.product_price : '师傅报价'}}<text wx:if="{{item.product_price}}">{{item.unit === '' ? '' : '/' + item.unit}} 起</text></text>
+        <button class='place_order' catchtap='takeOrder' data-id='{{item.p_id}}' data-standard='{{item.is_standard}}'>立即下单</button>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<view class='loading' wx:if="{{isLoading}}"><i-spin i-class='loading_icon' fix></i-spin></view>
+
+<view class='nomore' wx:if="{{showNoMore}}">没有更多数据了</view>

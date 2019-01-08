@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "领券中心",
+  "usingComponents": {
+    "i-icon": "../../extend/iview/icon/index"
+  }
+}

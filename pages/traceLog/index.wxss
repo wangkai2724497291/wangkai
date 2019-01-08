@@ -1,0 +1,40 @@
+/* pages/traceLog/index.wxss */
+.table_head {
+  display: flex;
+  align-items: center;
+  height: 113rpx;
+  margin-top: 25rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.table_head text {
+  width: 25%;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.table_tr {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  background-color: #fff;
+}
+
+.table_tr text {
+  width: 25%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #747679;
+}
+
+.table_head .col-30,
+.table_tr .col-30 {
+  width: 30%;
+}
+
+.table_head .col-20,
+.table_tr .col-20 {
+  width: 20%;
+}

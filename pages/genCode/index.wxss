@@ -1,0 +1,78 @@
+/* pages/genCode/index.wxss */
+.title {
+  margin: 29rpx 0 18rpx;
+  font-size: 35rpx;
+  text-align: center;
+}
+
+.reson {
+  padding: 0 20rpx;
+  font-size: 26rpx;
+  text-align: center;
+  word-break: break-all;
+}
+
+.form {
+  padding-left: 47rpx;
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.form_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  padding-right: 47rpx;
+}
+
+.form_item:first-of-type {
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.form_item input {
+  text-align: right;
+}
+
+.apply_code {
+  width: 642rpx;
+  height: 89rpx;
+  margin-top: 127rpx;
+  font-size: 29rpx;
+  color: #fff;
+  line-height: 89rpx;
+  background-color: #00c482;
+  border-radius: 3rpx;
+}
+
+.status_1 image {
+  display: block;
+  margin: 281rpx auto 34rpx;
+  width: 309rpx;
+  height: 309rpx;
+}
+
+.status_1 .canvas_poster {
+  display: block;
+  margin: 281rpx auto 34rpx;
+  width: 309rpx;
+  height: 309rpx;
+}
+
+.status_1 view {
+  font-size: 30rpx;
+  color: #5A5A5A;
+  text-align: center;
+}
+
+.status_1 button {
+  width: 218rpx;
+  height: 75rpx;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #00C482;
+  border-radius: 38rpx;
+}

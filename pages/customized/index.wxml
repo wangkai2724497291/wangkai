@@ -1,0 +1,29 @@
+<!--pages/customized/index.wxml-->
+<view class='first_step'>
+  <text class='title'>服务类型</text>
+  <view class='list'>
+    <text wx:for="{{firstList}}" wx:key="{{index}}" class='{{firstIndex === (index + 1) ? "active" : ""}}' catchtap='selectFirstStep' data-i='{{index + 1}}' id='{{item.g_id}}'>{{item.g_name}}</text>
+  </view>
+</view>
+
+<view class='second_step' wx:if="{{firstIndex}}">
+  <text class='title'>选择您需要的具体类别（单选）</text>
+  <view class='list'>
+    <text wx:for="{{secondList}}" wx:key="{{index}}" class='{{secondIndex === (index + 1) ? "active" : ""}}' catchtap='selectSecondStep' data-i='{{index + 1}}' id='{{item.c_id}}'>{{item.c_name}}</text>
+  </view>
+</view>
+
+<view class='third_step' wx:if="{{secondIndex}}">
+  <text class='title'>选择您需要的服务商品（单选）</text>
+  <view class='list'>
+    <text wx:for="{{thirdList}}" wx:key="{{index}}" class='{{thirdIndex === (index + 1) ? "active" : ""}}' catchtap='selectThirdStep' data-i='{{index + 1}}' id='{{item.p_id}}'>{{item.p_name}}</text>
+  </view>
+</view>
+
+<form report-submit="true" bindsubmit="formSubmit">
+<button form-type='submit' catchtap='gotoSimAppointment' wx:if="{{thirdIndex}}">我要下单</button>
+</form>
+
+<view class='tip'>“师傅报价”模式是根据您发布的订单服务内容推送给拥有该类专业技能的师傅，由专业师傅对您的订单进行评估报价，系统将给您推荐服务最好、价格最优的师傅报价。</view>
+
+<view class='foot_space'></view>

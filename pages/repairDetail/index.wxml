@@ -1,0 +1,79 @@
+<!--pages/repairDetail/index.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class='info'>
+  <image src='{{product.banner}}' />
+
+  <view class='title_saled'>
+    <text class='title'>{{product.p_name ? product.p_name : ''}}</text>
+
+    <view class='saled_see'>
+      <!-- <text class='saled'>购买：{{product.buy_times ? product.buy_times : 0}}</text>
+      <text class='see'>预览：{{product.see_times ? product.see_times : 0}}</text> -->
+    </view>
+  </view>
+  <view class='price' wx:if='{{product.is_standard}}'>￥{{product.product_price}}<text>{{product.unit === '' ? '' : '/' + product.unit}} 起</text></view>
+  <view class='description'>{{product.introduct}}</view>
+</view>
+
+<view class='evaluate' wx:if="{{evaluates.length}}">
+  <view class='title'>服务评价</view>
+
+  <view class='eval_item' wx:for="{{evaluates}}" wx:key="{{index}}">
+    <view class='eval_info_container'>
+      <image class='avatar' src='{{item.avatarurl}}' />
+      <view class='eval_info'>
+        <view class='name_time'>
+          <text class='name'>{{item.nickname}}</text>
+          <text class='time'>{{item.date}}</text>
+        </view>
+        <view class='stars'>
+          <text>专业技能：{{item.star.skill}}星</text>
+          <text>服务态度：{{item.star.attitude}}星</text>
+          <text>服务时效：{{item.star.efficiency}}星</text>
+        </view>
+        <view class='comment'>{{item.content}}</view>
+      </view>
+    </view>
+    <view class='img_box' wx:if="{{item.file.length}}">
+      <image wx:for="{{item.file}}" wx:for-index="idx" wx:for-item="url" wx:key="{{idx}}" src="{{url}}" bindtap="previewImage" id="{{url}}" data-urls='{{item.file}}' />
+    </view>
+  </view>
+</view>
+
+<view class='detail'>
+  <view class='title'>服务详情</view>
+
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+
+<view class='foot_space'></view>
+
+<view class='foot'>
+  <view class='actions'>
+    <button class='share' open-type="share"><image mode='aspectFit' src='../../img/icon-share.png' /><text>分享</text></button>
+    <button class='follow' catchtap='collection'><image mode='aspectFit' src="{{collect ? '../../img/icon-collected.png' : '../../img/icon-collect.png'}}" /><text>{{collect ? '已关注' : '关注'}}</text></button>
+    <button class='contact' bindtap='phoneCall'><image mode='aspectFit' src='../../img/icon-phone.png' /><text>联系TA</text></button>
+  </view>
+  <form report-submit="true" bindsubmit="formSubmit">
+    <button class='buy' form-type='submit'>立即下单</button>
+  </form>
+</view>
+
+<navigator open-type='reLaunch' class='back_to_home' url='/pages/index/index' wx:if="{{recommender}}">
+  <image src='/img/home-selected.png' mode='aspectFit'/>
+</navigator>
+
+<view class="auth_window" style='display:{{auth_window_display}}'>
+  <view class="dialog_window">
+    <view class="auth_content">该页面需要先微信授权登录哦</view>
+    <button class="auth_sure" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">去授权</button>
+  </view>
+</view>
+
+<view class="auth_window" style='display:{{auth_phone_display}}'>
+  <view class="dialog_window">
+    <view class="auth_content">申请获取你微信绑定的手机号</view>
+    <button class="auth_sure" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">去授权</button>
+  </view>
+</view>

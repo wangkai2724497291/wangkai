@@ -1,0 +1,110 @@
+<!--pages/appointment/index.wxml-->
+<view class='head'>{{product.p_name}}</view>
+
+<i-panel title="产品类型">
+  <view style="padding: 15px 15px 0;font-size: 30rpx" wx:if="{{product.sku}}">
+    <radio-group class="radio-group">
+      <label class="radio" wx:for="{{order.typeData}}" wx:key="{{index}}" bindtap="typeChange" id='{{index}}' data-value='{{item.value}}' data-disable='{{item.disable}}'>
+        <radio value="{{item.name}}" checked="{{item.checked}}" disabled='{{item.disable}}' />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+</i-panel>
+
+<i-panel title="产品规格">
+  <view style="padding: 15px 15px 0;font-size: 30rpx" wx:if="{{product.sku}}">
+    <radio-group class="radio-group">
+      <label class="radio" wx:for="{{order.specData}}" wx:key="{{index}}" bindtap="specChange" id='{{index}}' data-value='{{item.value}}' data-disable='{{item.disable}}'>
+        <radio value="{{item.name}}" checked="{{item.checked}}" disabled='{{item.disable}}' />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+</i-panel>
+
+<view class='count'>
+  <text>数量</text>
+  <i-input-number value="{{ order.count }}" min="1" max="100" step="1" bindchange="countChange" />
+</view>
+
+<i-panel title="需求文字描述(非必填)">
+  <textarea placeholder='请描述您的安装/维修环境（是否有电梯等），包括是否需要携带梯子、配件或特殊工具。如果您是商家（电商或实体店），请将用户的安装地址、手机号、联系人填写准确（前面定位的地址为取货地址-如需要师傅取货）。' value='{{order.msg}}' bindinput='textareaInput'></textarea>
+</i-panel>
+
+<navigator url='../address/index?from=startAddr&id={{product.p_id}}' class='addr' wx:if="{{product.sku.isMoreAddr}}">
+  <image src='../../img/icon-start.png' mode='aspectFit' />
+  <view class='info' wx:if="{{order.startAddr.name}}">
+    <text>{{order.startAddr.name}} {{order.startAddr.mobile}}</text>
+    <view>{{order.startAddr.address}}</view>
+  </view>
+  <view class='tip' wx:else>点击选择地址</view>
+  <view class='icon'>
+    <i-icon type="enter" size="24" color="#cccccc" />
+  </view>
+</navigator>
+
+<navigator url='../address/index?from=endAddr&id={{product.p_id}}' class='addr'>
+  <image src='../../img/icon-end.png' mode='aspectFit' />
+  <view class='info' wx:if="{{order.endAddr.name}}">
+    <text>{{order.endAddr.name}} {{order.endAddr.mobile}}</text>
+    <view>{{order.endAddr.address}}</view>
+  </view>
+  <view class='tip' wx:else>点击选择地址</view>
+  <view class='icon'>
+    <i-icon type="enter" size="24" color="#cccccc" />
+  </view>
+</navigator>
+
+<picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+  <view class='date'>
+    <view class='left_side'>
+      <i-icon type="activity" size="26" color="#09bb07" />
+      <text>上门服务日期</text>
+    </view>
+    <view class='date_right'>
+      <text>{{order.date}}</text>
+      <i-icon type="enter" size="24" color="#cccccc" />
+    </view>
+  </view>
+</picker>
+
+<picker disabled='{{order.date === ""}}' mode="multiSelector" value="{{index}}" range="{{time}}" bindchange="bindTimeChange" bindcolumnchange="timeColumnChange">
+  <view class='time' bindtap='clickTimePicker'>
+    <view class='left_side'>
+      <i-icon type="clock" size="26" color="#09bb07" />
+      <text>上门服务时间</text>
+    </view>
+    <view class='date_right'>
+      <text>{{order.time}}</text>
+      <i-icon type="enter" size="24" color="#cccccc" />
+    </view>
+  </view>
+</picker>
+
+<view class='coupon' catchtap='selectCoupon'>
+  <view class='left_side'>
+    <i-icon type="coupons" size="26" color="#09bb07" />
+    <text>优惠券</text>
+  </view>
+  <view class='right_side'>
+    <text wx:if="{{order.coupon.count > 0}}">￥{{order.coupon.count}}</text>
+    <text wx:else>{{couponMsg}}</text>
+    <i-icon type="enter" size="24" color="#cccccc" />
+  </view>
+</view>
+
+<view class='agreement'>
+  点击立即支付即同意
+  <navigator url='/pages/agreement/index'>《购买协议》</navigator>
+</view>
+
+<view class='foot_space'></view>
+
+<view class='foot'>
+  <view>
+    <text class='origin_price'>服务金额：￥{{serverPrice || 0}}</text>
+    <text class='price'>应付金额：<text>￥{{totalPrice || 0}}</text></text>
+  </view>
+  <form report-submit="true" bindsubmit="formSubmit">
+    <button catchtap='submitOrder' form-type='submit'>提交订单</button>
+  </form>
+</view>

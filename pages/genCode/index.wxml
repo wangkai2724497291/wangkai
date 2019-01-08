@@ -1,0 +1,61 @@
+<!--pages/genCode/index.wxml-->
+<!-- 首次申请 -->
+<view class='status_null' wx:if="{{generalization === null}}">
+  <view class='form'>
+    <view class='form_item'>
+      <label>手机号码</label>
+      <text>{{generalization.mobile || mobile}}</text>
+    </view>
+    <view class='form_item'>
+      <label>真实姓名</label>
+      <input type='text' value="{{realName}}" bindinput='realNameChange' placeholder='请输入您的真实姓名'></input>
+    </view>
+  </view>
+
+  <form report-submit="true" bindsubmit="formSubmit">
+    <button class='apply_code' catchtap='submitGenCode' form-type='submit' disabled='{{disableBtn}}'>申请推广码</button>
+  </form>
+</view>
+
+<!-- 审核失败 -->
+<view class='status_2' wx:if="{{generalization.status === 2}}">
+  <view class='title'>审核失败</view>
+  <view class='reson'>{{generalization.remarks || ''}}</view>
+  <view class='form'>
+    <view class='form_item'>
+      <label>手机号码</label>
+      <text>{{generalization.mobile}}</text>
+    </view>
+    <view class='form_item'>
+      <label>真实姓名</label>
+      <input type='text' value="{{realName}}" bindinput='realNameChange' placeholder='请输入您的真实姓名'></input>
+    </view>
+  </view>
+
+  <form report-submit="true" bindsubmit="formSubmit">
+    <button class='apply_code' catchtap='submitGenCode' form-type='submit' disabled='{{disableBtn}}'>重新申请推广码</button>
+  </form>
+</view>
+
+<!-- 待审核 -->
+<view class='status_0' wx:if="{{generalization.status === 0}}">
+  <view class='title'>待审核</view>
+  <view class='form'>
+    <view class='form_item'>
+      <label>手机号码</label>
+      <text>{{generalization.mobile}}</text>
+    </view>
+    <view class='form_item'>
+      <label>真实姓名</label>
+      <text>{{generalization.real_name}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 审核成功 -->
+<view class='status_1' wx:if="{{generalization.status === 1}}">
+  <!-- <canvas class='canvas_poster' canvas-id='canvasposter'></canvas> -->
+  <image src='{{generalization.qrcode}}' bindtap='previewImage'></image>
+  <view>客户端小程序推广码</view>
+  <button bindtap='saveQRcode'>保存到相册</button>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/addAddr/index.wxml-->
+<form report-submit="true" bindsubmit="formSubmit">
+  <view class='item'>
+    <text>联系人</text>
+    <input value="{{name}}" placeholder="联系人姓名" id='name' bindinput='inputChange' />
+  </view>
+  <view class='item'>
+    <text>手机号</text>
+    <input type='number' value="{{phone}}" placeholder="手机号" id='phone' bindinput='inputChange' />
+  </view>
+  <navigator url='/pages/location/index' class='item'>
+    <text>服务地址</text>
+    <view>{{addrObj.title}}<i-icon type="coordinates" size='20' color='#66cea3' /></view>
+  </navigator>
+  <view class='item'>
+    <text>详细地址</text>
+    <input value="{{addrDetail}}" placeholder="详细地址" id='addrDetail' bindinput='inputChange' />
+  </view>
+
+  <button form-type='submit' class='submit' catchtap='verify'>保存</button>
+  <button form-type='submit' class='cancle' catchtap='cancle' wx:if='{{editAddr.address_id}}'>取消</button>
+</form>

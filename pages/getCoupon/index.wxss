@@ -1,0 +1,112 @@
+/* pages/getCoupon/index.wxss */
+.first_time_tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF2BE;
+}
+.first_time_tip text {
+  font-size: 25rpx;
+  color: #D99F4B;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  color: #fff;
+  background-color: #00c482;
+}
+.location text {
+  margin: 0 10rpx;
+  font-size: 30rpx;
+}
+.location .info {
+  font-size: 20rpx;
+}
+
+.coupon {
+  width: 724rpx;
+  height: 180rpx;
+  margin: 16rpx auto 0;
+}
+
+.coupon .info_n_action {
+  display: flex;
+  align-items: center;
+  height: 128rpx;
+  padding: 0 0 0 30rpx;
+}
+
+.coupon .info_n_action .title_n_price {
+  position: relative;
+  width: 523rpx;
+}
+
+.coupon .info_n_action .title_n_price::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 1rpx;
+  height: 80rpx;
+  content: '';
+  background-color: #C5C5C5;
+  transform: translateY(-50%);
+}
+
+.coupon .info_n_action .title {
+  width: 523rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 31rpx;
+  font-weight: 600;
+}
+
+.coupon .title_n_price .price {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 35rpx;
+  color: #ff3a48;
+}
+
+.coupon .title_n_price .price .symbol {
+  font-size: 30rpx;
+}
+
+.coupon .info_n_action .action {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coupon .info_n_action .action text {
+  font-size: 25rpx;
+  color: #7D7D7D;
+}
+
+.coupon .info_n_action .action button {
+  width: 136rpx;
+  height: 47rpx;
+  padding: 0;
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  color: #31C27D;
+  line-height: 47rpx;
+  background-color: #fff;
+  border: 1px solid #31C27D;
+  border-radius: 10rpx;
+}
+
+.coupon .filter_n_time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48rpx;
+  padding: 0 42rpx;
+  line-height: 48rpx;
+  font-size: 20rpx;
+  color: #666;
+}

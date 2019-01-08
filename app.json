@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recommender/index",
+    "pages/withdraw/index",
+    "pages/pay/index",
+    "pages/getCoupon/index",
+    "pages/genCode/index",
+    "pages/genStream/index",
+    "pages/orderDetail/index",
+    "pages/user/index",
+    "pages/register/index",
+    "pages/evaluate/index",
+    "pages/appointment/index",
+    "pages/customized/index",
+    "pages/article/index",
+    "pages/repairDetail/index",
+    "pages/selectCity/index",
+    "pages/address/index",
+    "pages/orders/index",
+    "pages/serviceDetail/index",
+    "pages/agreement/index",
+    "pages/serviceCoupon/index",
+    "pages/addAddr/index",
+    "pages/location/index",
+    "pages/balance/index",
+    "pages/cards/index",
+    "pages/addcard/index",
+    "pages/collection/index",
+    "pages/traceLog/index",
+    "pages/coupon/index",
+    "pages/allClass/index",
+    "pages/single/index",
+    "pages/search/index",
+    "pages/simAppointment/index",
+    "pages/login/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#00c482",
+    "navigationBarTitleText": "家通达",
+    "navigationBarTextStyle": "light",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "black"
+  },
+  "networkTimeout": {
+    "uploadFile": 60000
+  }
+}

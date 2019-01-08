@@ -1,0 +1,213 @@
+<!--pages/orderDetail/index.wxml-->
+<view class='info'>
+  <view class='header'>
+    <text>订单号：{{order.order_sn}}</text>
+    <text class='status'>{{status[order.status]}}</text>
+  </view>
+
+  <view class='info_item'>
+    <text class='type'>下单时间：</text>
+    <text>{{order.create_time}}</text>
+  </view>
+  <view class='info_item'>
+    <text class='type'>服务类型：</text>
+    <text>{{order.obj_name}}</text>
+  </view>
+  <view class='info_item' wx:if="{{order.is_standard}}">
+    <text class='type'>产品类型：</text>
+    <text>{{order.product_type}}</text>
+  </view>
+  <view class='info_item' wx:if="{{order.is_standard}}">
+    <text class='type'>产品规格：</text>
+    <text>{{order.product_guige}}</text>
+  </view>
+  <view class='info_item'>
+    <text class='type'>服务时间：</text>
+    <text>{{order.make_time}}</text>
+  </view>
+  <view class='info_item'>
+    <text class='type'>联系信息：</text>
+    <text>{{order.username}}，{{order.mobile}}</text>
+  </view>
+  <!-- <view class='info_item'>
+    <text class='type'>联系电话：</text>
+    <text>{{order.mobile}}</text>
+  </view> -->
+  <view class='info_item' wx:if="{{order.is_standard && order.take_address_info}}">
+    <text class='type'>配送取货地址：</text>
+    <text>{{order.take_address_info.address}}</text>
+  </view>
+  <view class='info_item'>
+    <text class='type'>上门服务地址：</text>
+    <text>{{order.address_info.address}}</text>
+  </view>
+  <view class='info_item' wx:if="{{order.remark}}">
+    <text class='type'>备注：</text>
+    <text>{{order.remark}}</text>
+  </view>
+</view>
+
+<!-- <view class='price' wx:if="{{order.status == 2}}">
+  <text class='type'>报价金额</text>
+  <text>￥{{order.min_offer || 0}}</text>
+</view> -->
+
+<!-- <view class="page__bd order_detail_uploader" wx:if="{{order.status == 1 || order.status == 2}}">
+  <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title">添加图片</view>
+            <view class="weui-uploader__info">{{files.length}}/3</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  <image class='delete' src='../../img/delete.png' catchtap="deleteImage" data-item='{{item}}' />
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box" wx:if="{{files.length < 3}}">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+<view class='imgs_box' wx:if="{{order.status == 1 || order.status == 2}}">
+  <image wx:for="{{order.service_img}}" wx:key='{{index}}' src="{{item}}" bindtap="previewImage" id="{{item}}" data-urls='{{item}}'></image>
+</view>
+
+<view class='progress_no_quoted' wx:if="{{!order.is_standard}}">
+  <image class='no_quoted' src='/img/no-quoted1.png' wx:if="{{order.status == 1}}" />
+  <image class='no_quoted' src='/img/no-quoted2.png' wx:if="{{order.status == 2}}" />
+  <image class='no_quoted' src='/img/no-quoted3.png' wx:if="{{order.status == 5}}" />
+  <image class='no_quoted' src='/img/no-quoted4.png' wx:if="{{order.status == 6}}" />
+  <image class='no_quoted' src='/img/no-quoted5.png' wx:if="{{order.status == 8}}" />
+</view>
+
+<view class='progress_no_quoted' wx:else>
+  <image class='no_quoted' src='/img/quoted1.png'/>
+  <image class='no_quoted' src='/img/quoted2.png' wx:if="{{order.status == 2}}" />
+  <image class='no_quoted' src='/img/quoted3.png' wx:if="{{order.status == 4}}" />
+  <image class='no_quoted' src='/img/quoted4.png' wx:if="{{order.status == 5}}" />
+  <image class='no_quoted' src='/img/quoted5.png' wx:if="{{order.status == 8}}" />
+</view>
+
+<view class='detail' wx:if="{{order.status != 1 && order.status != 2}}">
+  <view class='header'>
+    订单明细
+  </view>
+
+  <view class='detail_item' wx:if="{{order.status != 9}}">
+    <text class='type'>服务价格</text>
+    <text>￥{{order.amount}}</text>
+  </view>
+  <view class='detail_item'>
+    <text class='type'>优惠券</text>
+    <text>￥{{order.coupon_code!=null&&order.coupon_code!=0 ? order.coupon_info.prices : 0}}</text>
+  </view>
+  <view class='detail_item'>
+    <text class='type'>已付金额</text>
+    <text>￥{{order.total || 0}}</text>
+  </view>
+  <view class='detail_item' wx:if="{{order.is_thank_fee}}">
+    <text class='type'>感谢费</text>
+    <text>￥{{order.thank_fee}}</text>
+  </view>
+  <view class='detail_item' wx:if="{{order.is_price_diff}}">
+    <text class='type'>补差价</text>
+    <text>￥{{order.price_diff}}</text>
+  </view>
+</view>
+
+<view class='evaluate' wx:if="{{order.status == 8}}">
+  <view class='header'>
+    评价
+  </view>
+
+  <view class='evaluate_item'>
+    <view class='star_list'>
+      <text>专业技能：{{comment.star.skill}}星</text>
+      <text>服务态度：{{comment.star.attitude}}星</text>
+      <text>服务时效：{{comment.star.efficiency}}星</text>
+    </view>
+
+    <view class='comment'>{{comment.content}}</view>
+
+    <view class='img_box'>
+      <image wx:for="{{comment.file}}" wx:key='{{index}}' src="{{item}}" bindtap="commentPreview" id="{{item}}" data-urls='{{item}}'></image>
+    </view>
+  </view>
+</view>
+
+<!-- <text class='money_tip' wx:if="{{order.is_standard || order.status >= 2}}">此报价为人工服务费，不含配件费用</text> -->
+
+<view class='service' bindtap='phoneCall'>
+  <image src='../../img/service2.png'></image>
+  <text>联系客服</text>
+</view>
+
+<!-- <form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' class='sure' wx:if="{{order.status == 2}}" bindtap='agreeAndPay'>同意报价并支付</button>
+</form> -->
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' class='sure' wx:if='{{order.status == 5 && order.price_diff > 0 && !order.is_diff }}' bindtap='showpayDiff'>支付差价</button>
+</form>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' class='sure' wx:if="{{order.status == 6 && !order.is_thank_fee}}" bindtap='showpayFee'>添加感谢费</button>
+</form>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' class='sure' wx:if="{{order.status == 6}}" bindtap='confirmOrder' disabled="{{disableConfirmBtn}}">确认完成</button>
+</form>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' class='sure' wx:if="{{order.status == 7}}" bindtap='addComment'>评价</button>
+</form>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' class='cancel' bindtap='cancelOrder' wx:if="{{order.status == 0 || order.status == 1 || order.status == 2 || order.status == 3 || order.status == 4 || order.status == 5}}" disabled="{{disableCancleBtn}}">取消订单</button>
+</form>
+
+<view class='master_list' wx:if="{{masterList.order_offer_record.length && order.status == 2}}">
+  <view class='title'>报价师傅</view>
+  <view class='list_item' wx:for="{{masterList.order_offer_record}}" wx:key="{{index}}">
+    <view class='info_n_action'>
+      <image src='{{item.avatar}}' class='avater'></image>
+      <view class='master_info'>
+        <view class='name'>
+          {{item.username}}
+          <image wx:if="{{item.auth_status == 1}}" class='certificate_icon' src='../../img/certificate-icon.png'></image>
+          <text class='star'>{{item.eval_score}}星级</text>
+        </view>
+        <view class='price'>报价金额
+          <text>￥{{item.amount}}</text>
+        </view>
+      </view>
+      <button bindtap='sureOrderOffer' id='{{item.id}}' data-price='{{item.amount}}'>确认雇佣</button>
+    </view>
+    <view class='service_n_notice'>
+      <view class='provide_service'>
+        <view class='item' wx:for="{{masterList.quotation}}" wx:for-item="ser" wx:for-index="idx" wx:key='{{idx}}' wx:if='{{item[ser.quo_id]}}'>
+          <image src='../../img/hadService.png'></image>
+          <text>{{ser.name}}</text>
+        </view>
+      </view>
+      <view class='notice_title'>师傅留言</view>
+      <view class='content'>{{item.remarks}}</view>
+    </view>
+  </view>
+</view>
+
+<i-modal title="{{payFeeTitle}}" visible="{{ visible }}" actions="{{ actions }}" bind:click="payFee">
+  <input type='digit' class='fee' placeholder='请填写金额' value='{{payFee}}' bindinput='payFeeInput' />
+</i-modal>

@@ -1,0 +1,48 @@
+/* pages/addcard/index.wxss */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68rpx;
+  padding: 7px 15px;
+  line-height: 1.4;
+  font-size: 14px;
+  overflow: hidden;
+  color: #495060;
+}
+.item input {
+  flex: 1;
+  text-align: right;
+}
+.select_bank {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68rpx;
+  padding: 7px 15px;
+  line-height: 1.4;
+  font-size: 14px;
+  overflow: hidden;
+  color: #495060;
+  background-color: #fff;
+}
+
+.select_bank picker {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+button {
+  box-sizing: border-box;
+  display: block;
+  width: 641rpx;
+  height: 89rpx;
+  margin: 50rpx auto 0;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 89rpx;
+  color: #fff;
+  background-color: #00c482;
+  border-radius: 4rpx;
+}

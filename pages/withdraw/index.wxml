@@ -1,0 +1,24 @@
+<!--pages/withdraw/index.wxml-->
+<form class='withdraw_form'>
+  <navigator url='../cards/index'>
+    <text>选择银行卡</text>
+    <view>
+      <text wx:if='{{name != "" && endNum != ""}}'>{{name}}  尾号{{endNum}}</text>
+      <text wx:else>点击选择银行卡</text>
+      <i-icon type="enter" size="22" color="#80848f" />
+    </view>
+  </navigator>
+  <label for='acount'>
+    <text>提现金额</text>
+    <input type="digit" value='{{cash ? cash : ""}}' id='acount' placeholder='请填写提现金额，不低于{{countPlaceHolder}}元' bindinput="inputChange"></input>
+  </label>
+</form>
+
+<view class='balance_n_rate'>
+  <view class='balance'>账户余额：<text>{{balance}}</text></view>
+  <view class='rate'>提现需再扣除手续费￥{{seriveCharge}}</view>
+</view>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' catchtap='withdraw'>确认提现</button>
+</form>

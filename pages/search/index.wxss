@@ -1,0 +1,145 @@
+/* pages/search/index.wxss */
+
+/* 搜索 */
+.search {
+  box-sizing: border-box;
+  position: relative;
+  width: 750rpx;
+  padding: 28rpx;
+  background-color: #00c482;
+}
+.search i-icon{
+  position: absolute;
+  top: 49%;
+  left: 50rpx;
+  transform: translateY(-50%);
+}
+.search input{
+  font-size: 30rpx;
+  padding: 10rpx 0 12rpx 80rpx;
+  background-color: #fff;
+  border-radius: 35rpx;
+}
+
+/* 热门搜索 */
+.best_recomment {
+  display: block;
+  padding: 30rpx;
+  margin-bottom: 23rpx;
+  font-size: 23rpx;
+  background-color: #fff;
+}
+.best_recomment .head,
+.other_recommend .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 27rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.best_recomment .head image,
+.other_recommend .head image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 15rpx;
+}
+
+.best_recomment .product_img {
+  width: 689rpx;
+  height: 522rpx;
+  margin-bottom: 10rpx;
+}
+
+.best_recomment .info_action {
+  display: flex;
+  align-items: center;
+}
+.best_recomment .info_action .info {
+  width: 527rpx;
+  overflow: hidden;
+}
+.best_recomment .info_action .title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.best_recomment .info_action .price {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #fa5741
+}
+
+.best_recomment .info_action .price text {
+  font-size: 25rpx;
+}
+
+.best_recomment .info_action .info view {
+  margin-top: 5rpx;
+  font-size: 23rpx;
+  color: #a8a8a8;
+}
+
+.best_recomment .info_action .place_order,
+.other_recommend .info .place_order {
+  display: inline-block;
+  width: 163rpx;
+  height: 55rpx;
+  margin: 0;
+  line-height: 55rpx;
+  text-align: center;
+  font-size: 23rpx;
+  color: #fff;
+  background-color: #ff9585;
+  border-radius: 8rpx;
+}
+
+/* 其他推荐 */
+.other_recommend {
+  padding: 30rpx;
+  font-size: 23rpx;
+  background-color: #fff;
+}
+.other_recommend .recom_item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.other_recommend .recom_item .product_img {
+  width: 190rpx;
+  height: 144rpx;
+}
+.other_recommend .recom_item .info {
+  box-sizing: border-box;
+  width: 500rpx;
+  padding-left: 29rpx;
+  color: #94989a;
+}
+.other_recommend .recom_item .title_saled {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.other_recommend .recom_item .title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #000;
+}
+.other_recommend .recom_item .description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.other_recommend .recom_item .price_button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 15rpx;
+}
+.other_recommend .recom_item .price {
+  font-size: 34rpx;
+  color: #fa5741;
+}
+.other_recommend .recom_item .price text {
+  font-size: 25rpx;
+}

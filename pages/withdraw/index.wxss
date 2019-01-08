@@ -1,0 +1,54 @@
+/* pages/withdraw/index.wxss */
+.withdraw_form {
+  display: block;
+  padding-left: 46rpx;
+  margin-top: 21rpx;
+  font-size: 27rpx;
+  background-color: #fff;
+}
+.withdraw_form navigator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35rpx 46rpx 35rpx 0;
+  border-bottom: 1rpx solid #fbfbfb;
+}
+.withdraw_form navigator view {
+  display: flex;
+  align-items: center;
+}
+
+.withdraw_form label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35rpx 46rpx 35rpx 0;
+}
+
+.withdraw_form label input{
+  width: 370rpx;
+  text-align: right;
+}
+
+.balance_n_rate {
+  display: flex;
+  justify-content: space-between;
+  padding: 23rpx 40rpx;
+  font-size: 25rpx;
+}
+
+.balance text {
+  color: #ff725c;
+}
+
+button {
+  box-sizing: border-box;
+  width: 641rpx;
+  height: 89rpx;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+  line-height: 89rpx;
+  color: #fff;
+  background-color: #00c482;
+  border-radius: 4rpx;
+}

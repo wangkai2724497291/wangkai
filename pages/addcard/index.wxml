@@ -1,0 +1,25 @@
+<!--pages/addcard/index.wxml-->
+<i-panel title="请输入银行卡信息" hide-border="true">
+  <view class='item'>
+    <text>持卡人</text>
+    <input value="{{name}}" focus placeholder="请填写银行卡的持卡人姓名" bindinput="nameInput" />
+  </view>
+  <view class='item'>
+    <text>银行卡卡号</text>
+    <input value="{{account}}" focus placeholder="请填写银行卡卡号" bindinput="accountInput" />
+  </view>
+  <!-- <i-input value="{{ name }}" title="持卡人" autofocus placeholder="请填写银行卡的持卡人姓名" bind:change="nameInput" right />
+  <i-input value="{{ account }}" type="number" title="银行卡卡号" placeholder="请填写银行卡卡号" bind:change="accountInput" right /> -->
+</i-panel>
+
+<view class='select_bank'>
+  <view class="picker_title">银行名称</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+      <i-icon type="enter" size='22' />
+    </view>
+  </picker>
+</view>
+
+<button catchtap='addCard' disabled='{{isAdding}}'>{{btnText}}</button>

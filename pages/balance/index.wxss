@@ -1,0 +1,41 @@
+/* pages/balance/index.wxss */
+.account_balance {
+  padding: 63rpx 25rpx 50rpx 40rpx;
+  margin-bottom: 70rpx;
+  overflow: hidden;
+  color: #fff;
+  background-color: #00c482;
+}
+
+.account_balance > text {
+  font-size: 29rpx;
+}
+
+.account_balance view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 75rpx;
+}
+
+.account_balance view navigator {
+  height: 52rpx;
+  padding: 0 20rpx;
+  font-size: 25rpx;
+  line-height: 52rpx;
+  color: #00c482;
+  background-color: #fff;
+  border-radius: 26rpx;
+}
+
+.withdraw {
+  display: block;
+  width: 85.6%;
+  height: 89rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 89rpx;
+  color: #fff;
+  background-color: #ff9585;
+  border-radius: 4rpx;
+}

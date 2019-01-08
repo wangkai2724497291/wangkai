@@ -1,0 +1,85 @@
+<!--pages/simAppointment/index.wxml-->
+<view class='head'>{{product.p_name}}</view>
+
+<navigator url='../address/index?from=simAppoint&id={{product.p_id}}' class='contact'>
+  <view class="contact_item">
+    <view class='info' wx:if="{{order.address.name}}">
+      <text class='name_phone'>{{order.address.name}} {{order.address.mobile}}</text>
+      <view class='addr'>
+        <i-icon type="coordinates" size="18" color="#cccccc" />
+        <text>{{order.address.address}}</text>
+      </view>
+    </view>
+    <view wx:else>点击选择地址</view>
+    <i-icon type="enter" size="24" color="#cccccc" />
+  </view>
+</navigator>
+
+<picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+  <view class='date'>
+    <view class='left_side'>
+      <i-icon type="activity" size="26" color="#09bb07" />
+      <text>上门服务日期</text>
+    </view>
+    <view class='date_right'>
+      <text>{{order.date}}</text>
+      <i-icon type="enter" size="24" color="#cccccc" />
+    </view>
+  </view>
+</picker>
+
+<picker disabled='{{order.date === ""}}' mode="multiSelector" value="{{index}}" range="{{time}}" bindchange="bindTimeChange" bindcolumnchange="timeColumnChange">
+  <view class='time' bindtap='clickTimePicker'>
+    <view class='left_side'>
+      <i-icon type="clock" size="26" color="#09bb07" />
+      <text>上门服务时间</text>
+    </view>
+    <view class='date_right'>
+      <text>{{order.time}}</text>
+      <i-icon type="enter" size="24" color="#cccccc" />
+    </view>
+  </view>
+</picker>
+
+<i-panel title="需求文字描述(非必填)">
+  <textarea placeholder='请描述您的安装/维修环境（是否有电梯等），包括是否需要携带梯子、配件或特殊工具。如果您是商家（电商或实体店），请将用户的安装地址、手机号、联系人填写准确（前面定位的地址为取货地址-如需要师傅取货）。' value='{{order.msg}}' bindinput='textareaInput'></textarea>
+</i-panel>
+
+<view class="page__bd product_uploader">
+  <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title">发布需求图片（建议多个角度拍摄）</view>
+            <view class="weui-uploader__info">{{files.length}}/4</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  <image class='delete' src='../../img/delete.png' catchtap="deleteImage" data-item='{{item}}' />
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box" wx:if="{{files.length < 4}}">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='agreement'>
+  点击立即支付即同意
+  <navigator url='/pages/agreement/index'>《购买协议》</navigator>
+</view>
+
+<view class='foot_space'></view>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button class='submit' catchtap='verify' form-type='submit'>下单找师傅</button>
+</form>

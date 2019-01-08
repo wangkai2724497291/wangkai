@@ -1,0 +1,27 @@
+<!--component/tabBar/index.wxml-->
+<view class='tab_bar_wrap'>
+  <navigator open-type='redirectTo' class='tab_item' url='/pages/index/index'>
+    <image src='/img/home-selected.png' wx:if="{{index === 1}}"></image>
+    <image src='/img/home.png' wx:else></image>
+    <text class='{{index === 1 ? "active" : null}}'>首页</text>
+  </navigator>
+  <navigator open-type='redirectTo' class='tab_item' url='/pages/allClass/index'>
+    <image src='/img/allserver-selected.png' wx:if="{{index === 2}}"></image>
+    <image src='/img/allserver.png' wx:else></image>
+    <text class='{{index === 2 ? "active" : null}}'>全部服务</text>
+  </navigator>
+  <navigator class='tab_item out_wrap' url='/pages/customized/index'>
+    <image src='/img/take-order.png'></image>
+    <text>我要下单</text>
+  </navigator>
+  <navigator open-type='redirectTo' class='tab_item' url='/pages/orders/index'>
+    <image src='/img/order-selected.png' wx:if="{{index === 4}}"></image>
+    <image src='/img/order.png' wx:else></image>
+    <text class='{{index === 4 ? "active" : null}}'>订单</text>
+  </navigator>
+  <navigator open-type='redirectTo' class='tab_item' url='/pages/user/index'>
+    <image src='/img/mine-selected.png' wx:if="{{index === 5}}"></image>
+    <image src='/img/mine.png' wx:else></image>
+    <text class='{{index === 5 ? "active" : null}}'>我的</text>
+  </navigator>
+</view>

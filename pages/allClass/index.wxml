@@ -1,0 +1,49 @@
+<!--pages/allClass/index.wxml-->
+<view class='search'>
+  <i-icon type="search" size="23" color="#9b9b9b" />
+  <input placeholder='输入您需要的服务，如：衣柜安装' confirm-type='search' bindconfirm='search'></input>
+</view>
+
+<!-- <view class='hot_search'>
+  <view class='head'>
+    <image src='../../img/hot.png' mode='aspectFit' />
+    <text>热门搜索</text>
+  </view>
+
+  <navigator wx:for="{{hotWord}}" wx:key="{{index}}" url='../search/index?keyword={{item.l_name}}'>{{item.l_name}}</navigator>
+</view> -->
+
+<view class='recommend'>
+  <!-- <view wx:for="{{serverList}}" wx:key="{{index}}" style='display: {{products[index].length ? "block" : "none"}}'>
+    <form report-submit="true" bindsubmit="formSubmit">
+      <button form-type='submit' catchtap='changeTab' class='tab {{"tab" + (index + 1)}}' data-tab='{{index + 1}}'>
+        <text>{{item.c_name}}</text>
+        <i-icon type="{{tabActive == (index + 1) ? 'packup' : 'unfold'}}" />
+      </button>
+    </form>
+    <form
+      class='tab_container'
+      report-submit="true"
+      bindsubmit="formSubmit"
+      style='height: {{tabActive == (index + 1) ? "auto;padding: 30rpx 30rpx 45rpx;" : 0}}'>
+      <button wx:for="{{products[index]}}" wx:for-index="idx" wx:key="{{idx}}" wx:for-item="product" data-id="{{product.p_id}}" data-standard="{{product.is_standard}}" bindtap='gotoProduct' form-type='submit'>{{product.p_name}}</button>
+    </form>
+  </view> -->
+  <view class='server_box' wx:for='{{serverList}}' wx:key='{{index}}'>
+    <view class='server_title'>{{item.c_name}}</view>
+    <view class='tab_container'>
+    <form
+      report-submit="true"
+      bindsubmit="formSubmit">
+      <button wx:for="{{products[index]}}" wx:for-index="idx" wx:key="{{idx}}" wx:for-item="product" data-id="{{product.p_id}}" data-standard="{{product.is_standard}}" bindtap='gotoProduct' form-type='submit'>
+        <image src='{{product.icon}}'></image>
+        <text>{{product.p_name}}</text>
+      </button>
+    </form>
+    </view>
+  </view>
+</view>
+
+<view class='foot_space'></view>
+
+<tarBar index="{{2}}"></tarBar>

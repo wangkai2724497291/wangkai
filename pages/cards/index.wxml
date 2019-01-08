@@ -1,0 +1,16 @@
+<!--pages/cards/index.wxml-->
+
+<radio-group class="radio-group" bindchange="selectBank">
+  <label class="radio" wx:for="{{banks}}" wx:key="{{index}}">
+    <!-- <image src="../../img/bank1.png" mode='aspectFit'/> -->
+    <view class='right_side'>
+      <view class='text_info'>
+        <text class='name'>{{item.bank_name}}</text>
+        <text class='account'>尾号{{item.endNum}}储蓄卡</text>
+      </view>
+      <radio value='{"name":"{{item.bank_name}}","code":"{{item.bank_code}}","end":"{{item.endNum}}"}' checked="{{item.checked}}" />
+    </view>
+  </label>
+</radio-group>
+<navigator open-type='navigateBack'>选择银行卡</navigator>
+<navigator url='/pages/addcard/index'>添加银行卡</navigator>

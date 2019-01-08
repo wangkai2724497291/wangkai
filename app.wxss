@@ -1,0 +1,34 @@
+@import 'weui.wxss';
+
+.container{
+  height: 100%;
+  width:100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+page {
+  background-color: #f9f9f9;
+}
+
+button::after {
+  border: 0;
+}
+
+.loading {
+  position: relative;
+  height: 50rpx;
+}
+
+.nomore {
+  padding: 20rpx;
+  text-align: center;
+  color: #94989a;
+  font-size: 30rpx;
+}
+
+.foot_space {
+  height: 140rpx;
+}

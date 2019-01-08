@@ -1,0 +1,29 @@
+<!--pages/address/index.wxml-->
+<view class='list'>
+  <view 
+    class='{{item.can_use ? "item" : "item unuse"}}'
+    wx:for="{{addrList}}"
+    wx:key="{{index}}"
+    id='{{item.address_id}}'
+    data-name='{{item.username}}'
+    data-mobile='{{item.mobile}}'
+    data-address='{{item.province}}{{item.city}}{{item.area}}{{item.address}}'
+    data-lat='{{item.lat}}'
+    data-lng='{{item.lng}}'
+    data-canuse='{{item.can_use}}'
+    catchtap='selectAddr'>
+    <view class='name_phone'>
+      <text class='name'>{{item.username}}</text>
+      <text class='phone'>{{item.mobile}}</text>
+    </view>
+    <view class='address'>{{item.province}}{{item.city}}{{item.area}}{{item.address}}</view>
+    <button class='edit' catchtap='edit' id='{{item.address_id}}' data-i='{{index}}'>编辑</button>
+    <button class='remove' catchtap='showModal' id='{{item.address_id}}' data-i='{{index}}'>删除</button>
+  </view>
+</view>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' bindtap='addAddr' class='add'>新增地址</button>
+</form>
+
+<view class='nomore' wx:if="{{noAddress}}">您还没有添加过任何地址</view>

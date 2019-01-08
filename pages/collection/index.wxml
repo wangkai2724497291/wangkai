@@ -1,0 +1,23 @@
+<!--pages/collection/index.wxml-->
+<view class='collections'>
+  <navigator url='{{item.status ? "../repairDetail/index?id=" + item.product_id + "&standard=" + item.is_standard : null}}' class='collection' wx:for="{{collections}}" wx:key="{{index}}">
+    <image src='{{item.icon}}'></image>
+    <view class='info'>
+      <view class='title_sale'>
+        <text class='{{item.status ? "title" : "title off_sale"}}'>{{item.p_name}}</text>
+        <!-- <text class='sale'>已售：{{item.saled || '0'}}</text> -->
+      </view>
+
+      <text class='description'>{{item.p_desc}}</text>
+
+      <view class='price_action'>
+        <text class='{{item.status ? "" : "off_sale"}}'>{{item.is_standard ? "￥" + item.product_price + "起": "师傅报价"}}</text>
+        <button class='{{item.status ? "" : "off_sale"}}' disabled='{{!item.status}}' catchtap='takeOrder' data-id='{{item.product_id}}' data-standard='{{item.is_standard}}'>{{item.status ? "立即下单" : "失效"}}</button>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<view class='loading' wx:if="{{isLoading}}"><i-spin i-class='loading_icon' fix></i-spin></view>
+
+<view class='nomore' wx:if="{{showNoMore}}">没有更多数据了</view>

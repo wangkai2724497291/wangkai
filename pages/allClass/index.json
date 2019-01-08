@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-icon": "../../extend/iview/icon/index",
+    "tarBar": "/component/tabBar/index"
+  }
+}

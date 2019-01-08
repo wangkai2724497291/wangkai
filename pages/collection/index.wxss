@@ -1,0 +1,81 @@
+/* pages/collection/index.wxss */
+.collections {
+  padding: 0 36rpx;
+}
+
+.collection {
+  box-sizing: border-box;
+  display: flex;
+  height: 213rpx;
+  padding: 32rpx 0;
+  font-size: 20rpx;
+  color: #94989a;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.collection image {
+  width: 250rpx;
+  height: 151rpx;
+}
+
+.collection .info {
+  box-sizing: border-box;
+  width: 428rpx;
+  height: 100%;
+  padding-left: 28rpx;
+}
+
+.collection .title_sale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collection .title_sale .title {
+  flex: 1;
+  font-size: 31rpx;
+  color: #000;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.collection .description {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.collection .price_action {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.collection .price_action text {
+  flex: 1;
+  font-size: 37rpx;
+  color: #fa5741;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.collection .title_sale .off_sale,
+.collection .price_action .off_sale {
+  color: #94989a;
+}
+
+.collection .price_action button {
+  width: 162rpx;
+  height: 54rpx;
+  font-size: 23rpx;
+  color: #fff;
+  line-height: 54rpx;
+  background-color: #ff9585;
+}
+
+.collection .price_action button.off_sale {
+  background-color: #eee;
+}

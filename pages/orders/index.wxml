@@ -1,0 +1,78 @@
+<!--pages/orders/index.wxml-->
+<i-tabs current="{{ current }}" color="#00c482" bindchange="tabsChange">
+  <i-tab key="tab1" title="任务"></i-tab>
+  <i-tab key="tab2" title="执行中"></i-tab>
+  <i-tab key="tab3" title="已完成"></i-tab>
+  <i-tab key="tab5" title="已取消"></i-tab>
+  <i-tab key="tab4" title="全部"></i-tab>
+</i-tabs>
+<view class='tab_container' wx:if="{{current == 'tab1'}}">
+  <navigator class='order' url='/pages/orderDetail/index?order_id={{item.order_id}}' wx:for="{{task}}" wx:key="{{index}}">
+    <view class='title_status'>
+      <text class='title'>{{item.obj_name}}</text>
+      <text class="{{item.status == 1 ? 'status' : 'status offered'}}">{{status[item.status]}}</text>
+    </view>
+    <text class='time'>服务时间: {{item.make_time}}</text>
+    <text class='address'>上门服务地址: {{item.address_info.address}}</text>
+    <!-- <view class='price_action' wx:if="{{item.status == 2}}">
+      <text class='price'>¥{{item.min_offer || 0}}</text>
+      <button catchtap='agreeAndPay' data-id='{{item.order_id}}' data-sn='{{item.order_sn}}' data-count='{{item.min_offer}}' data-standard='{{item.is_standard}}' data-cid='{{item.c_id}}'>同意报价</button>
+    </view> -->
+  </navigator>
+</view>
+
+<view class='tab_container' wx:elif="{{current == 'tab2'}}">
+  <navigator class='order' url='/pages/orderDetail/index?order_id={{item.order_id}}&tab=excuting' wx:for="{{excuting}}" wx:key="{{index}}">
+    <view class='title_status'>
+      <text class='title'>{{item.obj_name}}</text>
+      <text class="status offered">{{status[item.status]}}</text>
+    </view>
+    <text class='time'>服务时间: {{item.make_time}}</text>
+    <text class='address'>上门服务地址: {{item.address_info.address}}</text>
+  </navigator>
+</view>
+
+<view class='tab_container' wx:elif="{{current == 'tab3'}}">
+  <navigator class='order' url='/pages/orderDetail/index?order_id={{item.order_id}}&tab=completed' wx:for="{{completed}}" wx:key="{{index}}">
+    <view class='title_status'>
+      <text class='title'>{{item.obj_name}}</text>
+      <text class="status offered">{{status[item.status]}}</text>
+    </view>
+    <text class='time'>服务时间: {{item.make_time}}</text>
+    <text class='address'>上门服务地址: {{item.address_info.address}}</text>
+  </navigator>
+</view>
+
+<view class='tab_container' wx:elif="{{current == 'tab5'}}">
+  <navigator class='order' url='/pages/orderDetail/index?order_id={{item.order_id}}&tab=cancel' wx:for="{{cancel}}" wx:key="{{index}}">
+    <view class='title_status'>
+      <text class='title'>{{item.obj_name}}</text>
+      <text class="status offered">{{status[item.status]}}</text>
+    </view>
+    <text class='time'>服务时间: {{item.make_time}}</text>
+    <text class='address'>上门服务地址: {{item.address_info.address}}</text>
+  </navigator>
+</view>
+
+<view class='tab_container' wx:else="{{current == 'tab4'}}">
+  <navigator class='order' url='/pages/orderDetail/index?order_id={{item.order_id}}&tab=all' wx:for="{{allOrder}}" wx:key="{{index}}">
+    <view class='title_status'>
+      <text class='title'>{{item.obj_name}}</text>
+      <text class="{{item.status == 0 ? 'status' : 'status offered'}}">{{status[item.status]}}</text>
+    </view>
+    <text class='time'>服务时间: {{item.make_time}}</text>
+    <text class='address'>上门服务地址: {{item.address_info.address}}</text>
+    <!-- <view class='price_action' wx:if="{{item.status == 2}}">
+      <text class='price'>¥{{item.min_offer || 0}}</text>
+      <button catchtap='agreeAndPay' data-id='{{item.order_id}}' data-sn='{{item.order_sn}}' data-count='{{item.min_offer}}' data-standard='{{item.is_standard}}' data-cid='{{item.c_id}}'>同意报价</button>
+    </view> -->
+  </navigator>
+</view>
+
+<view class='loading' wx:if="{{isLoading}}"><i-spin i-class='loading_icon' fix></i-spin></view>
+
+<view class='nomore' wx:if="{{showNoMore}}">没有更多数据了</view>
+
+<view class='foot_space'></view>
+
+<tarBar index="{{4}}"></tarBar>

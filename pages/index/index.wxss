@@ -1,0 +1,224 @@
+/* pages/home/index.wxss */
+
+.location {
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  color: #fff;
+  background-color: #00c482;
+}
+.location text {
+  margin: 0 10rpx;
+  font-size: 30rpx;
+}
+
+.search {
+  box-sizing: border-box;
+  position: relative;
+  width: 750rpx;
+  padding: 28rpx;
+  overflow: hidden;
+  background-color: #00c482;
+}
+.search i-icon{
+  position: absolute;
+  top: 49%;
+  left: 50rpx;
+  transform: translateY(-50%);
+}
+.search input,
+.search text {
+  font-size: 34rpx;
+  padding: 10rpx 0 12rpx 80rpx;
+  background-color: #fff;
+  border-radius: 35rpx;
+}
+.search text {
+  display: block;
+}
+
+swiper {
+  height: 376rpx;
+}
+swiper image {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 22rpx;
+  background-color: #fff;
+}
+.menu navigator {
+  box-sizing: border-box;
+  width: 25%;
+  padding: 30rpx 0;
+  overflow: hidden;
+  text-align: center;
+}
+.menu navigator image {
+  width: 88rpx;
+  height: 88rpx;
+}
+.menu navigator text {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 23rpx;
+}
+
+.title {
+  position: relative;
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  font-weight: 700;
+  text-align: center;
+  background-color: #fff;
+}
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 32%;
+  height: 1rpx;
+  background-color: #dbdbdb;
+  transform: translateY(-50%);
+}
+.title::before {
+  left: 33rpx;
+}
+.title::after {
+  right: 33rpx;
+}
+
+.server_list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32rpx 55rpx;
+  background-color: #fff;
+}
+.server_list navigator {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 224rpx;
+  padding: 22rpx 20rpx;
+  overflow: hidden;
+  background-color: #fcfcfc;
+  text-align: right;
+  border: 1rpx solid #efefef;
+  border-radius: 7rpx;
+}
+.server_list navigator text {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.server_list navigator text:first-of-type {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.server_list navigator text:last-of-type {
+  font-size: 25rpx;
+  font-weight: 500;
+  color: #b4b4b4;
+  white-space: nowrap;
+}
+.server_list navigator image {
+  width: 70%;
+  height: 135rpx;
+  margin-top: 30rpx;
+}
+
+.get_coupon_banner {
+  width: 750rpx;
+  height: 168rpx;
+}
+
+/* 领取优惠劵 */
+.get_coupon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.get_coupon .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.get_coupon .close {
+  position: absolute;
+  top: -50rpx;
+  right: 0;
+  width: 50rpx;
+  height: 50rpx;
+}
+.get_coupon .redbag {
+  width: 473rpx;
+  height: 566rpx;
+}
+.get_coupon .content > text {
+  position: absolute;
+  top: 150rpx;
+  left: 50%;
+  font-size: 83rpx;
+  color: #FF2C2C;
+  transform: translateX(-50%);
+}
+.get_coupon .content .money_symbol {
+  font-size: 45rpx;
+}
+.get_coupon .content button {
+  width: 372rpx;
+  height: 73rpx;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #893A0F;
+  background-color: #FFDE1B;
+  border-radius: 73rpx;
+}
+
+/*认证弹窗*/
+.auth_window{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dialog_window{
+  width:80%;
+  height:125px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius:5px; 
+  z-index:1;
+  margin-top:-20px;
+}
+.auth_content{
+  height:80px;
+  text-align:center;
+  color:#626362;
+  line-height:80px;
+}
+.auth_sure{
+  height:45px;
+  text-align:center;
+  font-size:16px;
+  color:#37a923;
+  border-top:1px solid #d3d3d3;
+  line-height:40px;
+  width:100%;
+  background-color:#fff;
+}

@@ -1,0 +1,79 @@
+<!--pages/home/index.wxml-->
+<navigator url='/pages/selectCity/index' class='location'>
+  <i-icon type="coordinates_fill" size="20" color="#fff" />
+  <text>{{city}}</text>
+  <i-icon type="unfold" size="15" color="#fff" />
+</navigator>
+
+<view class='search'>
+  <i-icon type="search" size="23" color="#9b9b9b" />
+  <input placeholder='输入您需要的服务，如：衣柜安装' focus="{{false}}" confirm-type='search' bindconfirm='search' wx:if='{{auth_window_display == "none" && auth_phone_display == "none" && !showGetCoupon}}'></input>
+  <text wx:else>输入您需要的服务，如：衣柜安装</text>
+</view>
+
+<swiper indicator-dots="{{true}}"
+  indicator-color="#bcbcbc"
+  indicator-active-color="#00c482"
+  autoplay="{{true}}"
+  interval="{{3000}}">
+  <block wx:for="{{banner}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.image}}" catchtap='clickBanner' data-url="{{item.url}}" class="slide-image" mode="widthFix"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='menu'>
+  <navigator
+    wx:for="{{menu}}"
+    url="{{index == (menu.length - 1) ? '/pages/allClass/index' : '../single/index?c_id=' + item.c_id}}"
+    wx:key="{{index}}">
+    <image src="{{item.icon}}" mode="widthFix" />
+    <text>{{item.c_name}}</text>
+  </navigator>
+</view>
+
+<navigator url='/pages/getCoupon/index'>
+  <image src='/img/get-coupon.png' class='get_coupon_banner'></image>
+</navigator>
+
+<view class='title'>
+  热门服务
+</view>
+
+<view class='server_list'>
+  <navigator wx:for="{{server}}" url='../repairDetail/index?id={{item.p_id}}&standard={{item.is_standard}}' wx:key="{{index}}">
+    <text>{{item.p_name}}</text>
+    <text>{{item.p_detail}}</text>
+    <image src='{{item.icon}}'></image>
+  </navigator>
+</view>
+
+<view class='foot_space'></view>
+
+<tarBar index="{{1}}" wx:if="{{showTabBar}}"></tarBar>
+
+<view class='get_coupon' wx:if="{{showGetCoupon}}">
+  <view class='content'>
+    <image class='close' src='/img/delete.png' bintap='closeGetCoupon'></image>
+    <image class='redbag' src='/img/redbag.png'></image>
+    <text><text class='money_symbol'>￥</text>500</text>
+    <button>马上领取</button>
+  </view>
+</view>
+
+<view class="auth_window" style='display:{{auth_window_display}}'>
+  <view class="dialog_window">
+    <view class="auth_content">该页面需要先微信授权登录哦</view>
+    <button class="auth_sure" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">去授权</button>
+  </view>
+</view>
+
+<view class="auth_window" style='display:{{auth_phone_display}}'>
+  <view class="dialog_window">
+    <view class="auth_content">申请获取你微信绑定的手机号</view>
+    <form report-submit="true" bindsubmit="getFormId">
+      <button class="auth_sure" form-type='submit' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">去授权</button>
+    </form>
+  </view>
+</view>

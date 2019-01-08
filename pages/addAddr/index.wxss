@@ -1,0 +1,51 @@
+/* pages/addAddr/index.wxss */
+form {
+  display: block;
+  margin-top: 21rpx;
+}
+
+form .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 45rpx 30rpx 45rpx;
+  font-size: 27rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+form navigator.item {
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+ form view.item:last-of-type {
+  border-color: transparent;
+} 
+
+form .item text {
+  min-width:65px;
+  padding-right:10px;
+}
+
+form .item input,
+form .item > view {
+  flex: 1;
+  text-align: right;
+}
+
+.cancle,
+.submit {
+  width: 642rpx;
+  height: 89rpx;
+  margin-top: 80rpx;
+  line-height: 89rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #00c482;
+  border-radius: 4rpx;
+}
+
+.cancle {
+  margin-top: 30rpx;
+  background-color: #f74d4c;
+}

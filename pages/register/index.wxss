@@ -1,0 +1,104 @@
+/**index.wxss**/
+.register {
+  padding: 0 54rpx;
+}
+
+.col {
+  position: relative;
+  align-items: center;
+  display: flex;
+  height: 107rpx;
+  overflow: hidden;
+  line-height: 107rpx;
+  font-size: 30rpx;
+  /* border-bottom: 1rpx solid #eee; */
+}
+
+.col > text {
+  width: 185rpx;
+  text-align: right;
+}
+.col > input {
+  width: 400rpx;
+  margin-left: 15rpx;
+}
+
+.col > .smsinput,
+.col > .img_code_input {
+  width: 210rpx;
+}
+
+.col > button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* width: 150rpx; */
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+  transform: translateY(-50%);
+  background-color: #00c482;
+}
+
+.img_code_wrap {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  background-color: #000;
+  transform: translateY(-50%);
+}
+
+.regi_btn {
+  width: 641rpx;
+  height: 89rpx;
+  margin: 50rpx auto 0;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 89rpx;
+  color: #fff;
+  background-color: #00c482;
+  border-radius: 4rpx;
+}
+
+/*认证弹窗*/
+.auth_window{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dialog_window{
+  width:80%;
+  height:125px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius:5px; 
+  z-index:1;
+  margin-top:-20px;
+}
+.auth_content{
+  height:80px;
+  text-align:center;
+  color:#626362;
+  line-height:80px;
+}
+.auth_sure{
+  height:45px;
+  text-align:center;
+  font-size:16px;
+  color:#37a923;
+  border-top:1px solid #d3d3d3;
+  line-height:40px;
+  width:100%;
+  background-color:#fff;
+}

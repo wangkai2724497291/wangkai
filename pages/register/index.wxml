@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<!-- <view class="register">
+  <view class='col'>
+    <text>手机号码：</text>
+    <input type="number" placeholder='手机号码' bindinput="getPhone" />
+  </view>
+  <view class='col'>
+    <text>验证码：</text>
+    <input class='smsinput' type="number" placeholder='短信验证码' bindinput="getSmsCodeValue" />
+    <button catchtap='getSmsCode' disabled='{{!canGetSmsCode}}'>{{canGetSmsCode ? smsBtn : (count + 's')}}</button>
+  </view>
+  <view class='col'>
+    <text>图形验证码：</text>
+    <input class='img_code_input' placeholder='图形验证码' bindinput="getCodeValue" />
+    <view class='img_code_wrap'><wux-vcode bind:change="imgCodeChange" hasPoint="{{flase}}" num="{{4}}" /></view>
+  </view>
+  <form report-submit="true" bindsubmit="formSubmit">
+    <button form-type='submit' class='regi_btn' catchtap='register'>立即注册</button>
+  </form>
+</view>
+<i-message id="message" />
+
+<view class="auth_window" style='display:{{auth_window_display}}'>
+  <view class="dialog_window">
+    <view class="auth_content">该页面需要先微信授权登录哦</view>
+    <button class="auth_sure" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">去授权</button>
+  </view>
+</view> -->
+
+<!-- <view>获取到的短信验证码：{{smsCode}}</view> -->

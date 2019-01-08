@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我要下单",
+  "usingComponents": {
+    "tarBar": "/component/tabBar/index"
+  }
+}

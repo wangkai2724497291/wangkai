@@ -1,0 +1,77 @@
+/* pages/address/index.wxss */
+.list {
+  padding-left: 44rpx;
+  margin-top: 21rpx;
+  margin-bottom: 110rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.item {
+  position: relative;
+  display: block;
+  padding: 35rpx 35rpx 35rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.item:last-of-type {
+  border-color: transparent;
+}
+
+.item .name_phone {
+  margin-bottom: 10rpx;
+  color: #000;
+}
+
+.unuse .name_phone {
+  color: #a6a6a6;
+}
+
+.name {
+  display: inline-block;
+  margin-right: 30rpx;
+}
+
+.address {
+  width: 460rpx;
+  font-size: 23rpx;
+  color: #a6a6a6;
+}
+
+.edit {
+  position: absolute;
+  top: 50%;
+  right: 136rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #00c482;
+  transform: translateY(-50%);
+}
+
+.remove {
+  position: absolute;
+  top: 50%;
+  right: 20rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #f74d4c;
+  transform: translateY(-50%);
+}
+
+button.add {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #00c482;
+  border-radius: 0;
+}
+
+.i-class .i-swipeout-item {
+  padding: 35rpx 35rpx 35rpx 44rpx!important;
+}

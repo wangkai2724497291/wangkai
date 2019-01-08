@@ -1,0 +1,19 @@
+<!--pages/traceLog/index.wxml-->
+
+<view class='table_head'>
+  <text>时间</text>
+  <text class='col-30'>类型</text>
+  <text class='col-20'>发生金额</text>
+  <text>结余</text>
+</view>
+
+<view class='table_tr' wx:for="{{result}}" wx:key="{{index}}">
+  <text class='table_td'>{{item.on_time}}</text>
+  <text class='table_td col-30'>{{item.obj_type === 'profit' ? profitType[item.profit_type] : finalType[item.obj_type]}}</text>
+  <text class='table_td col-20'>{{item.fina_cash}}</text>
+  <text class='table_td'>{{item.balance}}</text>
+</view>
+
+<view class='loading' wx:if="{{isLoading}}"><i-spin i-class='loading_icon' fix></i-spin></view>
+
+<view class='nomore' wx:if="{{showNoMore}}">没有更多数据了</view>

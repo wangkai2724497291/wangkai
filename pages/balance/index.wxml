@@ -1,0 +1,10 @@
+<!--pages/balance/index.wxml-->
+<view class='account_balance'>
+  <text>账户余额(元)</text>
+  <view class='num_account'>
+    <text>{{balance}}</text>
+    <navigator url='/pages/traceLog/index'>交易流水</navigator>
+  </view>
+</view>
+
+<navigator class='withdraw' url='/pages/withdraw/index'>申请提现</navigator>

@@ -1,0 +1,47 @@
+/* component/tabBar/index.wxss */
+.tab_bar_wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 750rpx;
+  height: 118rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #F1F1F1;
+}
+.tab_bar_wrap .tab_item {
+  width: 20%;
+}
+.tab_bar_wrap .tab_item image {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  margin: 10rpx auto 5rpx;
+}
+.tab_bar_wrap .tab_item text {
+  display: block;
+  font-size: 25rpx;
+  text-align: center;
+  color: #BCBCBC;
+}
+.tab_bar_wrap .tab_item .active {
+  color: #00C482;
+}
+.tab_bar_wrap .out_wrap {
+  position: relative;
+}
+.tab_bar_wrap .out_wrap image {
+  position: absolute;
+  top: -40rpx;
+  left: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0;
+  transform: translateX(-50%);
+}
+.tab_bar_wrap .out_wrap text {
+  position: absolute;
+  bottom: 7rpx;
+  left: 0;
+  width: 100%;
+}

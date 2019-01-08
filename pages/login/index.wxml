@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+   <view class='title'>
+      <text>{{title}}</text>
+   </view>
+   <view class='account_view'>
+       <i-panel >
+         <i-input value="" title="账号" autofocus placeholder="请输入登录账号" />
+         <i-input value="" title="密码" autofocus placeholder="请输入密码" />
+       </i-panel>
+   </view>
+   <view class='login_or_regist'>
+        <button class='login_button' bindtap='login'>登录</button>
+        <button class='regist_button' bindtap='regist'>注册</button>
+   </view>
+</view>
+<i-message id="message" />
+<view class="auth_window" style='display:{{auth_window_display}}'>
+      <view class="dialog_window">
+         <view class="auth_content">该页面需要先微信授权登录哦</view>
+         <button class="auth_sure"  open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">确定</button>
+      </view>
+      <view class='auth_background' bindtap='auth_return'></view>
+</view>

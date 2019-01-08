@@ -1,0 +1,22 @@
+<!--pages/serviceCoupon/index.wxml-->
+<view class='coupon' wx:for="{{canUse}}" wx:key="{{index}}" style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;' catchtap='selectCoupon' id='{{item.record_id}}' data-price='{{item.prices}}' data-code='{{item.coupon_code}}'>
+  <view class='title_price'>
+    <text class='title'>{{item.coupon_name}}</text>
+    <view class='price'>
+      <text class='symbol'>￥</text>
+      <text>{{item.prices}}</text>
+    </view>
+  </view>
+  <view class='time'>{{item.coupon_start_time}}-{{item.coupon_end_time}}</view>
+</view>
+<view class='nomore' wx:if="{{canUse.length == 0}}">没有可用的优惠劵</view>
+<!-- <view class='coupon unuseful' wx:for="{{unUseful}}" wx:key="{{index}}" style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;'>
+  <view class='title_price'>
+    <text class='title'>{{item.coupon_name}}</text>
+    <view class='price'>
+      <text class='symbol'>￥</text>
+      <text>{{item.prices}}</text>
+    </view>
+  </view>
+  <view class='time'>{{item.coupon_start_time}}-{{item.coupon_end_time}}</view>
+</view> -->

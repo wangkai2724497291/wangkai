@@ -1,0 +1,40 @@
+<!--pages/location/index.wxml-->
+<view class='select'>
+  <view class='search_box'>
+    <navigator url='../selectCity/index' class='city_container'>
+      <text class='city'>{{city}}</text>
+      <i-icon type="unfold" color='#bcbcbc' />
+    </navigator>
+    <i-icon type="search" size='20' color='#949494' />
+    <input placeholder='搜索当前城市的地址' bindinput="searchChange" bindfocus="searchFocus" bindblur="searchBlur" />
+  </view>
+</view>
+
+<view class='loction_box' wx:if="{{!searchStatus}}">
+  <view class='title'>详细地址</view>
+  <view class='exact_addr'>
+    <text catchtap='selectLocationAddr'>{{locationAddr}}</text>
+    <view catch:tap='getLoaction'>
+      <image src='../../img/icon-location.png' mode='aspectFit' />重新定位
+    </view>
+  </view>
+</view>
+
+<view class='result' wx:if="{{result.length}}">
+  <view
+    class='item'
+    wx:for="{{result}}"
+    wx:key="{{index}}"
+    catchtap='selectAddr'
+    data-title='{{item.title}}'
+    data-province='{{item.province}}'
+    data-city='{{item.city}}'
+    data-area='{{item.district}}'
+    data-lat='{{item.location.lat}}'
+    data-lng='{{item.location.lng}}'
+    data-addr='{{item.address}}'
+    data-adcode='{{item.adcode}}'>
+    <view class='title'><i-icon type="coordinates" size='24' />{{item.title}}</view>
+    <view class='addr'>{{item.address}}</view>
+  </view>
+</view>

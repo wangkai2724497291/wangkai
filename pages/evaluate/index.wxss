@@ -1,0 +1,79 @@
+/* pages/evaluate/index.wxss */
+.evaluate {
+  box-sizing: border-box;
+  width: 705rpx;
+  padding: 50rpx 17rpx 22rpx;
+  margin: 23rpx auto 70rpx;
+  background-color: #fff;
+  border-radius: 4rpx;
+}
+.evaluate .id {
+  padding-left: 27rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.evaluate .star {
+  display: flex;
+  align-items: center;
+  padding-top: 20rpx;
+  padding-left: 27rpx;
+  font-size: 30rpx;
+}
+.evaluate .star text {
+  margin-right: 30rpx;
+}
+
+.comment_img {
+  margin-top: 40rpx;
+  background-color: #fafafa;
+  border: 1rpx solid #e4e4e4;
+  border-radius: 4rpx;
+}
+
+.comment_img textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 150rpx;
+  padding: 27rpx;
+  font-size: 26rpx;
+}
+
+.comment_img .tip {
+  display: block;
+  padding: 15rpx 27rpx;
+  font-size: 22rpx;
+}
+
+.publish {
+  width: 642rpx;
+  height: 89rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 89rpx;
+  background-color: #00c482;
+  border-radius: 4rpx;
+}
+
+.comment_img .weui-cell {
+  padding: 20rpx;
+  background-color: #fafafa;
+}
+
+.comment_img .weui-uploader__input-box,
+.comment_img .weui-uploader__img {
+  width: 196rpx;
+  height: 196rpx;
+}
+
+.comment_img .weui-uploader__file {
+  position: relative;
+}
+
+.comment_img .weui-uploader__file .delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40rpx;
+  height: 40rpx;
+}

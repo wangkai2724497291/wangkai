@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "一键找师傅",
+  "usingComponents": {
+    "i-panel": "../../extend/iview/panel/index",
+    "i-radio-group": "../../extend/iview/radio-group/index",
+    "i-radio": "../../extend/iview/radio/index",
+    "i-input-number": "../../extend/iview/input-number/index",
+    "i-icon": "../../extend/iview/icon/index"
+  }
+}

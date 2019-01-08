@@ -1,0 +1,131 @@
+/* pages/serviceDetail/index.wxss */
+.info {
+  padding: 0 36rpx 20rpx;
+  margin-bottom: 21rpx;
+  background-color: #fff;
+}
+
+.info .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rpx;
+  font-size: 22rpx;
+  color: #7f7f7f;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.info .header .status {
+  font-size: 27rpx;
+  color: #00c482;
+}
+
+.info_item {
+  padding-top: 15rpx;
+  font-size: 26rpx;
+}
+
+.info_item .type {
+  display: inline-block;
+  width: 130rpx;
+  white-space: nowrap;
+  color: #7f7f7f;
+}
+
+
+.detail {
+  padding: 0 36rpx 20rpx;
+  background-color: #fff;
+}
+.detail .header {
+  height: 114rpx;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+  line-height: 114rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.detail_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15rpx;
+  font-size: 26rpx;
+  color: #ff725c;
+}
+
+.detail_item .type {
+  color: #7f7f7f;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25rpx 54rpx;
+  font-size: 24rpx;
+  color: #66cea3;
+}
+.service image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+button {
+  width: 642rpx;
+  margin-top: 20rpx;
+  margin-bottom: 33rpx;
+  border-radius: 4rpx;
+  font-size: 30rpx;
+}
+
+.sure {
+  color: #fff;
+  background-color: #66cea3;
+}
+
+.cancel {
+  background-color: #fff;
+  border: 1rpx solid #b8b8b8;
+}
+
+.tip {
+  display: block;
+  font-size: 26rpx;
+  text-align: center;
+  color: #a7a7a7;
+}
+
+.evaluate {
+  padding: 0 36rpx 20rpx;
+  background-color: #fff;
+}
+.evaluate .header {
+  height: 114rpx;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+  line-height: 114rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.evaluate_item .star_list {
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 0 10rpx;
+  font-size: 26rpx;
+  color: #ff9454;
+}
+
+.evaluate_item .comment {
+  margin: 10rpx 0 20rpx;
+  font-size: 29rpx;
+}
+.evaluate .img_box {
+  display: flex;
+  justify-content: space-between;
+}
+.evaluate .img_box image {
+  width: 206rpx;
+  height: 124rpx;
+}

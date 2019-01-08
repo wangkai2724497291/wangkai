@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择服务地址",
+  "usingComponents": {
+    "i-icon": "../../extend/iview/icon/index"
+  }
+}

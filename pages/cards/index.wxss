@@ -1,0 +1,53 @@
+/* pages/cards/index.wxss */
+
+navigator {
+  box-sizing: border-box;
+  display: block;
+  width: 641rpx;
+  height: 89rpx;
+  margin: 30rpx auto 20rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 89rpx;
+  color: #fff;
+  background-color: #00c482;
+  border-radius: 4rpx;
+}
+
+.radio-group {
+  margin-top: 21rpx;
+  background-color: #fff;
+}
+.radio {
+  display: flex;
+  align-items: flex-start;
+  padding: 30rpx 0 0 26rpx;
+}
+
+.radio image {
+  width: 65rpx;
+  height: 65rpx;
+}
+
+.radio .right_side {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx 36rpx 30rpx;
+  border-bottom: 1rpx solid #fafafa;
+}
+
+.radio .right_side .text_info {
+  flex: 1;
+  font-size: 27rpx;
+}
+
+.radio .right_side .text_info text {
+  display: block;
+}
+
+.radio .right_side .text_info .account {
+  font-size: 21rpx;
+  color: #cacaca;
+}

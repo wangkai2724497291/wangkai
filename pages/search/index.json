@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索结果",
+  "usingComponents": {
+    "i-icon": "../../extend/iview/icon/index",
+    "i-spin": "../../extend/iview/spin/index"
+  }
+}

@@ -1,0 +1,32 @@
+<!--pages/getCoupon/index.wxml-->
+<navigator url='/pages/selectCity/index' class='location'>
+  <i-icon type="coordinates_fill" size="20" color="#fff" />
+  <text>{{city}}</text>
+  <i-icon type="unfold" size="15" color="#fff" />
+  <text class='info'>以下的券适用于当前区域</text>
+</navigator>
+
+<view class='first_time_tip'>
+  <text>您的新人专属红包尚未领取</text>
+  <i-icon type="enter" size="12" color="#d99f4b" />
+</view>
+
+<view class='coupon' style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;'>
+  <view class='info_n_action'>
+    <view class='title_n_price'>
+      <view class='title'>优惠券名称，最多两行展示，太长用优惠券名称，最多两行展示，太长用</view>
+      <view class='price'>
+        <text class='symbol'>￥</text>
+        <text>3388.88</text>
+      </view>
+    </view>
+    <view class='action'>
+      <text>免费领取</text>
+      <button>我要购买</button>
+    </view>
+  </view>
+  <view class='filter_n_time'>
+    <text class='filter'>满10元可用</text>
+    <text class='time'>2019.01.02-2019.03.03</text>
+  </view>
+</view>

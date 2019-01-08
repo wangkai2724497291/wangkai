@@ -1,0 +1,38 @@
+/* pages/recommender/index.wxss */
+
+.form {
+  padding-left: 47rpx;
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.form_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  padding-right: 47rpx;
+}
+
+.form_item input {
+  flex: 1;
+  text-align: right;
+}
+
+.tip {
+  padding: 27rpx 0 0 55rpx;
+  font-size: 25rpx;
+  color: #919191;
+}
+
+.save_btn {
+  width: 642rpx;
+  height: 89rpx;
+  margin-top: 127rpx;
+  font-size: 29rpx;
+  color: #fff;
+  line-height: 89rpx;
+  background-color: #00c482;
+  border-radius: 3rpx;
+}

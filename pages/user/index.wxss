@@ -1,0 +1,143 @@
+/* pages/user/index.wxss */
+
+/* 头像、我的订单 */
+.avatar_container {
+  box-sizing: border-box;
+  height: 286rpx;
+  padding-top: 45rpx;
+  text-align: center;
+}
+.avatar_container image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.avatar_container text {
+  display: block;
+}
+
+/* 订单 */
+.order {
+  position: relative;
+  display: block;
+  margin-bottom: 21rpx;
+  font-size: 0;
+  background-color: #fff;
+}
+.order_title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  padding: 15rpx 36rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: linear-gradient(to right,#00c482,#00abc4);
+  border-radius: 30rpx;
+  transform: translate(-50%, -50%);
+}
+.order navigator,
+.order .goto_order {
+  position: static;
+  display: inline-block;
+  width: 20%;
+  padding: 46rpx 0;
+  font-size: 24rpx;
+  text-align: center;
+  vertical-align: top;
+  background-color: #fff;
+  line-height: normal;
+  border-radius: 0;
+}
+.order .goto_order image,
+.order navigator image {
+  width: 46rpx;
+  height: 46rpx;
+}
+.order .goto_order text,
+.order navigator text {
+  display: block;
+  color: #575757;
+}
+
+/* 账户信息 */
+.info {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 192rpx;
+  padding: 27rpx 32rpx;
+  margin-bottom: 21rpx;
+  background-color: #fff;
+}
+.info navigator {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 221rpx;
+  height: 100%;
+  background-color: #fcfcfc;
+  border: 1rpx solid #efefef;
+}
+.info navigator text {
+  font-size: 30rpx;
+  color: #ff725c;
+  text-align: center;
+}
+.info navigator .title {
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  color: #343535;
+}
+
+/* 联系客服 */
+.menu_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 40rpx;
+  margin-bottom: 21rpx;
+  line-height: normal;
+  background-color: #fff;
+  font-size: 27rpx;
+}
+.menu_item image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.menu_item view:first-of-type {
+  display: flex;
+  align-items: center;
+}
+
+/* 推荐测试按钮 */
+.recomment {
+  display: block;
+  height: 100rpx;
+  font-size: 27rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+}
+
+/* 二维码 */
+.qrcode {
+  margin-top: 52rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.qrcode image {
+  width: 313rpx;
+  height: 313rpx;
+}
+
+.qrcode view {
+  font-size: 25rpx;
+  color: #161823;
+}

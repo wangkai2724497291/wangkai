@@ -1,0 +1,43 @@
+/* pages/serviceCoupon/index.wxss */
+.coupon {
+  width: 724rpx;
+  height: 180rpx;
+  margin: 23rpx auto 0;
+}
+
+.coupon .title_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 128rpx;
+  padding: 0 50rpx;
+}
+
+.coupon .title_price .title {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.coupon .title_price .price {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 46rpx;
+  color: #ff3a48;
+}
+
+.coupon .title_price .price .symbol {
+  font-size: 30rpx;
+}
+
+.coupon .time {
+  height: 48rpx;
+  padding-left: 42rpx;
+  line-height: 48rpx;
+  font-size: 20rpx;
+  color: #666;
+}
+
+.unuseful .title,
+.unuseful .title_price .price {
+  color: #eee;
+}

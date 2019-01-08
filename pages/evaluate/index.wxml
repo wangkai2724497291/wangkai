@@ -1,0 +1,65 @@
+<!--pages/evaluate/index.wxml-->
+<view class='evaluate'>
+  <view class='id'>订单：{{order.order_sn}}</view>
+
+  <view class='star'>
+    <text>专业技能</text>
+    <i-rate bind:change="starChange1" value="{{starIndex1}}" size="28">
+      {{starIndex1}}星
+    </i-rate>
+  </view>
+
+  <view class='star'>
+    <text>服务态度</text>
+    <i-rate bind:change="starChange2" value="{{starIndex2}}" size="28">
+      {{starIndex2}}星
+    </i-rate>
+  </view>
+
+  <view class='star'>
+    <text>服务时效</text>
+    <i-rate bind:change="starChange3" value="{{starIndex3}}" size="28">
+      {{starIndex3}}星
+    </i-rate>
+  </view>
+
+  <view class='comment_img'>
+    <textarea placeholder='说说您对服务人员的一些评价，可选填！' value='{{msg}}' bindinput='textareaInput'></textarea>
+
+    <view class="page__bd">
+      <view class="weui-cells">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title"></view>
+                <view class="weui-uploader__info">{{files.length}}/3</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for="{{files}}" wx:key="*this">
+                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                      <image class='delete' src='../../img/delete.png' catchtap="deleteImage" data-item='{{item}}' />
+                    </view>
+                  </block>
+                </view>
+                <view class="weui-uploader__input-box" wx:if="{{files.length < 3}}">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <text class='tip'>最多上传三张图片</text>
+  </view>
+</view>
+
+<form report-submit="true" bindsubmit="formSubmit">
+  <button form-type='submit' class='publish' bindtap="publish" disabled='{{isPublishing}}'>发布</button>
+</form>
+
+<view class='foot_space'></view>

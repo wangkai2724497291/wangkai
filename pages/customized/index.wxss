@@ -1,0 +1,50 @@
+/* pages/customized/index.wxss */
+.title {
+  display: block;
+  padding: 10rpx 0 10rpx 30rpx;
+  padding-left: 30rpx;
+  font-size: 29rpx;
+  color: #757575;
+}
+
+.list {
+  padding: 28rpx 0 60rpx 30rpx;
+  background-color: #fff;
+}
+
+.list text {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 55rpx;
+  padding: 0 20rpx;
+  margin-right: 24rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #8e8e8e;
+  line-height: 50rpx;
+  border: 1rpx solid #8e8e8e;
+  border-radius: 8rpx;
+}
+
+.list .active {
+  color: #44d4a3;
+  border-color: #44d4a3;
+}
+
+button {
+  box-sizing: border-box;
+  width: 641rpx;
+  height: 89rpx;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+  line-height: 89rpx;
+  color: #fff;
+  background-color: #00c482;
+  border-radius: 4rpx;
+}
+
+.tip {
+  padding: 50rpx 40rpx 120rpx;
+  font-size: 26rpx;
+  color: #a4a4a4;
+}

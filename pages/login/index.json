@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+      "i-button": "../../extend/iview/button/index",
+      "i-input": "../../extend/iview/input/index",
+      "i-panel": "../../extend/iview/panel/index",
+      "i-message": "../../extend/iview/message/index"
+    }
+}

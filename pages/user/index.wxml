@@ -1,0 +1,88 @@
+<!--pages/user/index.wxml-->
+<!-- 头像、我的订单 -->
+<view class='avatar_container'>
+  <image src='{{avatar}}'></image>
+  <text>{{nickName}}</text>
+</view>
+
+<!-- 订单 -->
+<view class='order' report-submit="true" bindsubmit="formSubmit">
+  <text class='order_title'>我的订单</text>
+  <navigator open-type="switchTab" url='/pages/orders/index'>
+    <image src="../../img/order-icon1.png"></image>
+    <text>任务</text>
+  </navigator>
+  <view class='goto_order' bindtap='gotoOrder' data-type='excuting'>
+    <image src="../../img/order-icon2.png"></image>
+    <text>执行中</text>
+  </view>
+  <view class='goto_order' bindtap='gotoOrder' data-type='completed'>
+    <image src="../../img/order-icon3.png"></image>
+    <text>已完成</text>
+  </view>
+  <view class='goto_order' bindtap='gotoOrder' data-type='cancel'>
+    <image src="../../img/order-icon4.png"></image>
+    <text>已取消</text>
+  </view>
+  <view class='goto_order' bindtap='gotoOrder' data-type='all'>
+    <image src="../../img/order-icon5.png"></image>
+    <text>全部</text>
+  </view>
+</view>
+
+<!-- 账户信息 -->
+<view class='info'>
+  <navigator url='/pages/balance/index?balance={{userInfo.balance}}'>
+    <text class='title'>账户余额</text>
+    <text>¥{{userInfo.balance ? userInfo.balance : '0.00'}}</text>
+  </navigator>
+  <navigator url='/pages/coupon/index'>
+    <text class='title'>可用优惠券</text>
+    <text>{{couponNum}}</text>
+  </navigator>
+  <navigator url='/pages/collection/index'>
+    <text class='title'>我的收藏</text>
+    <text>{{collecitionNum}}</text>
+  </navigator>
+</view>
+
+<navigator url="/pages/genCode/index" class='menu_item'>
+  <text>{{generalization.status === 1 ? '我的' : '申请'}}推广码</text>
+  <i-icon type="enter" size="18" color="#cccccc" />
+</navigator>
+
+<navigator url="/pages/genStream/index" class='menu_item' wx:if="{{generalization.status === 1}}">
+  <text>推广明细</text>
+  <i-icon type="enter" size="18" color="#cccccc" />
+</navigator>
+
+<navigator url="/pages/recommender/index" class='menu_item'>
+  <text>推荐人</text>
+  <i-icon type="enter" size="18" color="#cccccc" />
+</navigator>
+
+<!-- 联系客服 -->
+<view class='menu_item contact' bindtap='phoneCall'>
+  <view>
+    <!-- <image src='../../img/service.png'></image> -->
+    <text>联系客服</text>
+  </view>
+  <view class='phone'>{{serviceTel}}</view>
+</view>
+
+<view class='qrcode' wx:if="{{generalization.status === 1}}">
+  <image src='{{generalization.qrcode}}' bindtap='previewImage'></image>
+  <view>我的二维码</view>
+</view>
+
+<view class='foot_space'></view>
+
+<tarBar index="{{5}}"></tarBar>
+
+<!-- <button class='menu_item'>
+  <text>推荐人</text>
+  <view class='phone'><i-icon type="enter" size="18" color="#cccccc" /></view>
+</button> -->
+
+<!-- 退出登录 -->
+<!-- <navigator url='/pages/register/index?data=2HYgJkCvuYhjyf6BlN3H6A==' class='recomment'>推荐测试按钮，未测试该部分的请忽略</navigator> -->

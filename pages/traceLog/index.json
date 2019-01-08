@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "交易流水",
+  "usingComponents": {
+    "i-spin": "../../extend/iview/spin/index"
+  }
+}

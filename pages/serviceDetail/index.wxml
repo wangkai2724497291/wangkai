@@ -1,0 +1,53 @@
+<!--pages/serviceDetail/index.wxml-->
+<view class='info'>
+  <view class='header'>
+    <text>订单号：{{orderInfo.id}}</text>
+    <text class='status'>{{orderInfo.status}}</text>
+  </view>
+
+  <view class='info_item'><text class='type'>服务类型：</text><text>{{orderInfo.title}}</text></view>
+  <view class='info_item'><text class='type'>服务时间：</text><text>{{orderInfo.time}}</text></view>
+  <view class='info_item'><text class='type'>联系人：</text><text>{{orderInfo.name}}</text></view>
+  <view class='info_item'><text class='type'>联系电话：</text><text>{{orderInfo.phone}}</text></view>
+  <view class='info_item'><text class='type'>服务地址：</text><text>{{orderInfo.address}}</text></view>
+</view>
+
+<view class='detail'>
+  <view class='header'>
+    订单明细
+  </view>
+
+  <view class='detail_item'><text class='type'>服务价格</text><text>￥{{orderInfo.price}}</text></view>
+  <view class='detail_item'><text class='type'>优惠券</text><text>￥{{orderInfo.coupon}}</text></view>
+  <view class='detail_item'><text class='type'>已付金额</text><text>￥{{orderInfo.pay}}</text></view>
+</view>
+
+<view class='service'>
+  <image src='../../img/service2.png'></image>
+  <text>联系客服</text>
+</view>
+
+<button class='sure'>支付差价</button>
+<button class='cancel'>取消订单</button>
+
+<text class='tip'>若48小时未确认完成，系统将自动确认完成！</text>
+
+<view class='evaluate'>
+  <view class='header'>
+    评价
+  </view>
+
+  <view class='evaluate_item'  wx:for="{{evaluateInfo}}" wx:key="{{index}}">
+    <view class='star_list'>
+      <text>专业技能：{{item.star1}}星</text>
+      <text>服务态度：{{item.star2}}星</text>
+      <text>服务时效：{{item.star3}}星</text>
+    </view>
+
+    <view class='comment'>{{item.comment}}</view>
+
+    <view class='img_box'>
+      <image wx:for="{{item.imgUrls}}" wx:for-index="idx" wx:for-item="url" wx:key="{{idx}}" src="{{url}}" bindtap="previewImage" id="{{url}}" data-urls='{{item.imgUrls}}'></image>
+    </view>
+  </view>
+</view>
