@@ -164,7 +164,6 @@ Page({
             wx.hideLoading()
             wx.showToast({
               title: '保存图片成功，请前往系统相册查看！',
-              icon: 'none',
               duration: 2000
             })
           },

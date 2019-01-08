@@ -21,7 +21,7 @@
 </view>
 
 <form report-submit="true" bindsubmit="formSubmit">
-<button form-type='submit' catchtap='gotoSimAppointment' wx:if="{{thirdIndex}}">我要下单</button>
+  <button form-type='submit' catchtap='gotoSimAppointment' wx:if="{{thirdIndex}}">我要下单</button>
 </form>
 
 <view class='tip'>“师傅报价”模式是根据您发布的订单服务内容推送给拥有该类专业技能的师傅，由专业师傅对您的订单进行评估报价，系统将给您推荐服务最好、价格最优的师傅报价。</view>
