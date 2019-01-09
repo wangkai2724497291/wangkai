@@ -2,6 +2,7 @@
 var app = getApp()
 var path = require('../../utils/api.js');
 var wxRequest = require('../../utils/wxRequest.js')
+import config from '../../utils/config.js'
 Page({
 
   /**
@@ -300,7 +301,12 @@ Page({
         filePath: files[success],
         name: 'orderImage' + (success + 1),
         formData: {
-          'file_name': 'orderImage' + (success + 1)
+          'file_name': 'orderImage' + (success + 1),
+          'token': wx.getStorageSync('token')
+        },
+        header: {
+          'content-type': 'application/json',
+          'app-ver': config.getVersion
         },
         success: function(res) {
           // console.log(res)
