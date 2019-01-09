@@ -79,13 +79,14 @@ Page({
     this.setData({
       order: app.globalData.pageAppointment
     }, () => {
-      if (JSON.stringify(this.data.product) == '{}') return
-      if (JSON.stringify(this.data.order) == '{}') return
-      this.setData({
-        serverPrice: parseFloat((this.data.product.sku.sale_price * this.data.order.count).toFixed(2)),
-        totalPrice: parseFloat((this.data.product.sku.sale_price * this.data.order.count - this.data.order.coupon.count).toFixed(2))
-      })
+      if (this.data.product.sku !== undefined && this.data.order.count !== undefined) {
+        this.setData({
+          serverPrice: parseFloat((this.data.product.sku.sale_price * this.data.order.count).toFixed(2)),
+          totalPrice: parseFloat((this.data.product.sku.sale_price * this.data.order.count - this.data.order.coupon.count).toFixed(2))
+        })
+      }
     })
+
   },
 
   /**

@@ -33,9 +33,9 @@
   </navigator>
 </view>
 
-<navigator url='/pages/getCoupon/index'>
+<!-- <navigator url='/pages/getCoupon/index'>
   <image src='/img/get-coupon.png' class='get_coupon_banner'></image>
-</navigator>
+</navigator> -->
 
 <view class='title'>
   热门服务

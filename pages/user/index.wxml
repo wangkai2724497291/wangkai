@@ -56,10 +56,10 @@
   <i-icon type="enter" size="18" color="#cccccc" />
 </navigator>
 
-<navigator url="/pages/recommender/index" class='menu_item'>
+<!-- <navigator url="/pages/recommender/index" class='menu_item'>
   <text>推荐人</text>
   <i-icon type="enter" size="18" color="#cccccc" />
-</navigator>
+</navigator> -->
 
 <!-- 联系客服 -->
 <view class='menu_item contact' bindtap='phoneCall'>
