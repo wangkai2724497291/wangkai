@@ -1,5 +1,9 @@
 <!--pages/serviceCoupon/index.wxml-->
+<<<<<<< HEAD
 <view class='coupon' wx:for="{{canUse}}" wx:key="{{index}}" style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;' catchtap='selectCoupon' id='{{item.record_id}}' data-price='{{item.prices}}' data-code='{{item.coupon_code}}'>
+=======
+<view class='coupon' wx:for="{{canUse}}" wx:key="{{index}}" style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;' catchtap='selectCoupon' id='{{item.record_id}}' data-price='{{item.prices}}' data-code='{{item.coupon_code}}' data-couponid='{{item.coupon_id}}'>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   <view class='title_price'>
     <text class='title'>{{item.coupon_name}}</text>
     <view class='price'>
@@ -7,7 +11,15 @@
       <text>{{item.prices}}</text>
     </view>
   </view>
+<<<<<<< HEAD
   <view class='time'>{{item.coupon_start_time}}-{{item.coupon_end_time}}</view>
+=======
+  <view class='condition_n_time'>
+    <view class='condition' wx:if='{{item.coupon_condition == "0.00"}}'>不限</view>
+    <view class='condition' wx:else>满￥{{item.coupon_condition}}可用</view>
+    <view class='time'>{{item.coupon_start_time}}-{{item.coupon_end_time}}</view>
+  </view>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 </view>
 <view class='nomore' wx:if="{{canUse.length == 0}}">没有可用的优惠劵</view>
 <!-- <view class='coupon unuseful' wx:for="{{unUseful}}" wx:key="{{index}}" style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;'>

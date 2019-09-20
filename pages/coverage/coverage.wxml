@@ -1,0 +1,22 @@
+<picker bindchange="changeRegin" mode = "region" value="{{region}}">
+  <view class='date'>
+    <view class='left_side'>
+      <i-icon type="coordinates" size="22" color="#363943" />
+      <text>选择服务区域</text>
+    </view>
+    <i-icon type="enter" size="24" color="#cccccc" />
+    
+  </view>
+  <view class='date_right' class="{{region.length?'show':'hide'}}">
+      <text>{{region[0]}} {{region[1]}} {{region[2]}}</text>
+    </view>
+</picker>
+
+<view class='hint'>
+  <view >服务提示</view>
+  <view>服务区域只能选择一个，一旦选择将无法更改！</view>
+</view>
+
+<view class='confirm' style='{{region.length?"":"display:none"}}'>
+  <button bindtap='cancelOrder'>确定</button>
+</view>

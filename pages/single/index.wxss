@@ -6,7 +6,12 @@
   position: relative;
   width: 750rpx;
   padding: 28rpx;
+<<<<<<< HEAD
   background-color: #00c482;
+=======
+  /* background-color: #00c482; */
+  background: #fff;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 .search i-icon{
   position: absolute;
@@ -19,6 +24,10 @@
   padding: 10rpx 0 12rpx 80rpx;
   background-color: #fff;
   border-radius: 35rpx;
+<<<<<<< HEAD
+=======
+  background: #F5F5F5;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 
 /* 热门搜索 */
@@ -88,11 +97,31 @@
   line-height: 55rpx;
   text-align: center;
   font-size: 23rpx;
+<<<<<<< HEAD
   color: #fff;
   background-color: #ff9585;
   border-radius: 8rpx;
 }
 
+=======
+  color: black;
+  background-color: #FFB100;
+  border-radius: 8rpx;
+}
+.place_orders{
+  display: inline-block;
+  width: 180rpx;
+  height: 72rpx;
+  margin: 0;
+  line-height: 72rpx;
+  text-align: center;
+  font-size: 23rpx;
+  color: black;
+  background-color: #FFB100;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+}
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 /* 其他推荐 */
 .other_recommend {
   padding: 30rpx;

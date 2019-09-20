@@ -4,7 +4,11 @@ var wxRequest = require('../../utils/wxRequest.js')
 var { isRegister } = require('../../models/isRegister.js')
 var app = getApp()
 Page({
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   /**
    * 页面的初始数据
    * 已取消订单是二期加入的，为了不动之前的代码，cancel对应的是currentPage5和totalPage5
@@ -24,7 +28,11 @@ Page({
     totalPage5: 1,
     pageSize: 10,
     showNoMore: false,
+<<<<<<< HEAD
     status: ['新增', '待报价', '已报价', '待确认', '待上门', '服务中', '服务完成', '已完成', '已评价', '已取消'],
+=======
+    status: ['新增', '待报价', '已报价', '待确认', '待上门', '服务中', '服务完成', '已完成', '已评价', '已取消', '已上门'],
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     task: [],
     excuting: [],
     completed: [],
@@ -51,7 +59,11 @@ Page({
    */
   onShow: function () {
     if (wx.getStorageSync('token')) {
+<<<<<<< HEAD
       if (!isRegister(app.globalData.isRegister, '该页面需要授权手机号！')) return
+=======
+      if (!isRegister(app.globalData.isRegister, '该页面需要授权手机号\n前往首页点击授权登录！')) return
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     }
     var tab = '', page, status, isStandard
     this.setData({
@@ -71,11 +83,19 @@ Page({
       allOrder: [],
       cancel: []
     }, () => {
+<<<<<<< HEAD
+=======
+      console.log(app)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       if (app.globalData.orderType != '') {
         if (app.globalData.orderType == 'excuting') {
           tab = 'tab2'
           page = this.data.currentPage2
+<<<<<<< HEAD
           status = '-1,3,4,5,6'
+=======
+          status = '-1,3,4,5,6,-5'
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
           isStandard = null
         } else if (app.globalData.orderType == 'completed') {
           tab = 'tab3'
@@ -157,7 +177,11 @@ Page({
           status = '-1,1,2'
           isStandard = -1
         } else if (that.data.current == 'tab2') {
+<<<<<<< HEAD
           status = '-1,3,4,5,6'
+=======
+          status = '-1,3,4,5,6,-5'
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
           isStandard = null
           page = this.data.currentPage2
         } else if (that.data.current == 'tab3') {
@@ -194,7 +218,11 @@ Page({
         page = this.data.currentPage1
         totalPage = this.data.totalPage1
       } else if (this.data.current == 'tab2') {
+<<<<<<< HEAD
         status = '-1,3,4,5,6'
+=======
+        status = '-1,3,4,5,6,-5'
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         isStandard = null
         page = this.data.currentPage2
         totalPage = this.data.totalPage2
@@ -230,6 +258,12 @@ Page({
 
   // tab切换
   tabsChange({ detail }) {
+<<<<<<< HEAD
+=======
+    console.log(this)
+    console.log(detail)
+    console.log({detail})
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     if (!this.data.isLoading) {/* 加载数据时禁止切换tab */
       var status, page, isStandard
       if (detail.key == 'tab1') {//全部非标准订单
@@ -237,7 +271,11 @@ Page({
         isStandard = -1
         page = this.data.currentPage1
       } else if (detail.key == 'tab2') {//标准产品的订单（新增，待确认，待上门，服务中，服务完成）
+<<<<<<< HEAD
         status = '-1,3,4,5,6'
+=======
+        status = '-1,3,4,5,6,-5'
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         isStandard = null
         page = this.data.currentPage2
       } else if (detail.key == 'tab3') {//历史已完成订单（已完成，已评价）
@@ -266,13 +304,28 @@ Page({
 
   getOrders: function (page, status, isStandard, stopRefresh) {
     var that = this
+<<<<<<< HEAD
     var getOrders = wxRequest.postRequest(path.getOrders(), {
       page: page,
       page_size: this.data.pageSize,
+=======
+    console.log(page)
+    console.log(this.data.pageSize)
+    console.log(status)
+    console.log(this.data.status)
+    console.log(isStandard)
+    var getOrders = wxRequest.postRequest(path.getOrders(), {
+      page: page,
+      page_size:200, //this.data.pageSize,
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       status: status,
       is_standard: isStandard
     });
     getOrders.then(res => {
+<<<<<<< HEAD
+=======
+      console.log(res)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       if (res.data.status) {
         var totalPage = Math.ceil(res.data.data.count / that.data.pageSize)
         var orderList = res.data.data.order_info
@@ -285,7 +338,11 @@ Page({
             totalPage1: totalPage,
             currentPage1: page + 1
           })
+<<<<<<< HEAD
         } else if (status == '-1,3,4,5,6') {
+=======
+        } else if (status == '-1,3,4,5,6,-5') {
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
           that.setData({
             excuting: [...that.data.excuting, ...orderList],
             totalPage2: totalPage,

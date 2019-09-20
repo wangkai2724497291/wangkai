@@ -93,6 +93,99 @@ textarea {
   background-color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+/* 四、五级 */
+.fourth_box {
+  padding: 30rpx 0;
+  font-size:30rpx;
+}
+
+.fourth_list {
+  padding-right: 30rpx;
+  padding-bottom: 20rpx;
+  margin-bottom: 21rpx;
+  margin-left: 40rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.fourth_list:last-of-type {
+  border-color: transparent;
+}
+
+.fourth_list > text {
+  display: block;
+  margin-bottom: 15rpx;
+}
+
+.fourth_list .four_title {
+  margin-bottom: 15rpx;
+}
+
+.fourth_list .four_title > text {
+  font-size: 30rpx;
+}
+
+.fourth_list .list text {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 55rpx;
+  padding: 0 20rpx;
+  margin-right: 24rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #8e8e8e;
+  line-height: 50rpx;
+  border: 1rpx solid #8e8e8e;
+  border-radius: 8rpx;
+}
+
+.fourth_list .list .active {
+  color: #44d4a3;
+  border-color: #44d4a3;
+}
+/* .labels {
+  padding:36rpx;
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.labels .title {
+  display: block;
+  margin-bottom: 10rpx;
+  color: #000;
+}
+
+.labels .fourth_list {
+  margin-bottom: 25rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.labels .fourth_list:last-of-type {
+  border-color: transparent;
+}
+
+.labels .fifth_list {
+  padding-bottom: 30rpx;
+}
+
+.labels .fifth_list > text {
+  padding: 16rpx 30rpx;
+  margin-right: 13rpx;
+  margin-bottom: 10rpx;
+  font-size: 23rpx;
+  color: #181818;
+  background-color: #F9F9F9;
+  border-radius: 3rpx;
+}
+
+.labels .fifth_list > .active {
+  color: #fff;
+  background-color: #00C482;
+} */
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 /* 协议 */
 .agreement {
   padding: 30rpx;
@@ -117,6 +210,7 @@ textarea {
   border-top: 1rpx solid #f9f9f9;
   opacity: 1;
   background-color: #fff;
+<<<<<<< HEAD
 }
 .foot view {
   flex: 1;
@@ -142,6 +236,76 @@ textarea {
 .foot button {
   width: 288rpx;
   height: 100%;
+=======
+  z-index: 100;
+}
+
+.foot .cart_n_price {
+  display: flex;
+  width: 410rpx;
+  height: 100%;
+}
+
+.foot .cart_n_price .origin_price {
+  width: 290rpx;
+  padding-right: 10rpx;
+  font-size: 29rpx;
+  line-height: 118rpx;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.foot .cart_n_price .origin_price text {
+  color: #FF4949;
+}
+.foot navigator {
+  position: relative;
+  width: 120rpx;
+  height: 118rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+.foot navigator text {
+  position: absolute;
+  top: 9rpx;
+  left: 65rpx;
+  width: 33rpx;
+  height: 33rpx;
+  font-size:20rpx;
+  color: #fff;
+  background: rgba(255, 27, 54, 1);
+  border-radius: 50%;
+}
+
+.foot navigator image {
+  width: 41rpx;
+  height: 41rpx;
+  margin-top: 20rpx;
+}
+
+.foot navigator view {
+  display: block;
+  font-size: 23rpx;
+  color: #777;
+}
+
+
+.foot .add_shopcart {
+  width: 170rpx;
+  height: 100%;
+  padding: 0;
+  font-size: 29rpx;
+  color: #555;
+  line-height: 118rpx;
+  background-color: #FFC540;
+  border-radius: 0;
+}
+.foot .sbumit {
+  width: 170rpx;
+  height: 100%;
+  padding: 0;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   font-size: 29rpx;
   color: #fff;
   line-height: 118rpx;

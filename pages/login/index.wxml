@@ -4,11 +4,20 @@
       <text>{{title}}</text>
    </view>
    <view class='account_view'>
+<<<<<<< HEAD
        <i-panel >
          <i-input value="" title="账号" autofocus placeholder="请输入登录账号" />
          <i-input value="" title="密码" autofocus placeholder="请输入密码" />
        </i-panel>
    </view>
+=======
+       <i-panel>
+         <i-input value="" title="账号" maxlength='15' placeholder="请输入登录账号" />
+         <i-input value="" title="密码" maxlength='15' placeholder="请输入密码" />
+       </i-panel>
+   </view>
+   
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
    <view class='login_or_regist'>
         <button class='login_button' bindtap='login'>登录</button>
         <button class='regist_button' bindtap='regist'>注册</button>

@@ -1,5 +1,6 @@
 <!--pages/home/index.wxml-->
 <navigator url='/pages/selectCity/index' class='location'>
+<<<<<<< HEAD
   <i-icon type="coordinates_fill" size="20" color="#fff" />
   <text>{{city}}</text>
   <i-icon type="unfold" size="15" color="#fff" />
@@ -14,15 +15,43 @@
 <swiper indicator-dots="{{true}}"
   indicator-color="#bcbcbc"
   indicator-active-color="#00c482"
+=======
+  <i-icon type="coordinates" size="18" color="#363943" />
+  <text>{{city}}</text>
+  <i-icon type="unfold" size="15" color="#363943" />
+</navigator>
+
+<!-- <navigator url='/pages/camera/camera' class='camera'>
+  <text>监控</text>
+</navigator> -->
+
+<view class='search'>
+  <i-icon type="search" size="23" color="#9b9b9b" />
+  <input placeholder='如：衣柜安装' focus="{{false}}" confirm-type='search' bindconfirm='search' wx:if='{{auth_window_display == "none" && auth_phone_display == "none" && !showGetCoupon}}'></input>
+  <text wx:else>输入您需要的服务，如：衣柜安装</text>
+</view>
+<view class='code' bindtap='getScancode'><image src='/img/code.png'></image></view>
+
+<swiper indicator-dots="{{true}}"
+  indicator-color="rgba(0,0,0,0.2)"
+  indicator-active-color="#fff"
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   autoplay="{{true}}"
   interval="{{3000}}">
   <block wx:for="{{banner}}" wx:key="{{index}}">
     <swiper-item>
+<<<<<<< HEAD
       <image src="{{item.image}}" catchtap='clickBanner' data-url="{{item.url}}" class="slide-image" mode="widthFix"/>
+=======
+    <!-- <navigator url='/pages/orders/index'> -->
+      <image src="{{item.image}}" catchtap='clickBanner' data-url="{{item.url}}" class="slide-image" mode="widthFix"/>
+    <!-- </navigator> -->
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     </swiper-item>
   </block>
 </swiper>
 
+<<<<<<< HEAD
 <view class='menu'>
   <navigator
     wx:for="{{menu}}"
@@ -31,12 +60,25 @@
     <image src="{{item.icon}}" mode="widthFix" />
     <text>{{item.c_name}}</text>
   </navigator>
+=======
+
+<view class='menu1'>
+  <view class='menu2' bindtap="onLaunch">
+    <navigator wx:for="{{serverList}}" wx:key="index" url='{{(storage)?((index == (serverList.length - 1))?"/pages/allClass/index":"../single/index?c_id="+item.c_id+"&c_name="+item.c_name):""}}'>
+      <view class='menu3'>
+        <image src='{{item.icon}}'></image>
+        <view class='typeface'>{{item.c_name}}</view>
+      </view>
+    </navigator>
+  </view>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 </view>
 
 <!-- <navigator url='/pages/getCoupon/index'>
   <image src='/img/get-coupon.png' class='get_coupon_banner'></image>
 </navigator> -->
 
+<<<<<<< HEAD
 <view class='title'>
   热门服务
 </view>
@@ -48,6 +90,156 @@
     <image src='{{item.icon}}'></image>
   </navigator>
 </view>
+=======
+
+<view class='incorporate'>
+  <view class='install_s'>
+    <view class='install'>
+      <view class='title1'>
+        热门服务
+      </view>
+    </view>
+  </view>
+ 
+  <navigator url='/pages/allClass/index' class='nav'>
+    <view class='alls'>查看全部</view>
+    <i-icon type="enter" size="18" color="#cccccc" />
+  </navigator>
+</view>
+
+
+<!-- url='../repairDetail/index?id={{item.p_id}}&standard={{item.is_standard}}' -->
+<view class='server_list' bindtap="onLaunch">
+  <navigator wx:for="{{rinse}}"  wx:key="{{index}}" url='{{storage?"../repairDetail/index?id="+item.p_id+"&standard="+item.is_standard:""}}'>
+    <image src='{{item.icon}}'></image>
+    <text class='rinse'>{{item.p_name}}</text>
+    <text class='num' wx:if="{{item.product_price==null?'':'block'}}">￥{{item.product_price}}{{item.unit}}</text>
+  </navigator>
+</view>
+
+
+
+
+<view class='incorporate'>
+  <view class='install_s'>
+    <view class='install'>
+     <view class='title1'>
+        <!-- {{stair.g_name}} -->安装服务
+      </view>
+    </view>
+  </view>
+  <navigator url='/pages/allClass/index' class='nav'>
+    <view class='alls'>查看全部</view>
+    <i-icon type="enter" size="18" color="#cccccc" />
+  </navigator>
+</view>
+<view class='test'>
+  <view class='test1' bindtap="onLaunch">
+  <!-- url="{{'../single/index?c_id=' + item.c_id+'&c_name='+item.c_name}}" -->
+    <navigator wx:for="{{serverList1}}" wx:key="index" class='product' url='{{storage?"../single/index?c_id="+item.c_id+"&c_name="+item.c_name:""}}'>
+      <view class='test3'>
+        <image src='{{item.icon}}'></image>
+        <view class='typeface'>{{item.c_name}}</view>
+      </view>
+    </navigator>
+    <!-- </view> -->
+  </view>
+</view>
+<!-- url='/pages/repairDetail/index?id=299&standard=1' -->
+<navigator  bindtap="onLaunch" url='{{storage?"/pages/repairDetail/index?id=299&standard=1":""}}'>
+  <image src='/img/get-coupon1.png' class='get_coupon_banner'></image>
+</navigator>
+
+<view class='incorporate'>
+  <view class='install_s'>
+    <view class='install'>
+      <view class='title1'>
+        <!-- {{stair2.g_name}} -->服务维修
+      </view>
+    </view>
+  </view>
+  <navigator url='/pages/allClass/index' class='nav'>
+    <view class='alls'>查看全部</view>
+    <i-icon type="enter" size="18" color="#cccccc" />
+  </navigator>
+</view>
+<!--  url="{{'../single/index?c_id=' + item.c_id+'&c_name='+item.c_name}}" -->
+<view class='test'>
+  <view class='test1' bindtap="onLaunch">
+    <navigator wx:for="{{serverList2}}" wx:key="index" class='product' url='{{storage?"../single/index?c_id="+ item.c_id+"&c_name="+item.c_name:""}}'>
+      <view class='test3'>
+        <image src='{{item.icon}}'></image>
+        <view class='typeface'>{{item.c_name}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='incorporate'>
+  <view class='install_s'>
+    <view class='install'>
+      <view class='title1'>
+        <!-- {{stair3.g_name}} -->家居服务
+      </view>  
+    </view>
+  </view>
+  <navigator url='/pages/allClass/index' class='nav'>
+    <view class='alls'>查看全部</view>
+    <i-icon type="enter" size="18" color="#cccccc" />
+  </navigator>
+</view>
+<!-- url="{{item.c_name == '家通卡套餐'?'../repairDetail/index?id=299&standard=1':'../single/index?c_id=' + item.c_id+'&c_name='+item.c_name}}" -->
+<view class='test'>
+  <view class='test1' bindtap="onLaunch">
+    <navigator wx:for="{{serverList3}}" wx:key="index" class='product' url='{{(storage)?((item.c_name == "家通卡套餐")?"../repairDetail/index?id=299&standard=1":"../single/index?c_id=" + item.c_id+"&c_name="+item.c_name):""}}'>
+      <view class='test3'>
+          <image src='{{item.icon}}'></image>
+          <view class='typeface'>{{item.c_name}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='incorporate'>
+  <view class='install_s'>
+    <view class='install'>
+    <view class='title1'>
+        <!-- {{stair4.g_name}} -->装修服务
+      </view>
+    </view>
+  </view>
+  <navigator url='/pages/allClass/index' class='nav'>
+    <view class='alls'>查看全部</view>
+    <i-icon type="enter" size="18" color="#cccccc" />
+  </navigator>
+</view>
+<!-- url="{{'../single/index?c_id=' + item.c_id+'&c_name='+item.c_name}}" -->
+<view class='test'>
+  <view class='test2' bindtap="onLaunch">
+    <navigator wx:for="{{serverList4}}" wx:key="index" url='{{storage?"../single/index?c_id=" + item.c_id+"&c_name="+item.c_name:""}}'>
+      <view class='test3'>
+        <image src='{{item.icon}}'></image>
+        <view class='typeface'>{{item.c_name}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+<!-- <view>====================</view>
+
+<view class='test'>
+<view class='test1'>
+<view wx:for="{{serverList4}}">
+<view class='test3'>
+  <image src='{{item.icon}}'></image>
+  <view>{{item.c_name}}</view>
+  </view>
+</view>
+</view>
+</view> -->
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 
 <view class='foot_space'></view>
 
@@ -55,10 +247,17 @@
 
 <view class='get_coupon' wx:if="{{showGetCoupon}}">
   <view class='content'>
+<<<<<<< HEAD
     <image class='close' src='/img/delete.png' bintap='closeGetCoupon'></image>
     <image class='redbag' src='/img/redbag.png'></image>
     <text><text class='money_symbol'>￥</text>500</text>
     <button>马上领取</button>
+=======
+    <image class='close' src='/img/delete.png' bindtap='closeGetCoupon'></image>
+    <image class='redbag' src='/img/redbag.png'></image>
+    <text><text class='money_symbol'>￥</text>{{couponPrice}}</text>
+    <button bindtap='getCoupon'>马上领取</button>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   </view>
 </view>
 

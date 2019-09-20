@@ -1,0 +1,105 @@
+/* pages/activate/activate.wxss */
+page{
+  background: #f9f9f9;
+}
+.warp{
+  width: 100%;
+  margin-top: 20rpx;
+  
+}
+.activate{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 1rpx;
+  padding-left: 30rpx;
+}
+
+.activate .ipt{
+  width: 190rpx;
+  font-size: 28rpx;
+  
+}
+
+.code{
+  width: 400rpx;
+  font-size: 28rpx;
+}
+
+
+.warps{
+  width: 100%;
+  background: #fff;
+  
+}
+
+.date {
+  width: 100%;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-left: 30rpx;
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+}
+
+.left_side {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+i-icon{
+  position: absolute;
+  right: 30rpx;
+}
+
+
+.tui-picker-content{
+  padding: 30rpx;
+  text-align: center;
+}
+.tui-picker-name{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.tui-picker-detail{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  font-size: 35rpx;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.show{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-left: -30rpx;
+  padding-left: 35rpx;
+  font-size: 32rpx;
+  line-height: 90rpx;
+}
+.hint{
+  color: #FF9800;
+  font-size: 24rpx;
+  margin-top:50rpx;
+  margin-left: 100rpx;
+}
+.confirm{
+  width: 100%;
+  position: absolute;
+  bottom: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+.confirm button{
+  width: 90%;
+  height: 88rpx;
+  background: #0FBF97;
+  border-radius: 8rpx;
+  border: none;
+  color: #fff;
+}

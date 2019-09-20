@@ -1,5 +1,10 @@
 <!--index.wxml-->
+<<<<<<< HEAD
 <!-- <view class="register">
+=======
+<view>hello wrold</view>
+<view class="register">
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   <view class='col'>
     <text>手机号码：</text>
     <input type="number" placeholder='手机号码' bindinput="getPhone" />
@@ -25,6 +30,12 @@
     <view class="auth_content">该页面需要先微信授权登录哦</view>
     <button class="auth_sure" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">去授权</button>
   </view>
+<<<<<<< HEAD
 </view> -->
 
 <!-- <view>获取到的短信验证码：{{smsCode}}</view> -->
+=======
+</view>
+
+<view>获取到的短信验证码：{{smsCode}}</view>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39

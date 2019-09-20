@@ -5,11 +5,20 @@
   <text>{{payCount}}</text>
 </view>
 
+<<<<<<< HEAD
 <form report-submit="true" bindsubmit="formSubmit" wx:if="{{!isStandard}}">
   <view class='offer_price'>报价金额：￥
     <text>{{offerPrice}}</text>
   </view>
   <button form-type='submit' bindtap='gotoCoupon' class='goto_coupon'>
+=======
+<form report-submit="true" bindsubmit="formSubmit">
+  <view class='offer_price'>报价金额：￥
+    <text>{{offerPrice}}</text>
+  </view>
+
+  <button form-type='submit' bindtap='gotoCoupon' class='goto_coupon' style="{{offerPrice == 980?'display:none':''}}">
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     <text>优惠券</text>
     <view class='right_side'>
       <text>￥{{coupon.prices}}</text>

@@ -1,0 +1,60 @@
+		<view class="card_warp">
+			<view class="card_bag_image" style="background-image: url('http://a1.qpic.cn/psb?/V11fJ0Hi09lXr1/bG7t*6SNHWaIq9uuxUN7Mv3HbD0d94y9mstcIGRwRlE!/b/dDABAAAAAAAA&ek=1&kp=1&pt=0&bo=ZAGkAAAAAAADAOQ!&tl=1&vuin=2724497291&tm=1565917200&sce=50-1-1&rf=4-0');background-size: 100% 100%;">
+        <!-- <image src='/img/fiche.png'></image> -->
+				<view class='bagimg'><image src="{{headpics}}"></image></view>
+				<view class="username_font">{{username}}</view>
+				<view class="cell_phone">{{mobile}}</view>
+				<view class="call_phone" bindtap='call'><image src="/img/call.png"></image></view>
+			</view>
+			<view class="btn_bao">
+        <view class="security_btn" wx:if="{{deposit==1}}">
+					<view class='pension_s'><image src="/img/pension.png"></image></view>
+					<view>保障金</view>
+				</view>
+        <view class="security_btn_no" wx:if="{{deposit==0}}">
+					<view><image src="/img/pension_no.png"></image></view>
+					<view>保障金</view>
+				</view>
+        <view class="security_btn" wx:if="{{attestation==1}}">
+					<view class='approve'><image src="/img/card.png"></image></view>
+					<view class='card'>已认证</view>
+				</view>
+        <view class="security_btn_no" wx:if="{{attestation==0}}">
+					<view class='approve'><image src="/img/card_no.png"></image></view>
+					<view>未认证</view>
+				</view>
+        <view class="security_btn">
+					<view class='approve'><image src="/img/medal.png"></image></view>
+					<view>{{level}}星级</view>
+				</view>
+			</view>
+		</view>
+			
+			
+		<view class="serviceitem">
+			<view class="serviceitem_conter">
+				<view class="servicedemo">服务内容</view>
+				<view class="contentservice">
+          <view class='services' wx:for='{{serviceinfo}}' wx:key="index">
+              {{item.c_name}}
+            </view>
+				</view>
+			</view>
+		</view>
+
+ <view class='submit_btn'>
+    <!-- <view wx:if="{{state!=index}}" class='btng'><button bindtap='submitPresent' data-number='{{item.name}}' data-id='{{item.name}}'>提交订单</button></view> -->
+    <view class='home'><button bindtap='home'>返回首页</button></view>
+    <view class='submit_order'><button bindtap='submitPresent'>立即下单</button></view>
+  </view>
+
+
+
+
+  <view class="auth_window" style='display:{{auth_window_display}}'>
+  <view class="dialog_window">
+    <view class="auth_content">该页面需要先微信授权登录哦</view>
+    <button class="auth_sure" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">去授权</button>
+  </view>
+</view>
+

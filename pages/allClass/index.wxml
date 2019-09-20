@@ -4,6 +4,7 @@
   <input placeholder='输入您需要的服务，如：衣柜安装' confirm-type='search' bindconfirm='search'></input>
 </view>
 
+<<<<<<< HEAD
 <!-- <view class='hot_search'>
   <view class='head'>
     <image src='../../img/hot.png' mode='aspectFit' />
@@ -46,4 +47,25 @@
 
 <view class='foot_space'></view>
 
+=======
+<!-- 左边一级菜单 rick 2019/6/30-->
+<scroll-view scroll-y="true" class="left">
+  <view wx:for="{{firstMenu}}" wx:key="{{index}}" bindtap="selectFirst" data-id="{{item.cId}}" class="{{ item.firstMenuSelected == 0 ? 'firstNotActive' : 'firstActive' }}">
+    {{item.cName}}
+  </view>
+</scroll-view>
+
+<!-- 二级菜单 rick 2019/6/30 -->
+<view class='right_wrap'>
+<scroll-view scroll-y="true" class="right" >
+  <button wx:for="{{secondMenu}}" wx:key="{{index}}" class='right_s' bindtap='gotoProduct' form-type='submit' data-id="{{item.p_id}}" data-standard="{{item.is_standard}}">
+    <view bindtap='gotoProduct'>
+     <view class='right_font'> {{item.p_name}}</view>
+    </view>
+  </button>
+</scroll-view>
+</view>
+
+<view class='foot_space'></view>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 <tarBar index="{{2}}"></tarBar>

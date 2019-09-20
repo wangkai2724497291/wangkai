@@ -1,0 +1,12 @@
+<view class='page_row'>
+  <view class="search">
+ 
+    <input class='carid' placeholder=" {{title}}" focus="{{focus}}" />
+ 
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary"> 确定</button>
+    
+ 
+  </view>
+  <view class='tip'>
+  </view>
+</view>

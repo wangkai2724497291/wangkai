@@ -1,0 +1,59 @@
+/* pages/coupon/index.wxss */
+.search_container {
+  display: flex;
+  padding: 52rpx 39rpx;
+}
+.search_container button {
+  display: inline-block;
+  width: 90%;
+  height: 88rpx;
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 88rpx;
+  background-color: #00c482;
+  border-radius: 8rpx;
+}
+
+.tab_container {
+  margin-top: 23rpx;
+}
+
+.coupon {
+  width: 724rpx;
+  height: 180rpx;
+  margin: 0 auto 23rpx;
+}
+
+.coupon .title_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 128rpx;
+  padding: 0 50rpx;
+}
+
+.coupon .title_price .title {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.coupon .title_price .price {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 46rpx;
+  color: #ff3a48;
+}
+
+.coupon .title_price .price .symbol {
+  font-size: 30rpx;
+}
+
+.coupon .condition_n_time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48rpx;
+  padding: 0 42rpx;
+  font-size: 20rpx;
+  color: #666;
+}

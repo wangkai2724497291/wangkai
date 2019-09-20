@@ -1,0 +1,2 @@
+
+<button class='Scancode' bindtap='getScancode'>扫一扫</button>

@@ -1,7 +1,13 @@
 // pages/evaluate/index.js
+<<<<<<< HEAD
 var path = require('../../utils/api.js');
 var wxRequest = require('../../utils/wxRequest.js')
 import config from '../../utils/config.js'
+=======
+import config from '../../utils/config.js'
+var path = require('../../utils/api.js');
+var wxRequest = require('../../utils/wxRequest.js')
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 Page({
 
   /**
@@ -197,7 +203,10 @@ Page({
           'token': wx.getStorageSync('token')
         },
         header: {
+<<<<<<< HEAD
           'content-type': 'application/json',
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
           'app-ver': config.getVersion
         },
         success: function (res) {
@@ -225,8 +234,13 @@ Page({
   addComment: function () {
     var fileNames = this.data.fileNames
     var addComment = wxRequest.postRequest(path.addComment(), {
+<<<<<<< HEAD
       to_uid: this.data.order.master_id,
       to_username: this.data.order.master_name,
+=======
+      to_uid: this.data.order.master_info.master_id,
+      to_username: this.data.order.master_info.username,
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       obj_id: this.data.order.order_id,
       star: '{"skill":' + this.data.starIndex1 + ',"attitude":' + this.data.starIndex2 + ',"efficiency":' + this.data.starIndex3 + '}',
       content: this.data.msg,

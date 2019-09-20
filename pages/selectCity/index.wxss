@@ -15,7 +15,10 @@
   padding: 0 26rpx;
   margin: 16rpx auto 40rpx;
   font-size: 25rpx;
+<<<<<<< HEAD
   background-color: #f5f5f5;
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   border-radius: 4rpx;
 }
 

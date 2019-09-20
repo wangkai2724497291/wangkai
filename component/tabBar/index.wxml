@@ -1,5 +1,6 @@
 <!--component/tabBar/index.wxml-->
 <view class='tab_bar_wrap'>
+<<<<<<< HEAD
   <navigator open-type='redirectTo' class='tab_item' url='/pages/index/index'>
     <image src='/img/home-selected.png' wx:if="{{index === 1}}"></image>
     <image src='/img/home.png' wx:else></image>
@@ -24,4 +25,35 @@
     <image src='/img/mine.png' wx:else></image>
     <text class='{{index === 5 ? "active" : null}}'>我的</text>
   </navigator>
+=======
+  <!-- <navigator open-type='redirectTo' class='tab_item' url='/pages/index/index'>
+    <image src='/img/home-selected.png' wx:if="{{index === 1}}"></image>
+    <image src='/img/home.png' wx:else></image>
+    <text class='{{index === 1 ? "active" : null}}'>首页</text>
+  </navigator> -->
+  <view bindtap="homeindex" class='tab_item'>
+    <image src='/img/home-selected.png' wx:if="{{index === 1}}"></image>
+    <image src='/img/home.png' wx:else></image>
+    <text class='{{index === 1 ? "active" : null}}'>首页</text>
+  </view>
+  <view bindtap="allClass" class='tab_item'>
+    <image src='/img/allserver-selected.png' wx:if="{{index === 2}}"></image>
+    <image src='/img/allserver.png' wx:else></image>
+    <text class='{{index === 2 ? "active" : null}}'>全部服务</text>
+  </view>
+  <view class='tab_item out_wrap' bindtap="customized" url='/pages/customized/index'>
+    <image src='/img/take-order.png'></image>
+    <text>我要下单</text>
+  </view>
+  <view bindtap="orders" class='tab_item'>
+    <image src='/img/order-selected.png' wx:if="{{index === 4}}"></image>
+    <image src='/img/order.png' wx:else></image>
+    <text class='{{index === 4 ? "active" : null}}'>订单</text>
+  </view>
+  <view bindtap="user" class='tab_item'>
+    <image src='/img/mine-selected.png' wx:if="{{index === 5}}"></image>
+    <image src='/img/mine.png' wx:else></image>
+    <text class='{{index === 5 ? "active" : null}}'>我的</text>
+  </view>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 </view>

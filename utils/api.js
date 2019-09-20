@@ -28,6 +28,13 @@ module.exports = {
   getBanners: function() {
     return domain + "/mini_user/banner/get_banner";
   },
+<<<<<<< HEAD
+=======
+  //补差价
+  difference:function(){
+    return domain + "/mini_user/order/mini_price_diff";
+  },
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   //获取短信验证码
   getSmsCode: function() {
     return domain + "/mini_user/wx_user/sms_code";
@@ -40,6 +47,14 @@ module.exports = {
   register: function () {
     return domain + "/mini_user/wx_user/register";
   },
+<<<<<<< HEAD
+=======
+  //二维码   
+  code: function () {
+    // return domain + "/mini_user/master/getMasterCardInfo";
+    return domain + "/mini_user/master/getMasterCardInfo?uid=237&store=UN674t1LO2gOXhfH2k91PS9AFF+b8jyHUIK6n1teal2ffU/9uIKO8wClp3zu5H3a7PQcxlZxySX10Nun1YVLQCn4nLeTi76WnR+/GCMW04RdWjswO4LQhDKpmfs+BzOB";
+  },
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   //获取一级分类
   selectServiceGroup: function () {
     return domain + "/mini_user/service/select_service_group";
@@ -48,8 +63,19 @@ module.exports = {
   selectServiceCategory: function () {
     return domain + "/mini_user/service/select_service_category";
   },
+<<<<<<< HEAD
   //搜索某服务对应的产品，搜索第一个服务对应的产品，搜索所有产品
   selectServiceProduct: function () {
+=======
+  selectseccategory: function () {
+    return domain + "/mini_user/service/select_sec_category";
+  },
+  //搜索某服务对应的产品，搜索第一个服务对应的产品，搜索所有产品
+  selectServiceProduct1: function () {
+    return domain + "/mini_user/service/select_sec_product";
+  },
+   selectServiceProduct: function () {
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     return domain + "/mini_user/service/select_service_product";
   },
   // 查询热门标签
@@ -136,6 +162,13 @@ module.exports = {
   submitOrder: function () {
     return domain + "/mini_user/order/submit_order"
   },
+<<<<<<< HEAD
+=======
+  // 用户扫码下单
+  ScanVerIfiCation: function () {
+    return domain + "/mini_user/order/ScanVerIfiCation"
+  },
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   // 上传图片
   uploadFile: function () {
     return domain + "/mini_user/wx_user/file_up"
@@ -172,6 +205,13 @@ module.exports = {
   cancelOrder: function () {
     return domain + "/mini_user/order/cancel_order"
   },
+<<<<<<< HEAD
+=======
+  // 将订单状态已上门
+  confirmIndoor: function () {
+    return domain + "/mini_user/order/serviceing"
+  },
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   // 订单状态更改为已完成
   sureOrder: function () {
     return domain + "/mini_user/order/sure_order"
@@ -215,5 +255,101 @@ module.exports = {
   // 推广明细
   getPromotionList: function () {
     return domain + "/mini_user/wx_user/getPromotionList"
+<<<<<<< HEAD
   }
+=======
+  },
+  // 领券中心列表
+  getCouponList: function () {
+    return domain + "/mini_user/coupon/getCouponList"
+  },
+  // 通过优惠券id领取优惠券
+  takeCoupon: function () {
+    return domain + "/mini_user/coupon/tackCoupon"
+  },
+  // 付费优惠券购买
+  buyCoupon: function () {
+    return domain + "/mini_user/coupon/buyCoupon"
+  },
+  // 充值并获取支付参数
+  userRechargeInit: function () {
+    return domain + "/mini_user/wx_user/UserRechargeInit"
+  },
+  // 获取优惠券总值信息
+  couponNewInfo: function () {
+    return domain + "/mini_user/coupon/couponNewInfo"
+  },
+  // 马上领取
+  rightGet: function () {
+    return domain + "/mini_user/coupon/rightGet"
+  },
+  // 购物车-添加
+  addToShopcart: function () {
+    return domain + "/mini_user/cart/add"
+  },
+  // 购物车-获取
+  getShopCart: function () {
+    return domain + "/mini_user/cart/getList"
+  },
+  // 根据购物车返回的产品id，返回对应的可选地址
+  shopCartAddr: function () {
+    return domain + "/mini_user/cart/getCanUseAddress"
+  },
+  // 获取产品的[四，五]级标签
+  productLabels: function () {
+    return domain + "/mini_user/service/product_labels"
+  },
+  // 购物车查询数量
+  cartNum: function () {
+    return domain + "/mini_user/cart/cartNum"
+  },
+  // 购物车多选订单&提交
+  submitShopcart: function () {
+    return domain + "/mini_user/cart/submitOrder"
+  },
+  // 购物车下单支付
+  shopcartPay: function () {
+    return domain + "/mini_user/cart/blancePay"
+  },
+  // 删除选中的购物车中的商品
+  deleteShopcarProd: function () {
+    return domain + "/mini_user/cart/delete"
+  },
+  // 获取购物车优惠券
+  getCarCoupon: function () {
+    return domain + "/mini_user/cart/getCoupon"
+  },
+  // 判断有没有绑定父级
+  hasBind: function () {
+    return domain + "/mini_user/wx_user/hasBind"
+  },
+  // 获取小程序端推荐码
+  getRememberNo: function () {
+    return domain + "/mini_user/wx_user/getRememberNo"
+  },
+  // 绑定父级
+  bindParent: function () {
+    return domain + "/mini_user/wx_user/bindParent"
+  },
+  // 获取推荐服务产品
+  recommenderProd: function () {
+    return domain + "/mini_user/service/select_remember_product"
+  },
+  // 重新下单-new
+  reloadOrder: function () {
+    return domain + "/mini_user/cart/reloadOrder"
+  },
+  // 修改购物车的
+  changeCart: function () {
+    return domain + "/mini_user/cart/changeCart"
+  },
+  // 首页显示一级和二级分类信息
+  category: function () {
+    return domain + "/mini_user/index/index_fir_sec_cate"
+  },
+  // 首页清洗类产品展示
+  cleanout: function () {
+    return domain + "/mini_user/index/index_reco_clean_pro"
+  },
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }

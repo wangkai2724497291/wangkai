@@ -1,6 +1,10 @@
 <!--pages/user/index.wxml-->
 <!-- 头像、我的订单 -->
+<<<<<<< HEAD
 <view class='avatar_container'>
+=======
+<view class='avatar_container' bindtap='login' data-index='{{index}}'>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   <image src='{{avatar}}'></image>
   <text>{{nickName}}</text>
 </view>
@@ -8,7 +12,11 @@
 <!-- 订单 -->
 <view class='order' report-submit="true" bindsubmit="formSubmit">
   <text class='order_title'>我的订单</text>
+<<<<<<< HEAD
   <navigator open-type="switchTab" url='/pages/orders/index'>
+=======
+  <navigator open-type="redirectTo" url='/pages/orders/index'>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     <image src="../../img/order-icon1.png"></image>
     <text>任务</text>
   </navigator>
@@ -36,7 +44,11 @@
     <text class='title'>账户余额</text>
     <text>¥{{userInfo.balance ? userInfo.balance : '0.00'}}</text>
   </navigator>
+<<<<<<< HEAD
   <navigator url='/pages/coupon/index'>
+=======
+  <navigator url='/pages/coupon/index' data-index='{{index}}'>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     <text class='title'>可用优惠券</text>
     <text>{{couponNum}}</text>
   </navigator>
@@ -46,6 +58,7 @@
   </navigator>
 </view>
 
+<<<<<<< HEAD
 <navigator url="/pages/genCode/index" class='menu_item'>
   <text>{{generalization.status === 1 ? '我的' : '申请'}}推广码</text>
   <i-icon type="enter" size="18" color="#cccccc" />
@@ -60,6 +73,35 @@
   <text>推荐人</text>
   <i-icon type="enter" size="18" color="#cccccc" />
 </navigator> -->
+=======
+<!-- <navigator url="/pages/couponjitk/couponjitk" class='menu_item1'>
+  <text>家通卡</text>
+  <i-icon type="enter" size="18" color="#cccccc" />
+</navigator> -->
+
+<navigator url="/pages/genCode/index" class='menu_item1'>
+  <text>{{generalization.status === 1 ? '我的' : '申请'}}推广码</text>
+  <view class='right_size'>
+    <text>{{reCode}}</text>
+    <i-icon type="enter" size="18" color="#cccccc" />
+  </view>
+</navigator>
+
+<!-- <navigator url="/pages/partner/partner" class='menu_item'>
+  <text>合伙人</text>
+  <i-icon type="enter" size="18" color="#cccccc" />
+</navigator> -->
+
+<!-- <navigator url="/pages/genStream/index" class='menu_item' wx:if="{{generalization.status === 1}}">
+  <text>推广明细</text>
+  <i-icon type="enter" size="18" color="#cccccc" />
+</navigator> -->
+
+<navigator url="/pages/recommender/index" class='menu_item'>
+  <text>推荐人</text>
+  <i-icon type="enter" size="18" color="#cccccc" />
+</navigator>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 
 <!-- 联系客服 -->
 <view class='menu_item contact' bindtap='phoneCall'>
@@ -70,10 +112,33 @@
   <view class='phone'>{{serviceTel}}</view>
 </view>
 
+<<<<<<< HEAD
 <view class='qrcode' wx:if="{{generalization.status === 1}}">
   <image src='{{generalization.qrcode}}' bindtap='previewImage'></image>
   <view>我的二维码</view>
 </view>
+=======
+<!-- 二维码 -->
+<!-- <view class='contact' bindtap='twocode'>
+  <view>
+    <text>扫一扫</text>
+  </view>
+</view> -->
+
+<!-- 二维码 -->
+<!-- <view class='scancode'>
+  <button bindtap='getScancode'>扫一扫</button>
+</view> -->
+
+<!-- <view class='btn'>
+  <button  bindtap='logout'>退出登录</button>
+</view> -->
+<!-- 
+<view class='qrcode' wx:if="{{generalization.status === 1}}">
+  <image src='{{generalization.qrcode}}' bindtap='previewImage'></image>
+  <view>我的二维码</view>
+</view> -->
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 
 <view class='foot_space'></view>
 
@@ -86,3 +151,9 @@
 
 <!-- 退出登录 -->
 <!-- <navigator url='/pages/register/index?data=2HYgJkCvuYhjyf6BlN3H6A==' class='recomment'>推荐测试按钮，未测试该部分的请忽略</navigator> -->
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39

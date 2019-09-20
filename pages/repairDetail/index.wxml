@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 <!--pages/repairDetail/index.wxml-->
+=======
+<!--维修详情-->
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 <import src="../../wxParse/wxParse.wxml"/>
 
 <view class='info'>
   <image src='{{product.banner}}' />
 
   <view class='title_saled'>
+<<<<<<< HEAD
     <text class='title'>{{product.p_name ? product.p_name : ''}}</text>
+=======
+    <text class='title'>{{product.p_name ? product.p_name : ''}}</text><!--物品名称--->
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 
     <view class='saled_see'>
       <!-- <text class='saled'>购买：{{product.buy_times ? product.buy_times : 0}}</text>
@@ -16,7 +24,28 @@
   <view class='description'>{{product.introduct}}</view>
 </view>
 
+<<<<<<< HEAD
 <view class='evaluate' wx:if="{{evaluates.length}}">
+=======
+<view class='recommender_prod' wx:if='{{!product.is_standard && recommenderProds.length}}'>
+  <view class='title'>
+    推荐服务
+  </view>
+
+  <view class='server_list' wx:if='{{recommenderProds.length}}'>
+    <navigator wx:for="{{recommenderProds}}" url='../repairDetail/index?id={{item.p_id}}&standard={{item.is_standard}}' wx:key="{{index}}">
+      <image src='{{item.icon}}'></image>
+      <text>{{item.p_name}}</text>
+      <view class='price'>
+        <text>￥{{item.product_price || 0}}</text>
+        <text>起</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='evaluate' wx:if="{{evaluates.length}}" style='display:none'>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   <view class='title'>服务评价</view>
 
   <view class='eval_item' wx:for="{{evaluates}}" wx:key="{{index}}">
@@ -24,15 +53,24 @@
       <image class='avatar' src='{{item.avatarurl}}' />
       <view class='eval_info'>
         <view class='name_time'>
+<<<<<<< HEAD
           <text class='name'>{{item.nickname}}</text>
           <text class='time'>{{item.date}}</text>
+=======
+          <text class='name'>{{item.nickname}}</text><!--服务评价的名字-->
+          <text class='time'>{{item.date}}</text><!--服务评价的时间-->
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         </view>
         <view class='stars'>
           <text>专业技能：{{item.star.skill}}星</text>
           <text>服务态度：{{item.star.attitude}}星</text>
           <text>服务时效：{{item.star.efficiency}}星</text>
         </view>
+<<<<<<< HEAD
         <view class='comment'>{{item.content}}</view>
+=======
+        <view class='comment'>{{item.content}}</view><!--评价-->
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       </view>
     </view>
     <view class='img_box' wx:if="{{item.file.length}}">
@@ -43,9 +81,14 @@
 
 <view class='detail'>
   <view class='title'>服务详情</view>
+<<<<<<< HEAD
 
   <template is="wxParse" data="{{wxParseData:article.nodes}}" />
 </view>
+=======
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 
 <view class='foot_space'></view>
 

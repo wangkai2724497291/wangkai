@@ -1,0 +1,211 @@
+<!--pages/shopCart/index.wxml-->
+<i-tabs current="{{ current }}" color="#00c482" bindchange="tabsChange">
+  <i-tab key="1" title="标准产品服务"></i-tab>
+  <i-tab key="2" title="师傅报价服务"></i-tab>
+</i-tabs>
+
+<view class='tab_container' wx:if='{{current === "1"}}'>
+  <checkbox-group bindchange="categoryChange">
+    <view class='order' wx:for='{{list1}}' wx:key='{{index}}'>
+      <view class='c_title'>
+        <checkbox value="{{item.c_id}}" checked="{{item.checked}}" data-index='{{index}}' bindtap='cateTap' />
+        <text>{{item.c_name}}</text>
+      </view>
+      <checkbox-group bindchange="productChange">
+        <view class='product' wx:for='{{item.product_list}}' wx:for-index="prodIndex" wx:for-item="prod" wx:key='{{prodIndex}}'>
+          <view class='prod_name'>
+            <checkbox value='{{index + "," + prodIndex}}' checked="{{prod.checked}}" data-index='{{index}}' data-prodindex='{{prodIndex}}' bindtap='prodTap' />
+            <text>{{prod.p_name}}</text>
+            <navigator url='/pages/appointment/index?id={{item.product_list[0].p_id}}'><i-icon type="enter" size="18" color="#cccccc" /></navigator>
+          </view>
+          <checkbox-group bindchange="skuChange">
+            <view class='sku' wx:for='{{prod.sku_list}}' wx:for-index='skuIndex' wx:for-item='sku' wx:key='{{skuIndex}}'>
+              <checkbox value='{{index + "," + prodIndex + "," + skuIndex}}' checked="{{sku.checked}}" data-index='{{index}}' data-prodindex='{{prodIndex}}' data-skuindex='{{skuIndex}}' bindtap='skuTap' />
+              <view class='sku_title'>
+                <text class='title'>{{sku.type.name}} {{sku.special.name}}</text>
+                <text class='delete' data-pid='{{prod.p_id}}' data-skuid='{{sku.sku_id}}' data-index='{{index}}' data-prodindex='{{prodIndex}}' data-skuindex='{{skuIndex}}' catchtap='deleteProd'>删除</text>
+              </view>
+              <view class='price_n_count'>
+                <view class='price'>￥{{sku.sale_price}}</view>
+                <view class='input_number'>
+                  <button class='reduce' catchtap='reduce' data-index='{{index}}' data-prodindex='{{prodIndex}}' data-skuindex='{{skuIndex}}'>-</button>
+                  <input type='number' value='{{ sku.num }}' bindinput='numChange' data-index='{{index}}' data-prodindex='{{prodIndex}}' data-skuindex='{{skuIndex}}'></input>
+                  <button class='plus' catchtap='plus' data-index='{{index}}' data-prodindex='{{prodIndex}}' data-skuindex='{{skuIndex}}'>+</button>
+                </view>
+              </view>
+            </view>
+          </checkbox-group>
+        </view>
+      </checkbox-group>
+
+      <view class='addr' wx:if="{{item.take_address_info.is_more_addr}}" bindtap='selectAddr' data-index='{{index}}' data-cid='{{item.c_id}}' data-addrtype='start'>
+        <image src='../../img/icon-start.png' mode='aspectFit' />
+        <view class='info'>
+          <text>{{item.startAddr.name}} {{item.startAddr.mobile}}</text>
+          <view>{{item.startAddr.address}}</view>
+        </view>
+        <view class='icon'>
+          <i-icon type="enter" size="24" color="#cccccc" />
+        </view>
+      </view>
+
+      <view class='addr' bindtap='selectAddr' data-index='{{index}}' data-cid='{{item.c_id}}' data-addrtype='end'>
+        <image src='../../img/icon-end.png' mode='aspectFit' />
+        <view class='info'>
+          <text>{{item.address_info.name || ''}} {{item.address_info.mobile || ''}}</text>
+          <view>{{item.address_info.address || ''}}</view>
+        </view>
+        <view class='icon'>
+          <i-icon type="enter" size="24" color="#cccccc" />
+        </view>
+      </view>
+
+      <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange" data-index='{{index}}' data-cid='{{item.c_id}}'>
+        <view class='date'>
+          <view class='left_side'>
+            <i-icon type="activity" size="26" color="#09bb07" />
+            <text>上门服务日期</text>
+          </view>
+          <view class='date_right'>
+            <text>{{item.date || ''}}</text>
+            <i-icon type="enter" size="24" color="#cccccc" />
+          </view>
+        </view>
+      </picker>
+
+      <picker disabled='{{item.date === ""}}' mode="multiSelector" value="{{timeIndex}}" range="{{time}}" bindchange="bindTimeChange" bindcolumnchange="timeColumnChange" data-index='{{index}}' data-cid='{{item.c_id}}'>
+        <view class='time' bindtap='clickTimePicker' data-index='{{index}}'>
+          <view class='left_side'>
+            <i-icon type="clock" size="26" color="#09bb07" />
+            <text>上门服务时间</text>
+          </view>
+          <view class='date_right'>
+            <text>{{item.time || ''}}</text>
+            <i-icon type="enter" size="24" color="#cccccc" />
+          </view>
+        </view>
+      </picker>
+
+      <view class='coupon' catchtap='selectCoupon' data-index='{{index}}' data-cid='{{item.c_id}}'>
+        <view class='left_side'>
+          <i-icon type="coupons" size="26" color="#09bb07" />
+          <text>优惠券</text>
+        </view>
+        <view class='right_side'>
+          <text wx:if="{{item.coupon_info.prices > 0}}">￥{{item.coupon_info.prices}}</text>
+          <text wx:else class='coupon_msg'>{{couponMsg}}</text>
+          <i-icon type="enter" size="24" color="#cccccc" />
+        </view>
+      </view>
+    </view>
+  </checkbox-group>
+</view>
+
+<view class='tab_container' wx:if='{{current === "2"}}'>
+  <checkbox-group bindchange="categoryChange2">
+    <view class='order' wx:for='{{list2}}' wx:key='{{index}}'>
+      <view class='c_title'>
+        <checkbox value="{{item.c_id}}" checked="{{item.checked}}" data-index='{{index}}' bindtap='cateTap2' />
+        <text>{{item.c_name}}</text>
+      </view>
+      <checkbox-group bindchange="productChange2">
+        <view class='product product2' wx:for='{{item.product_list}}' wx:for-index="prodIndex" wx:for-item="prod" wx:key='{{prodIndex}}'>
+          <view class='prod_name'>
+            <checkbox value='{{index + "," + prodIndex}}' checked="{{prod.checked}}" data-index='{{index}}' data-prodindex='{{prodIndex}}' bindtap='prodTap2' />
+            <text>{{prod.p_name}}</text>
+            <navigator url='/pages/appointment/index?id={{item.product_list[0].p_id}}'><i-icon type="enter" size="18" color="#cccccc" /></navigator>
+            <text class='delete' data-pid='{{prod.p_id}}' data-index='{{index}}' data-prodindex='{{prodIndex}}' catchtap='deleteProd'>删除</text>
+          </view>
+          <view class='expect_n_number'>
+            <view class='expect'>
+              <text>期望报价：</text>
+              <input type='digit' value='{{prod.expected_quotation}}' bindinput='expectedChange' data-index='{{index}}' data-prodindex='{{prodIndex}}'></input>
+            </view>
+            <view class='input_number'>
+              <button class='reduce' catchtap='reduce' data-index='{{index}}' data-prodindex='{{prodIndex}}'>-</button>
+              <input type='number' value='{{ prod.num }}' bindinput='numChange' data-index='{{index}}' data-prodindex='{{prodIndex}}'></input>
+              <button class='plus' catchtap='plus' data-index='{{index}}' data-prodindex='{{prodIndex}}'>+</button>
+            </view>
+          </view>
+        </view>
+      </checkbox-group>
+
+      <view class='addr' wx:if="{{item.take_address_info.is_more_addr}}" bindtap='selectAddr' data-index='{{index}}' data-cid='{{item.c_id}}' data-addrtype='start'>
+        <image src='../../img/icon-start.png' mode='aspectFit' />
+        <view class='info'>
+          <text>{{item.startAddr.name}} {{item.startAddr.mobile}}</text>
+          <view>{{item.startAddr.address}}</view>
+        </view>
+        <view class='icon'>
+          <i-icon type="enter" size="24" color="#cccccc" />
+        </view>
+      </view>
+
+      <view class='addr' bindtap='selectAddr' data-index='{{index}}' data-cid='{{item.c_id}}' data-addrtype='end'>
+        <image src='../../img/icon-end.png' mode='aspectFit' />
+        <view class='info'>
+          <text>{{item.address_info.name || ''}} {{item.address_info.mobile || ''}}</text>
+          <view>{{item.address_info.address || ''}}</view>
+        </view>
+        <view class='icon'>
+          <i-icon type="enter" size="24" color="#cccccc" />
+        </view>
+      </view>
+
+      <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange" data-index='{{index}}' data-cid='{{item.c_id}}'>
+        <view class='date'>
+          <view class='left_side'>
+            <i-icon type="activity" size="26" color="#09bb07" />
+            <text>上门服务日期</text>
+          </view>
+          <view class='date_right'>
+            <text>{{item.date || ''}}</text>
+            <i-icon type="enter" size="24" color="#cccccc" />
+          </view>
+        </view>
+      </picker>
+
+      <picker disabled='{{item.date===""}}' mode="multiSelector" value="{{timeIndex}}" range="{{time}}" bindchange="bindTimeChange" bindcolumnchange="timeColumnChange" data-index='{{index}}' data-cid='{{item.c_id}}'>
+        <view class='time' bindtap='clickTimePicker' data-index='{{index}}'>
+          <view class='left_side'>
+            <i-icon type="clock" size="26" color="#09bb07" />
+            <text>上门服务时间</text>
+          </view>
+          <view class='date_right'>
+            <text>{{item.time || ''}}</text>
+            <i-icon type="enter" size="24" color="#cccccc" />
+          </view>
+        </view>
+      </picker>
+    </view>
+  </checkbox-group>
+</view>
+
+<view class='loading' wx:if="{{isLoading}}">
+  <i-spin i-class='loading_icon' fix></i-spin>
+</view>
+
+<view class='nomore' wx:if="{{showNoMore}}">没有更多数据了</view>
+
+<view class='foot_space'></view>
+
+<view class='footer' wx:if='{{current==="1"}}'>
+  <checkbox-group>
+    <checkbox value='list1.c_name' checked="{{allChecked}}" bindtap='checkAll' />全选
+  </checkbox-group>
+
+  <view class='price_n_btn'>
+    <text>应付金额：￥{{finalTotal}}</text>
+    <button bindtap='takeOrder' data-type='{{1}}'>确认下单</button>
+  </view>
+</view>
+
+<view class='footer' wx:if='{{current==="2"}}'>
+  <checkbox-group>
+    <checkbox value='list1.c_name' checked="{{allChecked2}}" bindtap='checkAll2' />全选
+  </checkbox-group>
+
+  <view class='price_n_btn'>
+    <button bindtap='takeOrder' data-type='{{0}}'>确认下单</button>
+  </view>
+</view>

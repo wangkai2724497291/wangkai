@@ -1,0 +1,68 @@
+<!--pages/confirmorder/confirmorder.wxml-->
+<view class='servetype'>{{content}}</view>
+<view class='service_big'>
+  <view class='dizhi_img'>
+    <view class='dizhi'><image src='/img/dizhi.png'></image></view>
+    <view class='site'>{{name}}</view>
+    <view class='phone_number'>{{phone}}</view>
+  </view>
+  <view class='right_img'>{{address}}</view>
+</view>
+<view class='servicetype'>
+  <view>支付金额</view>
+  <view class='amount'>
+    <view>¥</view>
+    <view>{{NameInput}}</view>
+  </view>
+</view>
+<view class='discount' bindtap='gotoCoupon'>
+  <view>优惠券</view>
+  <view class='coupon'>
+    <view>¥</view>
+    <view>{{discount}}</view>
+  </view>
+</view>
+
+
+
+<!-- <view class='payment'>
+  <view>支付方式</view>
+</view> -->
+
+<!-- <view class='loose_payment'>
+  <view class='payfor'>
+    <view>零钱支付</view>
+    <view>¥0.00</view>
+  </view>
+  <view class='radio'>
+    <radio-group class="radio-group">
+      <label class="radio" bindtap="typeChange" >
+        <radio />
+      </label>
+    </radio-group>
+  </view>
+</view> -->
+
+<!-- <view class='wx_payment'>
+  <view class='WeChat_pay'>微信支付</view>
+  <view class='radio'>
+    <radio-group class="radio-group">
+      <label class="radio" bindtap="typeChange" >
+        <radio checked="false" />
+      </label>
+    </radio-group>
+  </view>
+</view> -->
+
+<view class='btn_bottom'>
+  <view class='figure'>
+    <view>¥</view>
+    <view>{{payCount}}</view>
+    <!-- <view>{{NameInputs}}</view> -->
+  </view>
+  <!-- <view class='submit_btn'><button bindtap='submitorder'>支付</button></view> -->
+  <form report-submit="true" bindsubmit="formSubmit" class='submit_btn'>
+    <button form-type='submit' bindtap='pay' disabled='{{isPaying}}'>立即支付</button>
+  </form>
+</view>
+

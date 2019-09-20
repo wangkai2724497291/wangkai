@@ -1,0 +1,31 @@
+/* pages/genStream/index.wxss */
+.table_head {
+  display: flex;
+  height: 114rpx;
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  background-color: #fff;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+
+.table_head text {
+  width: 33.33%;
+  height: 100%;
+  line-height: 114rpx;
+  text-align: center;
+}
+
+.table_tr {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+
+.table_tr text {
+  width: 33.33%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #747679;
+}

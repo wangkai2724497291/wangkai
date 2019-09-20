@@ -29,10 +29,19 @@
   font-size: 30rpx;
 }
 
+<<<<<<< HEAD
 .coupon .time {
   height: 48rpx;
   padding-left: 42rpx;
   line-height: 48rpx;
+=======
+.coupon .condition_n_time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48rpx;
+  padding: 0 42rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   font-size: 20rpx;
   color: #666;
 }

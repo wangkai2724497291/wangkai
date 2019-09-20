@@ -98,6 +98,10 @@ Page({
 
   takeOrder: function (e) {
     var url = ''
+<<<<<<< HEAD
+=======
+    console.log(e)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     if (e.currentTarget.dataset.standard) {
       url = '/pages/appointment/index?id=' + e.currentTarget.dataset.id
     } else {

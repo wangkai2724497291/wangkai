@@ -101,6 +101,10 @@
   line-height: normal;
   background-color: #fff;
   font-size: 27rpx;
+<<<<<<< HEAD
+=======
+  height: 60rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 .menu_item image {
   width: 40rpx;
@@ -112,6 +116,30 @@
   align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+.menu_item1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 40rpx;
+  margin-bottom: 1rpx;
+  line-height: normal;
+  background-color: #fff;
+  font-size: 27rpx;
+  height: 60rpx;
+}
+.menu_item1 image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.menu_item1 view:first-of-type {
+  display: flex;
+  align-items: center;
+}
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 /* 推荐测试按钮 */
 .recomment {
   display: block;
@@ -125,6 +153,20 @@
   border-radius: 0;
 }
 
+<<<<<<< HEAD
+=======
+/* 退出登录 */
+.btn button{
+  width: 100%;
+  height: 88rpx;
+  border: none;
+  background: #fff;
+  font-size: 27rpx;
+  line-height: 88rpx;
+  margin-bottom: 100rpx;
+}
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 /* 二维码 */
 .qrcode {
   margin-top: 52rpx;
@@ -140,4 +182,26 @@
 .qrcode view {
   font-size: 25rpx;
   color: #161823;
+<<<<<<< HEAD
 }
+=======
+}
+
+
+/* 底部按钮 */
+.scancode {
+  width: 100%;
+  height: 200rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scancode button{
+  width: 90%;
+  border-radius:10rpx;
+  background: #000;
+  color: #fff;
+}
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39

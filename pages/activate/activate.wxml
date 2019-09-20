@@ -1,0 +1,29 @@
+<!--pages/activate/activate.wxml-->
+<view class='warp'>
+  <view class='activate'>
+    <input type='text' disabled='false' placeholder='账号' placeholder-style='color:black;' class='ipt'></input>
+    <input type='number' class='code' placeholder="请输入卡号" bindinput='card' focus='true'></input>
+  </view>
+  <view class='activate'>
+    <input type='text' disabled='false' placeholder='激活码' placeholder-style='color:black'  class='ipt' ></input>
+    <input type='text' class='code' placeholder="请输入激活码" bindinput='code'></input>
+  </view>
+</view>
+
+<picker bindchange="changeRegin" mode = "region" value="{{region}}">
+    <view class='warps'>
+      <view class='date'>
+        <view class='left_side'>
+          <text>选择服务区域</text>
+          <i-icon type="enter" size="24" color="#cccccc" />
+        </view>
+        <view class="{{region.length?'show':'hide'}}">
+          <text>{{region[0]}} {{region[1]}} {{region[2]}}</text>
+        </view>
+      </view>
+    </view>
+    </picker>
+
+<view class='confirm'>
+  <button bindtap='cancelOrder'>立即激活</button>
+</view>

@@ -1,0 +1,89 @@
+<!--pages/placeorder/placeorder.wxml-->
+<view class='servicedemo'>选择服务内容</view>
+<view class='contentservice'>
+  <view class='services {{state==index?"active":""}}' wx:for='{{serviceinfo}}' wx:key="index" bindtap='service' data-key='{{index}}'>
+    {{item.c_name}}
+  </view>
+</view>
+
+
+
+<navigator url='../address/index?from=simAppoint&id={{product.p_id}}' class='contact'>
+  <view class="contact_item">
+    <view class='info' wx:if="{{order.address.name}}">
+      <text class='name_phone'>{{order.address.name}} {{order.address.mobile}}</text>
+      <view class='addr'>
+        <i-icon type="coordinates" size="18" color="#cccccc" />
+        <text>{{order.address.address}}}</text>
+      </view>
+    </view>
+
+    <view wx:else class='img_is'>
+      <view class='site'>
+        <text class='card_s'>选择服务地址</text>
+      </view>
+    </view>
+    <i-icon type="enter" size="24" color="#cccccc" />
+  </view>
+</navigator>
+
+
+<view class="amount">
+			<view class="withdrawal">输入支付金额</view>
+      <!-- <view class='icon'>
+        <i-icon type="enter" size="24" color="#cccccc" />
+      </view> -->
+			<view class="inp">
+				<view class="ren">¥</view>
+				<view><input type="digit" maxlength='7' bindinput ="userNameInput" /></view>
+			</view>
+			<view class="difference">
+				<view>温馨提示：</view>
+				<view>除甲醛单次服务费用平台参考价为400-500元</view>
+			</view>
+		</view>
+
+<!-- <view class='service_site' bindtap='discount'>
+  <view>优惠券</view>
+  <view class='coupon'>
+   <view class='available'>{{couponNum}}张可用</view>
+    <view class='right_btn'><image src='/img/right.png'> </image></view>
+  </view>
+</view> -->
+
+<!-- <view class='service_site' bindtap='gotoCoupon'>
+  <view>优惠券</view>
+  <view class='coupon'>
+   <view class='available'>￥{{coupon.prices}}</view>
+    <view class='right_btn'><image src='/img/right.png'> </image></view>
+  </view>
+</view> -->
+
+
+<view class='service_site' bindtap='gotoCoupon'>
+  <view class='cash'>优惠券</view>
+  <view wx:if="{{coupon.prices}}" class='available'>
+    <view>￥{{coupon.prices}}</view>
+    <view class='icon_v'><i-icon type="enter" size="24" color="#cccccc" /></view>
+  </view>
+  
+  <view wx:else>
+    <view class='coupon'>
+      <view class='usable'>{{couponNum}}张可用</view>
+      <view class='icon_s'><i-icon type="enter" size="24" color="#cccccc" /></view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+<view class='btn_bottom'>
+  <view class='figure'>
+    <view>¥</view>
+    <view class='nameinput'>{{NameInputs}}</view>
+  </view>
+  <view class='submit_btn'><button bindtap='submitorder_oc'>提交订单</button></view>
+</view>

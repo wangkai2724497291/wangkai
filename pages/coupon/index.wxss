@@ -2,7 +2,10 @@
 .search_container {
   display: flex;
   padding: 52rpx 39rpx;
+<<<<<<< HEAD
   background-color: #00c482;
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 .search_container input {
   flex: 1;
@@ -19,7 +22,11 @@
   height: 71rpx;
   color: #fff;
   font-size: 26rpx;
+<<<<<<< HEAD
   background-color: #ff9585;
+=======
+  background-color: #00c482;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 4rpx;
@@ -60,10 +67,19 @@
   font-size: 30rpx;
 }
 
+<<<<<<< HEAD
 .coupon .time {
   height: 48rpx;
   padding-left: 42rpx;
   line-height: 48rpx;
+=======
+.coupon .condition_n_time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48rpx;
+  padding: 0 42rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   font-size: 20rpx;
   color: #666;
 }

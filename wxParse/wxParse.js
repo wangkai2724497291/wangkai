@@ -45,6 +45,10 @@ function wxParse(bindName = 'wxParseData', type='html', data='<div class="color:
   if(typeof(imagePadding) != 'undefined'){
     transData.view.imagePadding = imagePadding
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   var bindData = {};
   bindData[bindName] = transData;
   that.setData(bindData)
@@ -54,6 +58,11 @@ function wxParse(bindName = 'wxParseData', type='html', data='<div class="color:
 // 图片点击事件
 function wxParseImgTap(e) {
   var that = this;
+<<<<<<< HEAD
+=======
+  console.log(e);
+  console.log(that);
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   var nowImgUrl = e.target.dataset.src;
   var tagFrom = e.target.dataset.from;
   if (typeof (tagFrom) != 'undefined' && tagFrom.length > 0) {

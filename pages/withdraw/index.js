@@ -14,7 +14,13 @@ Page({
     balance: '',
     cash: 0,
     countPlaceHolder: '',
+<<<<<<< HEAD
     seriveCharge: '0'
+=======
+    seriveCharge: '0',
+    rate: 0,
+    limited: 0
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
@@ -83,7 +89,12 @@ Page({
   },
   inputChange: function (e) {
     this.setData({
+<<<<<<< HEAD
       cash: parseFloat(e.detail.value)
+=======
+      cash: parseFloat(e.detail.value),
+      seriveCharge: parseFloat((parseFloat(e.detail.value) * this.data.rate).toFixed(2)) || 0
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     })
   },
 
@@ -105,10 +116,18 @@ Page({
     //查询提现提示信息
     var getWithdrawTip = wxRequest.postRequest(path.getWithdrawTip());
     getWithdrawTip.then(res => {
+<<<<<<< HEAD
       console.log(res)
       if (res.data.status) {
         that.setData({
           countPlaceHolder: res.data.data
+=======
+      if (res.data.status) {
+        that.setData({
+          countPlaceHolder: parseInt(res.data.data.all_cash_limit.value),
+          rate: res.data.data.withdraw,
+          limited: parseFloat(res.data.data.all_cash_limit.value)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         })
       }
     })
@@ -124,16 +143,26 @@ Page({
       return
     }
 
+<<<<<<< HEAD
     if (parseInt(this.data.cash) < 200) {
       wx.showToast({
         title: '提现金额不能小于200',
+=======
+    if (parseInt(this.data.cash) < this.data.limited) {
+      wx.showToast({
+        title: '提现金额不能小于' + this.data.limited,
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         icon: 'none',
         duration: 2000
       })
       return
     }
 
+<<<<<<< HEAD
     if (this.data.cash > parseFloat(this.data.balance)) {
+=======
+    if ((this.data.cash - this.data.seriveCharge) > parseFloat(this.data.balance)) {
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       wx.showToast({
         title: '提现金额不能大于账户余额',
         icon: 'none',

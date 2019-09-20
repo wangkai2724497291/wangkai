@@ -1,5 +1,9 @@
 {
   "navigationBarTitleText": "订单详情",
+<<<<<<< HEAD
+=======
+  "enablePullDownRefresh": true,
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   "usingComponents": {
     "i-modal": "../../extend/iview/modal/index"
   }

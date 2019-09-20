@@ -1,0 +1,90 @@
+.body{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+.body_head{
+  width: 92%;
+}
+.banner image{
+  width: 692rpx;
+  height: 173rpx;
+}
+.order{
+  /* width:128rpx; */
+  height:31rpx;
+  font-size:32rpx;
+  font-weight:bold;
+  color:#000000;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx
+}
+.indent{
+  font-size:28rpx;
+  font-weight:normal;
+  color:#636363;
+   margin-bottom: 20rpx;
+}
+.process{
+font-size:32rpx;
+font-weight:bold;
+color:#000000;
+}
+.place_order image{
+  width: 100%;
+  height: 125rpx;
+  margin-top: 20rpx;
+}
+.customers{
+  font-size:32rpx;
+  font-weight:bold;
+  color:#000000;
+  margin-top: 20rpx;
+}
+.commitment image{
+  width: 29rpx;
+  height: 29rpx;
+}
+.refund{
+font-size:28rpx;
+font-weight:bold;
+color:#000000;
+margin-left: 10rpx;
+}
+.reimburse{
+font-size:24rpx;
+font-weight:normal;
+color:#8F8F8F;
+margin-left: 35rpx;
+margin-top: 10rpx;
+}
+
+.subscribe image{
+  width: 29rpx;
+  height: 29rpx;
+}
+.thirty{
+  font-size:28rpx;
+  font-weight:bold;
+  color:#000000;
+  margin-left: 10rpx;
+}
+.user{
+  font-size:24rpx;
+  font-weight:normal;
+  color:#8F8F8F;
+  margin-left: 35rpx;
+  margin-top: 10rpx;
+}
+.know{
+  width:750rpx;
+  height:99rpx;
+  background:#0FBF97;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+  color: #fff;
+  font-size:32rpx;
+  font-weight:normal;
+}

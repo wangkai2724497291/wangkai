@@ -175,7 +175,11 @@ Page({
       if (res.data.status) {
         var totalPage = Math.ceil(res.data.data.count / that.data.pageSize)
         couponList = res.data.data.list
+<<<<<<< HEAD
 
+=======
+        console.log(couponList);
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         for (var i = 0; i < couponList.length; i++) {//格式化时间
           couponList[i].coupon_start_time = util.formatTime(couponList[i].coupon_start_time)
           couponList[i].coupon_end_time = util.formatTime(couponList[i].coupon_end_time)

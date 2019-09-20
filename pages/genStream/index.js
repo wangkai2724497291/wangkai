@@ -79,6 +79,11 @@ Page({
       page: that.data.currentPage,
       page_size: 20
     }).then(res => {
+<<<<<<< HEAD
+=======
+      console.log(res);
+      console.log(that)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       if (!res.data.status) return
       that.setData({
         list: [...that.data.list, ...res.data.data.list],

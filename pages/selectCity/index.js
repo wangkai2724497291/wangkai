@@ -4,6 +4,16 @@ var city = require('../../utils/city.js');
 var path = require('../../utils/api.js');
 var wxRequest = require('../../utils/wxRequest.js')
 
+<<<<<<< HEAD
+=======
+var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
+// 实例化API核心类
+var demo = new QQMapWX({
+  key: 'RXXBZ-JZNCD-JPF4H-P5AZE-7UKYT-Z7F2B'
+  // key: 'LFJBZ-KAUCO-N4XWA-S535O-7F3D5-OWFKP' // 必填
+});
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 Page({
 
   /**
@@ -27,13 +37,20 @@ Page({
     isLoading: true,
     currentPage: 1,
     totalPage: 1,
+<<<<<<< HEAD
     showNoMore: false
+=======
+    showNoMore: false,
+
+  
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+<<<<<<< HEAD
     // 所有城市列表 开始 //
     var searchLetter = city.searchLetter;
     var cityList = city.cityList();
@@ -46,6 +63,24 @@ Page({
     //添加要匹配的字母范围值
     //1、更加屏幕高度设置子元素的高度
     var itemH = winHeight / searchLetter.length;
+=======
+    console.log(getApp())
+    console.log(app)
+    // 所有城市列表 开始 //
+    console.log(city)
+    var searchLetter = city.searchLetter;
+    var cityList = city.cityList();
+    console.log(searchLetter);
+
+    var sysInfo = wx.getSystemInfoSync();
+    console.log(sysInfo)
+    var winHeight = sysInfo.windowHeight - 170;
+    console.log(sysInfo.windowHeight)
+    //添加要匹配的字母范围值
+    //1、更加屏幕高度设置子元素的高度
+    var itemH = winHeight / searchLetter.length;
+    console.log(itemH)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     var tempObj = [];
     for (var i = 0; i < searchLetter.length; i++) {
       var temp = {};
@@ -54,6 +89,10 @@ Page({
       temp.bHeight = (i + 1) * itemH;
 
       tempObj.push(temp)
+<<<<<<< HEAD
+=======
+    
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     }
 
     this.setData({
@@ -76,9 +115,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+<<<<<<< HEAD
     var addr = app.globalData.address
     this.setData({
       city: addr.city,
+=======
+    console.log(app)
+    var addr = app.globalData.address
+    console.log(addr)
+    this.setData({
+      city: addr.recommend,
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       selectCity: addr.selectCity == '' ? addr.city : addr.selectCity //如果一开始还未选择城市，那么选择的城市和当前城市一样
     })
   },
@@ -118,6 +165,7 @@ Page({
 
   },
 
+<<<<<<< HEAD
   setSearchValue: function (e) {
     var that = this
     //搜索城市接口
@@ -127,6 +175,39 @@ Page({
       search_text: e.detail.value
     });
     searchCity.then(res => {
+=======
+  // setSearchValue: function (e) {
+  //   var that = this
+  //   //搜索城市接口
+  //   console.log(that)
+  //   var searchCity = wxRequest.postRequest(path.searchCity(), {
+  //     page: that.data.currentPage,
+  //     pagesize: 30,
+  //     search_text: e.detail.value,
+  //   });
+  //   searchCity.then(res => {
+  //     console.log(res)
+  //     if (res.data.status) {
+  //       that.setData({
+  //         result: res.data.data.list
+  //       })
+  //     }
+  //   })
+  // },
+
+
+  setSearchValue: function (e) { 
+    var that = this
+    //搜索城市接口
+    console.log(that)
+    var searchCity = wxRequest.postRequest(path.searchCity(), {
+      page: that.data.currentPage,
+      pagesize: 30,
+      search_text: e.detail.value,
+    });
+    searchCity.then(res => {
+      console.log(res)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       if (res.data.status) {
         that.setData({
           result: res.data.data.list
@@ -135,6 +216,74 @@ Page({
     })
   },
 
+<<<<<<< HEAD
+=======
+  // setSearchValue: function (e) {
+  //   var that = this
+  //   console.log(e);
+  //   console.log(that);
+  //   demo.getSuggestion({
+  //     keyword: e.detail.value,
+  //     region: that.data.city,
+  //     policy: 1,
+  //     success: function (res) {
+  //       console.log(res)
+  //       that.setData({
+  //         result: res.data
+  //       })
+  //     },
+  //     fail: function (res) {
+  //       console.log(res);
+  //     },
+  //     complete: function (res) {
+  //       // console.log(res);
+  //     }
+  //   });
+  // },
+
+
+  // selectAddr: function (e) {
+  //   var obj = {}
+  //   var data = e.currentTarget.dataset
+  //   obj.title = data.title
+  //   obj.addr = data.addr
+  //   obj.province = data.province
+  //   obj.city = data.city
+  //   obj.area = data.area
+  //   obj.adcode = data.adcode
+  //   obj.location = { lat: data.lat, lng: data.lng }
+  //   app.globalData.pageLocation = obj
+  //   wx.navigateBack()
+  // },
+
+  // selectLocationAddr: function () {
+  //   var obj = {}
+  //   var data = app.globalData.address
+  //   obj.title = data.street_number
+  //   obj.addr = data.street_number
+  //   obj.province = data.province
+  //   obj.city = data.city
+  //   obj.area = data.area
+  //   obj.adcode = data.adcode
+  //   obj.location = data.location
+  //   app.globalData.pageLocation = obj
+  //   wx.navigateBack()
+  // },
+
+
+  // getLoaction: function () {
+  //   var that = this
+  //   that.setData({
+  //     locationAddr: '重新定位中...'
+  //   })
+  //   app.getLoaction(function () {
+  //     that.setData({
+  //       locationAddr: app.globalData.address.allAddr
+  //     })
+  //   })
+  // },
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   // 搜索栏聚焦
   searchFocus: function () {
     this.setData({
@@ -149,14 +298,27 @@ Page({
     })
   },
 
+<<<<<<< HEAD
   getLoaction: function() {
     var that = this
+=======
+  getLoaction: function() {  
+    var that = this
+    console.log(that)
+    console.log(app)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     that.setData({
       city: '重新定位中...'
     })
     app.getLoaction(function() {
+<<<<<<< HEAD
       that.setData({
         city: app.globalData.address.city
+=======
+    console.log(app);
+      that.setData({
+        city: app.globalData.address.recommend
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       })
     })
   },
@@ -250,14 +412,25 @@ Page({
   },
   // 点击选择城市
   bindCity: function (e) {
+<<<<<<< HEAD
     var selectCity = e.currentTarget.dataset.city;
     app.globalData.address.selectCity = selectCity
+=======
+    console.log(e)
+    var selectCity = e.currentTarget.dataset;
+    app.globalData.address.selectCity = selectCity.city
+    app.globalData.address.selectAdcode = selectCity.adcode
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     this.setData({ selectCity: selectCity }, () => { wx.navigateBack() })
   },
   // 所有城市列表 方法结束 //
 
   selectCurrentCity: function () {
     app.globalData.address.selectCity = ''
+<<<<<<< HEAD
+=======
+    app.globalData.address.selectAdcode = ''
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     wx.navigateBack()
   }
 })

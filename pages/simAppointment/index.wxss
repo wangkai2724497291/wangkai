@@ -1,4 +1,8 @@
 /* pages/simAppointment/index.wxss */
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 .head {
   padding-top: 30rpx;
   padding-left: 30rpx;
@@ -8,21 +12,37 @@
 }
 
 /* 联系方式 */
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 .contact {
   display: block;
   margin-top: 21rpx;
   font-size: 30rpx;
   background-color: #fff;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 .contact_item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 36rpx;
 }
+<<<<<<< HEAD
 .contact_item .info > text {
   display: block;
 }
+=======
+
+.contact_item .info > text {
+  display: block;
+}
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 .contact_item .info .addr {
   display: flex;
   align-items: center;
@@ -30,9 +50,29 @@
   color: #a6a6a6;
 }
 
+<<<<<<< HEAD
 /* 时间 */
 .date,
 .time {
+=======
+.expected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:36rpx;
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.expected input {
+  text-align: right;
+}
+
+/* 时间 */
+
+.date, .time {
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,6 +84,7 @@
   background-color: #fff;
 }
 
+<<<<<<< HEAD
 .left_side,
 .right_side {
   display: flex;
@@ -53,11 +94,29 @@
 .left_side text {
   margin-left: 20rpx;
 }
+=======
+.left_side, .right_side {
+  display: flex;
+  align-items: center;
+}
+.left_side image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.left_side text {
+  margin-left: 20rpx;
+}
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 .right_side text {
   margin-right: 20rpx;
 }
 
 /* 留言框 */
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 textarea {
   box-sizing: border-box;
   width: 750rpx;
@@ -66,6 +125,7 @@ textarea {
   margin-top: 21rpx;
   font-size: 30rpx;
   background-color: #fff;
+<<<<<<< HEAD
 }
 
 /* 上传图片 */
@@ -73,14 +133,108 @@ textarea {
 .product_uploader .weui-uploader__img {
   width: 155rpx;
   height: 155rpx;
+=======
+  z-index: 100;
+  position: relative;
+}
+
+/* 四、五级 */
+.fourth_box {
+  padding: 30rpx 0;
+  font-size:30rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.fourth_list {
+  padding-right: 30rpx;
+  padding-bottom: 20rpx;
+  margin-bottom: 21rpx;
+  margin-left: 21rpx;
+  width: 200rpx;
+}
+
+.fourth_list:last-of-type {
+  border-color: transparent;
+}
+
+.fourth_list .four_title {
+  margin-bottom: 15rpx;
+  width:200rpx;
+  height:60rpx;
+  background:#F5F5F5;
+  color: #8e8e8e;
+  font-size: 25rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.fourth_list > text {
+  display: block;
+  margin-bottom: 15rpx;
+}
+
+.fourth_list .list text {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 55rpx;
+  padding: 0 20rpx;
+  margin-right: 24rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #8e8e8e;
+  line-height: 50rpx;
+  border: 1rpx solid #8e8e8e;
+  border-radius: 8rpx;
+}
+
+.fourth_list .list .active {
+  color: #44d4a3;
+  border-color: #44d4a3;
+}
+.active{
+  color: #fff;
+  border-color: #44d4a3;
+  background: #0FBF97;
+}
+
+/* 上传图片 */
+/* .product_uploader{
+  border-top: 1px solid red;
+} */
+/* .product_uploader .weui-uploader__input-box,
+.product_uploader .weui-uploader__img {
+  width: 155rpx;
+  height: 155rpx;
+} */
+
+.weui-uploade image{
+  width: 155rpx;
+  height: 155rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 .product_uploader .weui-uploader__file {
   position: relative;
 }
+<<<<<<< HEAD
 .product_uploader .weui-uploader__title {
   font-size: 30rpx;
 }
 
+=======
+
+.product_uploader .weui-uploader__title {
+  font-size: 30rpx;
+  margin-top: 25rpx;
+}
+.weui-cells{
+  height: 350rpx;
+}
+.weui-cell{
+  border-top: 1rpx solid #fff;
+}
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 .product_uploader .weui-uploader__file .delete {
   position: absolute;
   top: 0;
@@ -90,6 +244,10 @@ textarea {
 }
 
 /* 协议 */
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 .agreement {
   padding: 30rpx;
   font-size: 25rpx;
@@ -99,6 +257,7 @@ textarea {
 .agreement navigator {
   display: inline-block;
   color: #00c482;
+<<<<<<< HEAD
 }
 
 /* 提交按钮 */
@@ -113,4 +272,120 @@ textarea {
   color: #fff;
   background-color: #00c482;
   border-radius: 0;
+=======
+  /* border-top: 100rpx solid #fff; */
+}
+
+/* 提交按钮 */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 118rpx;
+  font-size: 23rpx;
+  background: #fff;
+  z-index: 1001;
+}
+
+.footer > navigator {
+  position: relative;
+  width: 350rpx;
+  height: 118rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+.footer > navigator text {
+  position: absolute;
+  top: 11rpx;
+  left: 176rpx;
+  width: 33rpx;
+  height: 33rpx;
+  font-size:20rpx;
+  color: #fff;
+  background: rgba(255, 27, 54, 1);
+  border-radius: 50%;
+}
+/* .contact_item view{
+  margin-top: 20rpx;
+} */
+.tip{
+  /* background: lightblue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 350rpx;
+}
+.tip image{
+  width: 40rpx;
+  height: 40rpx;
+  /* position: absolute;
+  top: 24%; */
+}
+.tip view{
+  /* margin-left: 60rpx; */
+}
+.img_is image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 12%;
+}
+.img_is text{
+  margin-left: 60rpx;
+}
+
+.footer > navigator image {
+  width: 41rpx;
+  height: 41rpx;
+  margin-top: 29rpx;
+}
+
+.footer > navigator view {
+  display: block;
+  color: #777;
+}
+
+.add_shopcart, .submit {
+  width: 200rpx;
+  height: 118rpx;
+  padding: 0;
+  font-size: 29rpx;
+  line-height: 118rpx;
+  border-radius: 0;
+}
+
+.add_shopcart {
+  color: #555;
+  background-color: #ffc540;
+}
+
+.submit {
+  color: #fff;
+  background-color: #cdcdcd;
+  width: 750rpx;
+  position: absolute;
+  bottom: 0;
+}
+
+.txtarea {
+  /* width: 100%;
+  height: 300rpx;
+  background-color: red;
+  font-size: 30rpx; */
+letter-spacing: -2rpx;
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 250rpx;
+  padding: 29rpx;
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+  z-index: 100;
+  position: relative;
+  color: rgb(134, 131, 131)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }

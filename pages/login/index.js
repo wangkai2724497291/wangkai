@@ -17,7 +17,11 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     /*页面数据配置*/
+<<<<<<< HEAD
     title:'每日一题',
+=======
+    title:'家通达',
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     auth_window_display:"none"
   },
   //事件处理函数
@@ -50,16 +54,31 @@ Page({
     var getPostsRequest = wxRequest.postRequest(path.test(), data);
     getPostsRequest.then(response => { 
          console.log("调用完毕继续");
+<<<<<<< HEAD
     })
   },
   regist:function(e){
     wx.navigateTo({
+=======
+      console.log(response)
+    })
+    wx.redirectTo({
+      url: '../user/index'
+    })
+  },
+  regist:function(e){
+    wx.redirectTo({
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       url: '../register/index'
     })
   },
   onLaunch:function(){
     //全局
     var that = this;
+<<<<<<< HEAD
+=======
+    console.log(that)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -84,15 +103,27 @@ Page({
   get_token: function (){
     //全局
     var that = this;
+<<<<<<< HEAD
     //先获取code
     wx.login({
       success: function (res) {
+=======
+    console.log(that)
+    //先获取code
+    wx.login({
+      success: function (res) {
+        console.log(res)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         if (res.code) {
           that.code = res.code;
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
               console.log(res);
+<<<<<<< HEAD
+=======
+              console.log(path)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
               // 可以将 res 发送给后台解码出 unionId
               that.globalData.userInfo = res.userInfo;
               wx.request({
@@ -103,7 +134,12 @@ Page({
                   encryptedData: res.encryptedData
                 },
                 success: function (res) {
+<<<<<<< HEAD
                   console.log(res.data);
+=======
+                  console.log(res);
+                  console.log(res.data)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
                   wx.setStorageSync("token", res.data.data.token);
                   that.setData({
                     auth_window_display: "none"

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // pages/agreement/index.js
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 Page({
 
   /**

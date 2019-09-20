@@ -19,7 +19,11 @@
       <view>{{bestRecomment.p_desc}}</view>
     </view>
     <form report-submit="true" bindsubmit="formSubmit">
+<<<<<<< HEAD
       <button class='place_order' catchtap='takeOrder' data-id='{{bestRecomment.p_id}}' data-standard='{{bestRecomment.is_standard}}' form-type='submit'>立即下单</button>
+=======
+      <button class='place_orders' catchtap='takeOrder' data-id='{{bestRecomment.p_id}}' data-standard='{{bestRecomment.is_standard}}' form-type='submit'>立即下单</button>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     </form>
   </view>
 </navigator>
@@ -27,7 +31,11 @@
 <view class='other_recommend' wx:if="{{otherRecomment.length}}">
   <view class='head'>
     <image src='../../img/other.png' mode='aspectFit' />
+<<<<<<< HEAD
     <text>其他推荐</text>
+=======
+    <text>{{categoryIds}}</text>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   </view>
 
   <navigator class='recom_item' url='../repairDetail/index?id={{item.p_id}}&standard={{item.is_standard}}' wx:for="{{otherRecomment}}" wx:key="{{index}}">

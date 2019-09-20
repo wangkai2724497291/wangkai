@@ -1,6 +1,10 @@
 <!--pages/balance/index.wxml-->
 <view class='account_balance'>
+<<<<<<< HEAD
   <text>账户余额(元)</text>
+=======
+  <text>您的账户余额(元)</text>
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   <view class='num_account'>
     <text>{{balance}}</text>
     <navigator url='/pages/traceLog/index'>交易流水</navigator>

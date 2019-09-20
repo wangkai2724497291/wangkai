@@ -1,0 +1,41 @@
+<view class='body'>
+  <view class='body_head'>
+    <view class='banner'>
+      <image src='/img/banner.png'></image>
+    </view>
+    <view class='order'>报价订单</view>
+    <view class='indent'>1.该订单为报价订单，下单后，多个师傅参与报价，请及
+时关注微信及短信推送，并选择其中一位合适的师傅并支
+付其报价；</view>
+    <view class='indent'>2.师傅将与您预约时间，准时上门服务；</view>
+    <view class='indent'>3.师傅上门后，现场产生增项业务（实际服务超出您在线
+上发布的需求），需双方协商价格，同意后开始服务，若
+师傅违规乱加价，您可对师傅进行投诉，平台会保障您的
+权益；</view>
+     <view class='process'>下单流程</view>
+     <view class='place_order'><image src='/img/place_order.png'></image></view>
+     <view class='customers'>服务承诺</view>
+     <view class='commitment'>
+      <image src='/img/icon_01.png'></image>
+      <text class='refund'>未服务全额退</text>
+      <view class='reimburse'>师傅未上门服务前，支持全额退款，退款将于24小时内到账</view>
+     </view>
+
+     <view class='subscribe'>
+      <image src='/img/icon_02.png'></image>
+      <text class='thirty'>30分钟内预约</text>
+      <view class='user'>用户雇佣师傅并支付完成后，师傅将会30分钟内预约上门服务
+时间</view>
+     </view>
+
+     <view class='subscribe'>
+      <image src='/img/icon_03.png'></image>
+      <text class='thirty'>准时上门服务</text>
+      <view class='user'>师傅将按照约定的时间准时上门服务</view>
+     </view>
+  </view>
+</view>
+
+ <form report-submit="true" bindsubmit="formSubmit">
+    <button class='know' catchtap='verify' data-type='submit' form-type='submit'>我知道了</button>
+  </form>

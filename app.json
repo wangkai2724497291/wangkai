@@ -1,6 +1,22 @@
 {
   "pages": [
     "pages/index/index",
+<<<<<<< HEAD
+=======
+    "pages/master/master",
+    "pages/confirmorder/confirmorder",
+    "pages/placeorder/placeorder",
+    "pages/overman/overman",
+    "pages/coverage/coverage",
+    "pages/activate/activate",
+    "pages/couponjitk/couponjitk",
+    "pages/allClass/index",
+    "pages/test/test",
+    "pages/simAppointment/index",
+    "pages/agreement/index",
+    "pages/shopCart/index",
+    "pages/appointment/index",
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     "pages/recommender/index",
     "pages/withdraw/index",
     "pages/pay/index",
@@ -11,7 +27,10 @@
     "pages/user/index",
     "pages/register/index",
     "pages/evaluate/index",
+<<<<<<< HEAD
     "pages/appointment/index",
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     "pages/customized/index",
     "pages/article/index",
     "pages/repairDetail/index",
@@ -19,7 +38,10 @@
     "pages/address/index",
     "pages/orders/index",
     "pages/serviceDetail/index",
+<<<<<<< HEAD
     "pages/agreement/index",
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     "pages/serviceCoupon/index",
     "pages/addAddr/index",
     "pages/location/index",
@@ -29,6 +51,7 @@
     "pages/collection/index",
     "pages/traceLog/index",
     "pages/coupon/index",
+<<<<<<< HEAD
     "pages/allClass/index",
     "pages/single/index",
     "pages/search/index",
@@ -45,4 +68,34 @@
   "networkTimeout": {
     "uploadFile": 60000
   }
+=======
+    "pages/single/index",
+    "pages/search/index",
+    "pages/login/index",
+    "pages/logs/logs",
+    "pages/shopcartPay/index",
+    "pages/camera/camera",
+    "pages/information/information",
+    "pages/purchaseNote/purchaseNote",
+    "pages/partner/partner",
+    "pages/code/code",
+    "pages/bind/bind"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "家通达",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark"
+  },
+  "networkTimeout": {
+    "uploadFile": 60000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请授权位置权限"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }

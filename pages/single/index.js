@@ -14,6 +14,10 @@ Page({
     otherRecomment: [],
 
     categoryId: 0,
+<<<<<<< HEAD
+=======
+    categoryIds:0,
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     isLoading: true,
     currentPage: 1,
     totalPage: 1,
@@ -24,8 +28,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+<<<<<<< HEAD
     this.setData({
       categoryId: options.c_id
+=======
+    if (options.c_id==21){
+      this.setData({
+        categoryIds: '家电清洗'
+      })
+    }
+    this.setData({
+      categoryId: options.c_id,
+      categoryIds: options.c_name,
+      
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     }, () => {
       this.getProducts()
     })
@@ -91,7 +107,10 @@ Page({
       formid: e.detail.formId
     });
     getFormId.then(res => {
+<<<<<<< HEAD
       // console.log(res)
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     })
   },
 
@@ -121,7 +140,11 @@ Page({
 
   getProducts: function() {
     var that = this
+<<<<<<< HEAD
     //搜索某服务对应的产品，搜索第一个服务对应的产品，搜索所有产品
+=======
+    //搜索某服务对应的产品，搜索第一个服务对应的产品，搜索所有产品 
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     var getServiceProduct = wxRequest.postRequest(path.selectServiceProduct(), {
       page: that.data.currentPage,
       num: 10,
@@ -130,6 +153,10 @@ Page({
     getServiceProduct.then(res => {
       if (res.data.status) {
         var otherRecomment = [...that.data.otherRecomment, ...res.data.data.data]
+<<<<<<< HEAD
+=======
+        console.log(otherRecomment)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         if (that.data.currentPage == 1) {
           otherRecomment.shift()
 
@@ -137,7 +164,10 @@ Page({
             bestRecomment: res.data.data.data[0]
           })
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         that.setData({
           otherRecomment: otherRecomment,
           totalPage: Math.ceil(res.data.data.count / 10),

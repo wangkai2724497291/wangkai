@@ -1,0 +1,25 @@
+.preview-tips {
+  margin: 20rpx 0;  
+}
+
+.video {
+  margin: 50px auto;
+  width: 100%;
+  height: 300px;
+}
+
+.btn-area{
+  margin: 30rpx;
+}
+.preview-tips{
+  text-align: center;
+}
+
+image{
+  margin-left: 50rpx;
+}
+/* .button-hover[type=primary] {
+color:rgba(0, 0, 0, 0.6);
+background-color:red;
+color: black;
+} */

@@ -1,24 +1,73 @@
 /* pages/home/index.wxss */
+<<<<<<< HEAD
 
 .location {
+=======
+page{
+  background: #fff;
+  overflow: Scroll;
+	overflow-x: hidden;
+}
+.location {
+  width: 225rpx;
+  /* height: 50rpx; */
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  /* color: #fff; */
+  /* background-color: red; */
+  white-space:nowrap; 
+  position: relative;
+  margin-top: 15rpx;
+  margin-bottom: 30rpx;
+  }
+
+.camera{
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   display: flex;
   align-items: center;
   padding-left: 20rpx;
   color: #fff;
   background-color: #00c482;
 }
+<<<<<<< HEAD
 .location text {
   margin: 0 10rpx;
   font-size: 30rpx;
+=======
+
+.camera text {
+  margin-left: 580rpx;
+  margin-top: -55rpx;
+  font-size: 30rpx;
+}
+
+.location text {
+ overflow:hidden;
+  margin: 0 10rpx;
+  font-size: 23rpx;
+  text-overflow: ellipsis;
+  color: #363943;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 
 .search {
   box-sizing: border-box;
+<<<<<<< HEAD
   position: relative;
   width: 750rpx;
   padding: 28rpx;
   overflow: hidden;
   background-color: #00c482;
+=======
+  width: 510rpx;
+  /* height: 60rpx; */
+  padding: 28rpx;
+  overflow: hidden;
+  position: absolute;
+   top: -30rpx;
+   left: 220rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 .search i-icon{
   position: absolute;
@@ -26,6 +75,7 @@
   left: 50rpx;
   transform: translateY(-50%);
 }
+<<<<<<< HEAD
 .search input,
 .search text {
   font-size: 34rpx;
@@ -35,6 +85,33 @@
 }
 .search text {
   display: block;
+=======
+.code image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0.8%;
+  right: 4%;
+}
+.active{
+  display: none;
+}
+.search input{
+  width: 320rpx;
+  background: #F5F5F5;
+   border-radius: 35rpx;
+   font-size: 26rpx;
+   padding: 10rpx 0 12rpx 80rpx;
+   color: #363943;
+}
+/* .search text {
+  font-size: 34rpx;
+  
+} */
+.search text {
+  display: block;
+ 
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 
 swiper {
@@ -44,6 +121,7 @@ swiper image {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -63,10 +141,61 @@ swiper image {
 }
 .menu navigator text {
   display: block;
+=======
+.menu1{
+  width: 100%;
+  /* background: lightblue; */
+  display: flex;
+  justify-content: center;
+}
+.menu2{
+  width: 100%;
+  border-bottom:25rpx solid #F5F5F5;
+}
+ .menu3{
+  width: 20%;
+  height: 200rpx;
+  padding: 30rpx 0;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu3 image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.menu3 view{
+  font-size: 23rpx;
+  margin-top: 20rpx;
+}
+
+
+.menu {
+  width: 100%;
+  display: flex;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  border-bottom: 30rpx solid #F5F5F5;
+}
+.menu navigator {
+  width: 20%;
+  text-align: center;
+}
+.menu navigator image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.menu navigator text {
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   margin-top: 8rpx;
   font-size: 23rpx;
 }
 
+<<<<<<< HEAD
 .title {
   position: relative;
   padding: 30rpx 0;
@@ -74,6 +203,15 @@ swiper image {
   font-weight: 700;
   text-align: center;
   background-color: #fff;
+=======
+
+.title {
+  position: relative;
+  font-size: 30rpx;
+  font-weight: 700;
+  background-color: #fff;
+  margin-right: 220rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 .title::before,
 .title::after {
@@ -81,16 +219,53 @@ swiper image {
   position: absolute;
   top: 50%;
   display: block;
+<<<<<<< HEAD
   width: 32%;
+=======
+  width: 125rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   height: 1rpx;
   background-color: #dbdbdb;
   transform: translateY(-50%);
 }
 .title::before {
+<<<<<<< HEAD
   left: 33rpx;
 }
 .title::after {
   right: 33rpx;
+=======
+  left: 100rpx;
+}
+.title::after {
+  right: 100rpx;
+}
+
+
+.title1 {
+  position: relative;
+  font-size: 30rpx;
+  font-weight: 700;
+  background-color: #fff;
+  margin-right: 190rpx;
+}
+.title1::before,
+.title1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 125rpx;
+  height: 1rpx;
+  background-color: #dbdbdb;
+  transform: translateY(-50%);
+}
+.title1::before {
+  left: 150rpx;
+}
+.title1::after {
+  right: 150rpx;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 
 .server_list {
@@ -98,14 +273,25 @@ swiper image {
   justify-content: space-between;
   padding: 0 32rpx 55rpx;
   background-color: #fff;
+<<<<<<< HEAD
+=======
+  border-bottom:25rpx solid #F5F5F5;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 .server_list navigator {
   box-sizing: border-box;
   display: inline-block;
+<<<<<<< HEAD
   width: 224rpx;
   padding: 22rpx 20rpx;
   overflow: hidden;
   background-color: #fcfcfc;
+=======
+  width: 200rpx;
+  /* padding: 0 20rpx; */
+  overflow: hidden;
+  background-color: #fff;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   text-align: right;
   border: 1rpx solid #efefef;
   border-radius: 7rpx;
@@ -113,6 +299,7 @@ swiper image {
 .server_list navigator text {
   display: block;
   overflow: hidden;
+<<<<<<< HEAD
   text-align: left;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -136,6 +323,33 @@ swiper image {
 .get_coupon_banner {
   width: 750rpx;
   height: 168rpx;
+=======
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.server_list navigator .rinse {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.server_list navigator .num {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #FF5147;
+  white-space: nowrap;
+}
+.server_list navigator image {
+  width: 100%;
+  height: 180rpx;
+  margin-right: 20rpx;
+}
+
+.get_coupon_banner {
+  width: 100%;
+  height: 168rpx;
+  border-top: 5rpx solid #F5F5F5;
+  border-bottom: 30rpx solid #F5F5F5;
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
 }
 
 /* 领取优惠劵 */
@@ -222,3 +436,141 @@ swiper image {
   width:100%;
   background-color:#fff;
 }
+<<<<<<< HEAD
+=======
+
+.incorporate{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background: #fff;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+}
+.install_s{
+  margin-left: 20rpx;
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  /* border-left: 10rpx solid #00c482; */
+}
+.incorporate .install_s{
+   flex: 4;
+   font-size: 35rpx;
+   color: #2A2A2A;
+   font-weight:bold;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+}
+.nav .alls{
+   flex: 1;
+   font-size: 25rpx;
+   color: #7E7E7E
+}
+i-icon{
+ font-size: 0;
+}
+.install{
+  margin-left: 20rpx;
+}
+
+.skin{
+  margin-top: 30rpx;
+  width: 100%;
+}
+.care{
+  width: 95%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  /* background:rgb(244, 246, 247); */
+}
+
+.product image{
+  width: 200rpx;
+  height: 240rpx;
+  border-radius: 5rpx;
+  /* display: block */
+}
+.block{
+  width: 236rpx;
+  height: 180rpx;
+  /* background: #fff; */
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block image{
+  width: 130rpx;
+  height: 200rpx;
+}
+.block .typeface{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.test{
+  width: 100%;
+  /* background: lightblue; */
+  display: flex;
+  justify-content: center;
+}
+.test1{
+  width: 100%;
+  border-bottom:25rpx solid #F5F5F5;
+}
+.test2{
+  width: 100%;
+}
+.test2 .test3{
+  width: 19%;
+  height: 200rpx;
+  margin: 20rpx;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.test1 .test3{
+  width: 19%;
+  height: 200rpx;
+  margin: 20rpx;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.test3 image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.test3 view{
+  font-size:22rpx;
+  margin-top:20rpx;
+
+}
+
+.test2{
+  text-align: center;
+  border-bottom: 1rpx solid #F5F5F5;
+  height: 50%;
+  position: relative;
+}
+/* .test4{
+  background: red;
+  height: 50%;
+  position: absolute;
+  left: 10rpx;
+} */
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+   .clearfloat{zoom:1}
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39

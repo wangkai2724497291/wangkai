@@ -16,7 +16,11 @@ Page({
   },
 
   /**
+<<<<<<< HEAD
    * 生命周期函数--监听页面加载
+=======
+   * 生命周期函数--监听页面加载 
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
    */
   onLoad: function(options) {
     this.getGenInfo()
@@ -91,6 +95,10 @@ Page({
     let that = this
     var getGenInfo = wxRequest.getRequest(path.generalizationCode());
     getGenInfo.then(res => {
+<<<<<<< HEAD
+=======
+      console.log(res)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       if (res.data.status) {
         that.setData({
           generalization: res.data.data.genera,

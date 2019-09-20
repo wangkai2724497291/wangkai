@@ -1,0 +1,49 @@
+<!--pages/coupon/index.wxml-->
+<view class='search_container'>
+  <button catchtap='exchange'>家通卡激活</button>
+</view>
+<!-- #00c482 -->
+<i-tabs current="{{ current }}" color="#00c482" bindchange="handleChange">
+  <i-tab key="tab1" title="未使用"></i-tab>
+  <i-tab key="tab2" title="已使用"></i-tab>
+</i-tabs>
+
+
+<view class='tab_container' wx:if="{{current == 'tab1'}}">
+  <view class='coupon' wx:for="{{notused}}" wx:key="{{index}}" style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;'>
+    <view class='title_price'>
+      <text class='title'>{{item.coupon_name}}</text>
+      <view class='price'>
+        <text class='symbol'>￥</text>
+        <text>{{item.prices}}</text>
+      </view>
+    </view>
+    
+    <view class='condition_n_time'>
+      <view class='condition' wx:if='{{item.coupon_condition == "0.00"}}'>不限</view>
+      <view class='condition' wx:else>满￥{{item.coupon_condition}}可用</view>
+      <view class='time'>{{item.coupon_start_time}}-{{item.coupon_end_time}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='tab_container' wx:elif="{{current == 'tab2'}}">
+  <view class='coupon' wx:for="{{used}}" wx:key="{{index}}" style='background: url(https://www.jiatd.com/uploads/comment/20180903/coupon.png) center center no-repeat;background-size: 100% 100%;'>
+    <view class='title_price'>
+      <text class='title'>{{item.coupon_name}}</text>
+      <view class='price'>
+        <text class='symbol'>￥</text>
+        <text>{{item.prices}}</text>
+      </view>
+    </view>
+    <view class='condition_n_time'>
+      <view class='condition' wx:if='{{item.coupon_condition == "0.00"}}'>不限</view>
+      <view class='condition' wx:else>满￥{{item.coupon_condition}}可用</view>
+      <view class='time'>{{item.coupon_start_time}}-{{item.coupon_end_time}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='loading' wx:if="{{isLoading}}"><i-spin i-class='loading_icon' fix></i-spin></view>
+
+<view class='nomore' wx:if="{{showNoMore}}">没有更多数据了</view>

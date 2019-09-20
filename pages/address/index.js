@@ -12,6 +12,11 @@ Page({
     noAddress: false,
     fromPage: '',
     productid: '',
+<<<<<<< HEAD
+=======
+    idx: '',
+    addrtype: '',
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     adcode: '',
     actions: [
       {
@@ -34,6 +39,16 @@ Page({
       fromPage: options.from,
       productid: options.id
     })
+<<<<<<< HEAD
+=======
+
+    if (options.from === 'shopCart') {
+      this.setData({
+        idx: options.idx,
+        addrtype: options.addrtype
+      })
+    }
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
@@ -92,7 +107,10 @@ Page({
       product_id: that.data.productid
     });
     addressList.then(res => {
+<<<<<<< HEAD
       // console.log(res)
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       if (res.data.status) {
         if (JSON.stringify(res.data.data) == '{}') {
           that.setData({
@@ -164,6 +182,10 @@ Page({
       obj.id = e.currentTarget.id
       obj.lat = data.lat
       obj.lng = data.lng
+<<<<<<< HEAD
+=======
+      obj.city_id = data.cityid
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       app.globalData.pageAddress = obj
 
       if (this.data.fromPage == 'startAddr') {
@@ -172,6 +194,15 @@ Page({
         app.globalData.pageAppointment.endAddr = obj
       } else if (this.data.fromPage == 'simAppoint') {
         app.globalData.pageSimAppoint.address = obj
+<<<<<<< HEAD
+=======
+      } else if (this.data.fromPage == 'samAppoint') {
+        app.globalData.pageSimAppoint.addrass = obj
+      } else if (this.data.fromPage == 'shopCart') {
+        app.globalData.pageShopCart.address.idx = this.data.idx
+        app.globalData.pageShopCart.address.addrtype = this.data.addrtype
+        app.globalData.pageShopCart.address.addr = obj
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       }
       wx.navigateBack()
     } else {

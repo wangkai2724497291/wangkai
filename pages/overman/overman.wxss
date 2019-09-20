@@ -1,0 +1,39 @@
+/* pages/overman/overman.wxss */
+.overman{
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+.master{
+  width: 300rpx;
+  height: 300rpx;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.master image{
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  top: -85rpx;
+  left: 70rpx;
+}
+.master .name{
+  width: 300rpx;
+  height: 150rpx;
+  background: red;
+  display: flex;
+  justify-content: center;
+}
+.name image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.collected image{
+  width: 30rpx;
+  height: 30rpx;
+}

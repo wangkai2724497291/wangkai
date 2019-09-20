@@ -29,15 +29,25 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+<<<<<<< HEAD
     this.setData({
       locationAddr: app.globalData.address.allAddr,
+=======
+    console.log(app)
+    this.setData({
+      locationAddr: app.globalData.address.recommend,
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       city: app.globalData.address.selectCity == '' ? app.globalData.address.city : app.globalData.address.selectCity
     })
   },
@@ -46,35 +56,55 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   getLoaction: function () {
@@ -83,19 +113,34 @@ Page({
       locationAddr: '重新定位中...'
     })
     app.getLoaction(function () {
+<<<<<<< HEAD
       that.setData({
         locationAddr: app.globalData.address.allAddr
+=======
+      console.log(app)
+      that.setData({
+        locationAddr: app.globalData.address.recommend
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       })
     })
   },
 
   searchChange: function (e) {
     var that = this
+<<<<<<< HEAD
+=======
+    console.log(e);
+    console.log(that);
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     demo.getSuggestion({
       keyword: e.detail.value,
       region: that.data.city,
       policy: 1,
       success: function (res) {
+<<<<<<< HEAD
+=======
+        console.log(res)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
         that.setData({
           result: res.data
         })
@@ -132,18 +177,34 @@ Page({
     obj.city = data.city
     obj.area = data.area
     obj.adcode = data.adcode
+<<<<<<< HEAD
     obj.location = {lat: data.lat, lng: data.lng}
+=======
+    obj.location = { lat: data.lat, lng: data.lng }
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     app.globalData.pageLocation = obj
     wx.navigateBack()
   },
 
   selectLocationAddr: function () {
+<<<<<<< HEAD
     var obj = {}
     var data = app.globalData.address
     obj.title = data.street_number
     obj.addr = data.street_number
     obj.province = data.province
     obj.city = data.city
+=======
+    console.log(app)
+    var obj = {}
+    var data = app.globalData.address
+    // obj.title = data.street_number
+    obj.title = data.recommend
+    obj.addr = data.street_number
+    obj.province = data.province
+    obj.city = data.city
+    obj.recommend = data.recommend
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     obj.area = data.area
     obj.adcode = data.adcode
     obj.location = data.location

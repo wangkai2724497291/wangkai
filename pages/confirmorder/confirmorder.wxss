@@ -1,0 +1,196 @@
+/* pages/confirmorder/confirmorder.wxss */
+.servetype{
+  margin: 30rpx;
+  color: #101010;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.service_big{
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin-bottom: 20rpx;
+}
+.dizhi_img .dizhi image {
+  padding-top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  }
+.dizhi_img{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 30rpx;
+}
+
+.right_img{
+  padding-bottom: 10rpx;
+  margin-left: 90rpx;
+  color: #A2A2A2;
+  font-size: 24rpx;
+}
+.site{
+  color: #101010;
+  font-size: 28rpx; 
+  margin-left: 20rpx;
+  margin-top: -10rpx;
+}
+.servicetype{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-top: 1rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.discount{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-top: 1rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.discount view:nth-of-type(1){
+  font-size: 32rpx;
+  margin-left: 40rpx;
+}
+.discount .amount{
+  font-size: 36rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.servicetype view:nth-of-type(1){
+  font-size: 32rpx;
+  margin-left: 40rpx;
+}
+.servicetype .amount{
+  font-size: 36rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.amount view:nth-of-type(1){
+  font-size: 30rpx;
+  margin-right: 5rpx;
+  margin-top: 8rpx;
+}
+.amount view:nth-of-type(2){
+  font-size: 36rpx;
+}
+
+
+.coupon{
+  font-size: 36rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.coupon view:nth-of-type(1){
+  font-size: 30rpx;
+  margin-right: 5rpx;
+  margin-top: 8rpx;
+  color: #FF9500;
+}
+.coupon view:nth-of-type(2){
+  font-size: 36rpx;
+  color: #FF9500;
+}
+.payment{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-top: 1rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.payment view:nth-of-type(1){
+  font-size: 32rpx;
+  margin-left: 40rpx;
+}
+.loose_payment,.wx_payment{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-top: 1rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.payfor{
+  display: flex;
+  flex-direction: row;
+  margin-left: 40rpx;
+}
+.payfor view:nth-of-type(1){
+  font-size: 32rpx;
+}
+.payfor view:nth-of-type(2){
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.radio{
+  margin-right: 20rpx;
+}
+.WeChat_pay{
+  font-size: 32rpx;
+  margin-left: 40rpx;
+}
+
+  .btn_bottom{
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .figure{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40rpx;
+  }
+  .figure view:nth-of-type(1){
+    font-size: 32rpx;
+    color: #FF9500;
+    margin-top: 20rpx;
+  }
+  .figure view:nth-of-type(2){
+    font-size: 54rpx;
+    color: #FF9500;
+    margin-left: 10rpx;
+  }
+  .submit_btn button{
+    width: 200rpx;
+    height: 60rpx;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #FF9500;
+    font-size: 28rpx;
+    line-height: 60rpx;
+    border-radius: 60rpx;
+    margin-right: 30rpx;
+  }
+  .phone_number{
+    font-size: 28rpx;
+    color: #101010;
+    margin-left: 30rpx;
+  }

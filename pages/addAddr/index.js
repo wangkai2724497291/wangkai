@@ -26,6 +26,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+<<<<<<< HEAD
+=======
+    console.log(app)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     if (options.edit === 'true') {
       wx.setNavigationBarTitle({
         title: '编辑地址'
@@ -33,13 +37,22 @@ Page({
 
       let addr = app.globalData.editAddr
       let obj = {}
+<<<<<<< HEAD
       obj.title = addr.province + addr.city + addr.area
+=======
+      obj.title = addr.province + addr.city + addr.area + addr.recommend
+      obj.recommend = addr.recommend
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       obj.province = addr.province
       obj.city = addr.city
       obj.area = addr.area
       obj.adcode = addr.adcode
       obj.location = { lat: addr.lat, lng: addr.lng }
       obj.address_id = addr.address_id
+<<<<<<< HEAD
+=======
+      // console.log(app)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       this.setData({
         name: app.globalData.editAddr.username,
         phone: app.globalData.editAddr.mobile,
@@ -48,6 +61,10 @@ Page({
         addrDetail: addr.address,
         editAddrId: addr.address_id
       })
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     }
   },
 
@@ -55,13 +72,20 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+<<<<<<< HEAD
     
+=======
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+<<<<<<< HEAD
+=======
+    console.log(app)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     if (app.globalData.pageLocation.title) {
       this.setData({
         addrObj: app.globalData.pageLocation
@@ -73,35 +97,55 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   inputChange: function (e) {
@@ -156,6 +200,10 @@ Page({
     }
 
     var that = this
+<<<<<<< HEAD
+=======
+    console.log(this)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     if (this.data.addrDetail && this.data.addrObj.title != app.globalData.address.allAddr) {
       // 通过地址获取坐标
       demo.geocoder({
@@ -178,7 +226,11 @@ Page({
       });
     } else {
       that.addAddress()
+<<<<<<< HEAD
     }    
+=======
+    }
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
   },
 
   addAddress: function () {
@@ -186,6 +238,10 @@ Page({
     //新增用户地址or更新用户地址
     var addr = that.data.addrObj
     console.log(addr)
+<<<<<<< HEAD
+=======
+    console.log(that)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     var addAddr = wxRequest.postRequest(path.addAddr(), {
       username: that.data.name,
       mobile: that.data.phone,
@@ -199,7 +255,12 @@ Page({
       address: addr.address_id ? that.data.addrDetail : (that.data.addrDetail ? addr.title + that.data.addrDetail : addr.title)
     });
     addAddr.then(res => {
+<<<<<<< HEAD
       // console.log(res)
+=======
+      console.log(res)
+      console.log(that)
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
       if (res.data.status) {
         app.globalData.pageLocation = {}
         wx.navigateBack()
@@ -224,6 +285,10 @@ Page({
     var getFormId = wxRequest.postRequest(path.getFormId(), {
       formid: e.detail.formId
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa31deabb250d9d8a1a94d8851963e555179fa39
     getFormId.then(res => {
       // console.log(res)
     })
